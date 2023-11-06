@@ -1,8 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import { Box, Grid } from '@mui/material';
-import Login from './Login';
-import Register from './Register';
+
 
 const Account = () => {
   const breadcrumbItems = [
