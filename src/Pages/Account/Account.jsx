@@ -16,14 +16,7 @@ const Account = () => {
         breadcrumbItems={breadcrumbItems}
       />
 
-      <Grid container   sx={{ margin:'auto', padding:'63px 100px', }}>
-        <Grid item xs={12} sm={12} md={6} >
-          <Login />
-        </Grid>
-        <Grid item xs={12} sm={12} md={6} >
-          <Register />
-        </Grid>
-      </Grid>
+      <h2>My Account</h2>
     </Box>
   );
 }
