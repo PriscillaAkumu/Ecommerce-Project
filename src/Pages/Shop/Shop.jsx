@@ -1,21 +1,13 @@
-import React from 'react';
-import Banner from '../../components/Banner/Banner';
-
-
+import "./Shop.css";
+import Filter from "./Filter";
+import ShopList from "./ShopList";
 const Shop = () => {
-  const breadcrumbItems = [
-    { label: 'Home', link: '/' },
-    { label: 'Shop', link: '/Shop' },
-  ];
   return (
-    <div>
- <Banner
-      pageTitle="Shop"
-      breadcrumbItems={breadcrumbItems}
-
-      />
-    </div>
+    <>
+      <Filter />
+      <ShopList />
+    </>
   );
-}
+};
 
 export default Shop;
