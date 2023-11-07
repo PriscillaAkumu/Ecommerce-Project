@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-// import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { Container } from "@mui/material";
 import CustomRoute from "./Routes/CustomRoute";
 import theme from "./style/Theme";
@@ -18,7 +18,7 @@ function App() {
       sx={{ background: "primary.dark" }}
     >
       <Router>
-        {/* <Navbar /> */}
+        <Navbar />
         <CustomRoute />
         <Footer />
       </Router>
