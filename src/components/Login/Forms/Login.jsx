@@ -59,7 +59,7 @@ export default function LoginForm() {
 					</Typography>
 
 					<form onSubmit={handleSubmit(onSubmit)} noValidate>
-						<Stack spacing={2} width={400}>
+						<Stack spacing={2}>
 							<Typography mb={2}>Username or email address</Typography>
 							<TextField
 							size="small"
