@@ -4,7 +4,7 @@ import {
   AppBar,
   Button,
   Box,
-  Typography,
+Typography,
   Toolbar,
   useMediaQuery,
   useTheme,
@@ -19,25 +19,25 @@ import DrawerComp from "./DrawerComp";
 
 
 const myButton = {
-  color: '#000',
+  color:'#000',
 }
 
 const menuButton = {
-  my: 2,
+  my: 2, 
   color: '#000',
-  display: 'block',
-  textTransform: 'capitalize',
-  fontSize: '16px',
-
-
+   display: 'block', 
+   textTransform: 'capitalize', 
+   fontSize:'16px',
+  
+   
 }
 
 const Navbar = () => {
-
+ 
   const theme = useTheme();
   console.log(theme);
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // console.log(isMatch);
+  console.log(isMatch);
 
   return (
 
@@ -47,7 +47,7 @@ const Navbar = () => {
         {isMatch ? (
           <>
 
-            <DrawerComp sx={{ height: '300px' }} />
+            <DrawerComp />
 
           </>
         ) : (
@@ -61,7 +61,7 @@ const Navbar = () => {
 
 
             }}>
-              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap:'30px' }}>
                 {/* {pages.map((page) => (
                   <Button
                     key={page}
@@ -70,21 +70,21 @@ const Navbar = () => {
                     {page}
                   </Button>
                 ))} */}
-
-
-                <Button href="/" style={menuButton}>
-                  Home
-                </Button>
-                <Button href="/Shop" style={menuButton}>
-                  Shop
-                </Button>
-                <Button href="/Account" style={menuButton}>
-                  Account
-                </Button>
-                <Button href="/Contact" style={menuButton}>
-                  Contact
-                </Button>
-
+             
+           
+<Button href="/" style={menuButton}>
+Home
+</Button>
+<Button href="/Shop" style={menuButton}>
+  Shop
+</Button>
+<Button href="/Account" style={menuButton}>
+  Account
+</Button>
+<Button href="/Contact" style={menuButton}>
+  Contact
+</Button>
+                
               </Box>
               <Box  >
                 <Button >

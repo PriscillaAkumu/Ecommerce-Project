@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import CssBaseline from '@mui/material/CssBaseline';
 import {
   Drawer,
   IconButton,
@@ -9,7 +8,6 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  Paper,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from '@mui/icons-material/MoreVert';
@@ -22,8 +20,6 @@ import User from '../../assets/user.png';
 
 
 const DrawerComp = () => {
-  const drawerWidth = 150
-  // const drawerHeight = 300
   // const pages = ["Home", "Shop", "ABout", "Contact"];
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,55 +31,40 @@ const DrawerComp = () => {
     setAnchorEl(null);
   };
 
-
-  const [selectedIndex, setSelectedIndex] = useState(1);
-
-  const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
-  };
-
   return (
     <React.Fragment>
-      <CssBaseline />
       {/* menuItems */}
       <Drawer
-        variant="temporary"
         anchor="left"
         open={openDrawer}
-        ModalProps={{
-          keepMounted: true,
-        }}
         onClose={() => setOpenDrawer(false)}
-        sx={{  width: drawerWidth,  }}
       >
-        <List  sx={{
-          width: drawerWidth, backgroundColor: '#FBEBB5', boxSizing: 'border-box', paddingTop: '40px', justifyContent: 'center',
-        }}>
+        <List>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Home</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Home</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Shop</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Shop</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Account</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Account</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Contact</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
-
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Contact</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+      
         </List>
       </Drawer>
       <IconButton
@@ -100,10 +81,8 @@ const DrawerComp = () => {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{ color: '#000' }}
-
       >
-        <MoreIcon color="black" />
+        <MoreIcon />
       </IconButton>
       <Menu
         id="basic-menu"
@@ -119,7 +98,7 @@ const DrawerComp = () => {
         <MenuItem onClick={handleClose}>  <SearchOutlinedIcon /></MenuItem>
 
         <MenuItem onClick={handleClose}> <FavoriteBorderOutlinedIcon /></MenuItem>
-
+        
         <MenuItem onClick={handleClose}><ShoppingCartOutlinedIcon /></MenuItem>
       </Menu>
     </React.Fragment>

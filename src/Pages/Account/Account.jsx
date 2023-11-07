@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
-import { Box, Grid } from '@mui/material';
+import AuthLogin from '../../components/Login/Auth';
+import PaymentPlan from '../../components/Payment/Payment';
 
 
 const Account = () => {
@@ -9,14 +10,18 @@ const Account = () => {
     { label: 'My Account', link: '/Account' },
   ];
   return (
-    <Box>
-      <Banner
-        pageTitle="My Account"
-        breadcrumbItems={breadcrumbItems}
+    <div>
+ <Banner
+      pageTitle="My Account"
+      breadcrumbItems={breadcrumbItems}
+
       />
 
-      <h2>My Account</h2>
-    </Box>
+      <AuthLogin />
+
+      <PaymentPlan />
+
+    </div>
   );
 }
 
