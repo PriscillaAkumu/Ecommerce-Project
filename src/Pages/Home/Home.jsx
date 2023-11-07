@@ -1,12 +1,21 @@
-import React from 'react';
-
+import "./Home.css";
+import Hero from "./Hero";
+import FeatProducts from "./FeatProducts";
+import TopPicks from "./TopPicks";
+import NewArrival from "./NewArrival";
+import OurBlogs from "./OurBlogs";
+import OurInstagram from "./OurInstagram";
 const Home = () => {
-
   return (
-    <div>
-      Home
-    </div>
+    <>
+      <Hero />
+      <FeatProducts />
+      <TopPicks />
+      <NewArrival />
+      <OurBlogs />
+      <OurInstagram />
+    </>
   );
-}
+};
 
 export default Home;
