@@ -8,13 +8,13 @@ const Shop = () => {
     { label: 'Shop', link: '/Shop' },
   ];
   return (
-    <div>
+    <>
  <Banner
       pageTitle="Shop"
       breadcrumbItems={breadcrumbItems}
 
       />
-    </div>
+    </>
   );
 }
 

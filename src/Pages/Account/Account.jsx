@@ -10,7 +10,7 @@ const Account = () => {
     { label: 'My Account', link: '/Account' },
   ];
   return (
-    <div>
+    <>
  <Banner
       pageTitle="My Account"
       breadcrumbItems={breadcrumbItems}
@@ -21,7 +21,7 @@ const Account = () => {
 
       <PaymentPlan />
 
-    </div>
+    </>
   );
 }
 

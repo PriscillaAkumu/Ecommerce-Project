@@ -28,7 +28,7 @@ export default function LoginForm() {
 			<Typography variant="h4">Register</Typography>
 
 			<form onSubmit={handleSubmit(onSubmit)} noValidate>
-				<Stack spacing={2} >
+				<Stack >
 					<Typography mb={2}>Email address</Typography>
 					<TextField
 					size="small"
@@ -46,7 +46,11 @@ export default function LoginForm() {
 					<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
 						{errors.email?.message}
 					</Typography>
+					</Stack>
 
+					<Stack
+					direction="column"
+					>
 					<Typography variant="body-3">
 						{" "}
 						A link to set your new password will be sent to your email address{" "}
@@ -57,6 +61,10 @@ export default function LoginForm() {
 						other purposes described in our <b>privacy policy.</b>
 					</Typography>
 
+
+					</Stack>
+
+					
 					{/* <Grid
 								container
 								sx={{
@@ -75,7 +83,7 @@ export default function LoginForm() {
 					</Button>
 
 					{/* </Grid> */}
-				</Stack>
+				
 			</form>
 			{/* <DevTool control={control} /> */}
 		</Box>

@@ -8,14 +8,14 @@ const Cart = () => {
         { label: 'Cart', link: '/Cart' },
       ];
   return (
-    <div >
+    < >
       <Banner
       pageTitle="Cart"
       breadcrumbItems={breadcrumbItems}
 
       />
      
-    </div>
+    </>
   );
 }
 

@@ -14,7 +14,10 @@ import {
 	Button,
 	Stack,
 	Box,
-} from "@mui/material"
+} from "@mui/material";
+import FormControlLabel from '@mui/material/FormControlLabel';
+
+
 
 export default function LoginForm() {
 	// state for authenication
@@ -59,10 +62,10 @@ export default function LoginForm() {
 					</Typography>
 
 					<form onSubmit={handleSubmit(onSubmit)} noValidate>
-						<Stack spacing={2}>
+						<Stack>
 							<Typography mb={2}>Username or email address</Typography>
 							<TextField
-							size="small"
+								size="small"
 								mb={2}
 								type="email"
 								id="email"
@@ -77,10 +80,12 @@ export default function LoginForm() {
 							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
 								{errors.email?.message}
 							</Typography>
+						</Stack>
 
+						<Stack>
 							<Typography mb={2}>Password</Typography>
 							<TextField
-							size="small"
+								size="small"
 								type="password"
 								id="password"
 								{...register("password", {
@@ -93,44 +98,40 @@ export default function LoginForm() {
 							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
 								{errors.password?.message}
 							</Typography>
+						</Stack>
 
-							<Grid
-								mb-2
-								sx={{
-									alignItems: "center",
-									justifyContent: "center",
-									gap: "31px",
-									width: "100%",
-								}}
-							>
-								<Checkbox
-									type="checkbox"
-									id="checkbox"
-									{...register("checkbox")}
-								/>
-								<Typography variant="body-2">Remember me</Typography>
-							</Grid>
 
-							<Grid
-								container
-								sx={{
-									alignItems: "center",
-									justifyContent: "center",
-									gap: "31px",
-									width: "100%",
-								}}
-							>
-								<Button size="large" 
-								type="submit" 
-								sx={{color:"black" , border:"2px solid blue"}}  
+						<Stack direction="row" alignItems="center"
+						>
+							 
+							<Checkbox
+								type="checkbox"
+								id="checkbox"
+								{...register("checkbox")}
+							/>
+							<Typography variant="body-2">Remember me</Typography>
+						</Stack>
+
+						<Stack 
+						direction="row"
+							// sx={{
+							// 	alignItems: "center",
+							// 	justifyContent: "center",
+							// 	gap: "31px",
+							// 	width: "100%",
+							// }}
+						>
+							<Button
+								size="large"
+								type="submit"
+								sx={{ color: "black", border: "2px solid blue" }}
 								// variant="outlined"
-								>
-									Login
-								</Button>
-								<Typography variant="body-2" mt={2}>
-									Lost Your Password?
-								</Typography>
-							</Grid>
+							>
+								Login
+							</Button>
+							<Typography variant="body-2" mt={2}>
+								Lost Your Password?
+							</Typography>
 						</Stack>
 					</form>
 					{/* <DevTool control={control} /> */}
