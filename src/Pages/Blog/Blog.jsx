@@ -9,6 +9,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ButtonStyle from "./ButtonStyle";
 import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
+import Pagination from "./Pagination";
+import FreeDelivery from "./FreeDelivery";
 
 const Blog = () => {
   return (
@@ -55,6 +57,9 @@ const Blog = () => {
           </div>
         </ContainerStyle>
       </div>
+
+      <Pagination />
+      <FreeDelivery />
     </>
   );
 };
