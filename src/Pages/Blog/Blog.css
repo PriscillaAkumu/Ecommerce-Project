@@ -26,7 +26,8 @@
   .blog__inner
   .blog__content
   .blog__content__meta
-  .blog__content__meta__item {
+
+  {
   display: flex;
   flex-wrap: nowrap;
   gap: 11px;
@@ -38,6 +39,13 @@
   color: #9f9f9f;
   margin-bottom: 15px;
 }
+
+ blog__content__meta__item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ }
+
 .blog__content__title {
   font-family: Poppins;
   font-size: 30px;
@@ -227,13 +235,18 @@
     width: 100%;
     padding: 0px;
   }
+.blog__content__meta_item{
+ display: flex;
+ justify-content: space-between;
+}
+
   .delivery .delivery__inner {
     flex-direction: column;
     gap: 20px;
   }
   .delivery .delivery__inner div {
     width: 100%;
-    /* justify-content: center; */
+
   }
 }
 

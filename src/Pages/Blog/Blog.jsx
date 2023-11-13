@@ -1,4 +1,6 @@
 import "./Blog.css";
+import Banner from '../../components/Banner/Banner';
+import Navbar from "../../components/Navbar/Navbar";
 import blogPosts from "./blogPosts";
 import blogimg1 from "../Blog/img/blogimg1.png";
 import ContainerStyle from "./ContainerStyle";
@@ -13,10 +15,22 @@ import Pagination from "./Pagination";
 import FreeDelivery from "./FreeDelivery";
 
 const Blog = () => {
+    const breadcrumbItems = [
+      { label: 'Home', link: '/' },
+      { label: 'Blog', link: '/Blog' },
+    ];
+
   return (
     <>
-      <div className="blog">
+    <div >
+    <Navbar/>
+    <Banner
+        pageTitle="Blog"
+        breadcrumbItems={breadcrumbItems}
+      />
+   <div className="blog"> 
         <ContainerStyle>
+       
           <div className="blog__inner">
             <div className="blog__content">
               {blogPosts.map((post, index) => (
@@ -29,7 +43,8 @@ const Blog = () => {
                     </div>
                     <div className="blog__content__meta__item">
                       <CalendarTodayIcon />
-                      {post.date}
+                      <div>  {post.date}</div>
+                    
                     </div>
                     <div className="blog__content__meta__item">
                       <LocalOfferIcon />
@@ -58,6 +73,9 @@ const Blog = () => {
         </ContainerStyle>
       </div>
 
+
+    </div>
+   
       <Pagination />
       <FreeDelivery />
     </>

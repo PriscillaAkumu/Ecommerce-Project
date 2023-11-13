@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
 
-    <AppBar position="sticky" sx={{ background: "#fff", }}>
+    <AppBar position='sticky'    sx={{ background: "#fff",   }}>
       <Toolbar>
 
         {isMatch ? (
