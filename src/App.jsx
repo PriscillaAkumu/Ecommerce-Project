@@ -5,27 +5,34 @@ import Navbar from "./components/Navbar/Navbar";
 import { Container } from "@mui/material";
 import CustomRoute from "./Routes/CustomRoute";
 import theme from "./style/Theme";
+import CartProvider from './context/CartContext';
 
 
 import Footer from "./components/Footer/Footer";
-import Cart from './Pages/Cart/Cart';
+
 
 
 function App() {
   return (
-    <Container 
+
+  <Container 
       maxWidth="xl"
       elevation={0}
       disableGutters={true}
       sx={{ background: "primary.dark" }}
     >
+      <CartProvider>
       <Router>
         <Navbar />
         <CustomRoute />
         <Footer />
       </Router>
+      </CartProvider>
+
 
     </Container>
+    
+  
   );
 }
 
