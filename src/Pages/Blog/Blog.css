@@ -261,6 +261,7 @@
 
   .blog__content__text {
     font-size: 12px;
+    text-align: justify;
   }
   .blog__content__meta__item svg,
   .blog__content__meta__item div {
