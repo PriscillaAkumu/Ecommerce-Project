@@ -1,5 +1,5 @@
 import ContainerStyle from "./ContainerStyle";
-import freeDelivery from "./FreeDelivery";
+
 import Pagination from "./Pagination";
 import productData from "/src/productData";
 
@@ -20,7 +20,6 @@ const ShopList = () => {
         </ContainerStyle>
       </div>
       <Pagination />
-      <freeDelivery />
     </>
   );
 };
