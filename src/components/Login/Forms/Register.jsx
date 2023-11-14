@@ -64,25 +64,15 @@ export default function LoginForm() {
 
 					</Stack>
 
-					
-					{/* <Grid
-								container
-								sx={{
-									alignItems: "center",
-									justifyContent: "center",
-									gap: "31px",
-									width: "100%",
-								}}
-							> */}
 					<Button size="large" 
 					type="submit" 
-					sx={{color:"black" , border:"2px solid blue"}} 
-					// variant="outlined"
+					sx={{color:"black" , border:"1px solid black"}} 
+					
 					>
 						Register
 					</Button>
 
-					{/* </Grid> */}
+				
 				
 			</form>
 			{/* <DevTool control={control} /> */}
