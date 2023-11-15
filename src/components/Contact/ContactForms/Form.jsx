@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useEffect } from "react"
 import { useForm } from "react-hook-form"
 // import { DevTool } from "@hookform/devtools"
@@ -40,9 +38,7 @@ export default function ContactForm() {
 				}}
 			>
 				<form onSubmit={handleSubmit(onSubmit)} noValidate>
-					<div
-						
-					>
+					
 						<Stack>
 							<Typography mb={2}>Your name</Typography>
 							<TextField
@@ -97,21 +93,12 @@ export default function ContactForm() {
 							/>
 						</Stack>
 
-						<Stack style={{}}>
+						<Stack >
 							<Typography
 								mb={2}
 								sx={{
-									// width: "75.96px",
-									// height: "24px",
-									// top: "1227px",
-									// left: "688px",
-									// fontFamily: "Poppins",
-									fontSize: "16px",
-									// fontWeight: "500",
-									// lineHeight: "24px",
-									// letter-spacing: 0em;
-					
-									color:"#000"
+								fontSize: "16px",
+								color:"#000"
 								}}
 							>
 								Message
@@ -120,35 +107,14 @@ export default function ContactForm() {
 								size="small"
 								type="text"
 								id="message"
-								// sx={{
-								// 	width: "527px",
-								// 	height: "120px",
-								// 	// top: "1273px",
-								// 	left:" 689px",
-								// 	borderRadius: "10px",
-								// 	border: "1px solid black"
-
-								// }}
+							
 							
 								placeholder= "Hi i'd like to ask about"
-								
-								// 								sx={{
-								// 									width: "177px",
-								// height: "24px",
-								// top: "1299px",
-								// left: "719px",
-								// fontFamily:"Poppins",
-								// fontSize:" 16px",
-								// fontWeight:" 400",
-								// lineHeight: "24px",
-								// // letter-spacing: 0em;
-								// textAlign: "left",
-								// color:"#9F9F9F"}}
 
 								{...register("message", {
 									required: {
 										value: /^[a-zA-Z0-9]+$/,
-										message: "Required field. ENter Message",
+										message: "Enter your message",
 									},
 								})}
 							/>
@@ -159,15 +125,14 @@ export default function ContactForm() {
 
 						<Stack direction="row">
 							<Button
-								size="large"
+								// size="large"
 								type="submit"
 								sx={{ color: "black", border: "1px solid black" }}
-								// variant="outlined"
 							>
 								Submit
 							</Button>
 						</Stack>
-					</div>
+					
 				</form>
 			</Box>
 		</>

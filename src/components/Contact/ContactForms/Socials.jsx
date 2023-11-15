@@ -1,26 +1,19 @@
-/** @format */
-
-import React, { useEffect } from "react";
-import location from "../../../assets/contact/location.png";
-import phone from "../../../assets/contact/phone.png";
-import clock from "../../../assets/contact/clock.png";
+import React, { useEffect } from "react"
+import location from "../../../assets/contact/location.png"
+import phone from "../../../assets/contact/phone.png"
+import clock from "../../../assets/contact/clock.png"
 
 // mui
-import { TextField, Typography, Button, Stack, Box } from "@mui/material";
+import { TextField, Typography, Button, Stack, Box } from "@mui/material"
 
 export default function Socials() {
 	return (
-		<Box
-			
-			
-		>
+		<Box>
 			<div
 				style={{
 					display: "flex",
 					gap: "10px",
-					marginBottom: "20px"
-					// marginLeft: "10px",
-					// marginRight: "50px",
+					marginBottom: "20px",
 				}}
 			>
 				<img
@@ -29,7 +22,6 @@ export default function Socials() {
 					style={{
 						width: "22px",
 						height: "28.18px",
-						// marginLeft: "8px",
 					}}
 				/>
 				<div>
@@ -37,10 +29,6 @@ export default function Socials() {
 						style={{
 							fontSize: "24px",
 							fontWeight: "500",
-							// lineHeight: "36px",
-							// textAlign: "left",
-							// width: "99px",
-							// Height: "36px",
 						}}
 					>
 						{" "}
@@ -50,7 +38,6 @@ export default function Socials() {
 						style={{
 							fontSize: "16px",
 							fontWeight: "400",
-							// lineHeight: "24px",
 						}}
 					>
 						236 5th SE Avenue, New <br />
@@ -60,18 +47,13 @@ export default function Socials() {
 				</div>
 			</div>
 
-			{/* telephone */}
-
-			<div style={{ display: "flex",gap: "10px", marginBottom: "20px" }}>
+			<div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
 				<img
 					src={phone}
 					alt="logo"
 					style={{
 						width: "30px",
 						height: "30px",
-						// top: "916px",
-						// left: "237px",
-						// padding: " 3.98px, 3.98px, 3.75px, 3.75px",
 					}}
 				/>
 				<div>
@@ -79,8 +61,6 @@ export default function Socials() {
 						style={{
 							fontSize: "24px",
 							fontWeight: "500",
-							// lineHeight: "36px",
-							// textAlign: "left",
 						}}
 					>
 						{" "}
@@ -90,24 +70,16 @@ export default function Socials() {
 						style={{
 							fontSize: "16px",
 							fontWeight: "400",
-							// lineHeight: "24px",
-
-							// letterSpacing: 0em;
-							// textAlign: "left",
-							// width: "212px",
-							// height: "48px",
-							// top: "949px",
-							// left: "297px",
 						}}
 					>
-						Mobile: +(84) 546-6789 <br/>
+						Mobile: +(84) 546-6789 <br />
 						Hotline: +(84) 456-6789
 					</p>
 				</div>
 			</div>
 			{/* Working hours  */}
 
-			<div style={{ display: "flex", gap: "10px",marginBottom: "20px" }}>
+			<div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
 				<img
 					src={clock}
 					alt="logo"
@@ -119,16 +91,9 @@ export default function Socials() {
 				<div>
 					<h1
 						style={{
-							// width: "166px",
-							// height: " 36px",
-							// top: " 1039px",
-							// left: "297px",
-							// fontFamily: " Poppins",
 							fontSize: "24px",
 							fontWeight: "500",
 							lineHeight: " 36px",
-							// letter-spacing: 0em;
-							// textAlign: " left",
 						}}
 					>
 						{" "}
@@ -136,15 +101,9 @@ export default function Socials() {
 					</h1>
 					<p
 						style={{
-							// width: "212px",
-							// height: "96px",
-							// top: "1075px",
-							// left: "297px",
 							fontSize: "16px",
 							fontWeight: "400",
 							lineHeight: "24px",
-							// letterSpacing: 0em;
-							// textAlign: " left", 
 						}}
 					>
 						Monday-Friday: 9:00 - 22:00
