@@ -114,10 +114,11 @@ export default function ContactForm() {
 								
 							})}
 						>
-							<MenuItem value="_none" selected>
+							{/* <MenuItem value="_none" selected>
 								-None-
-							</MenuItem>
-							<MenuItem value="italy">Italy</MenuItem>
+							</MenuItem> */}
+							<MenuItem value="italy" selected>Italy</MenuItem>
+							<MenuItem value="sri lanka">Sri Lanka</MenuItem>
 							<MenuItem value="germany">Germany</MenuItem>
 							<MenuItem value="uganda">Uganda</MenuItem>
 							<MenuItem value="nigeria">Nigeria</MenuItem>
@@ -274,15 +275,16 @@ export default function ContactForm() {
 						</Typography>
 					</Stack>
 
-					<Stack direction="row">
+					{/* <Stack direction="row">
 						<Button
 							size="large"
 							type="submit"
 							sx={{ color: "black", border: "1px solid black" }}
 						>
+						>
 							Submit
 						</Button>
-					</Stack>
+					</Stack> */}
 				</form>
 				<DevTool control={control} />
 			</Box>

@@ -5,15 +5,15 @@ import Elipse2 from "../../assets/contact/Ellipse 1.png"
 import { Stack, Button, Typography, Box } from "@mui/material"
 import Radio from "@mui/material/Radio"
 import FormControlLabel from "@mui/material/FormControlLabel"
-import { useForm } from "react-hook-form"
+// import { useForm } from "react-hook-form"
+
 
 export default function Billing(){
-	// const form = useForm()
-	// const { register, control, formState } = form
+
 
 	return (
 		<Box>
-			<form>
+			<form >
 			<div
 				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
 			>
@@ -161,9 +161,13 @@ export default function Billing(){
 			<div>
 				<FormControlLabel
 					value="other"
+					id="radio"
 					control={<Radio />}
 					label="Direct Bank Transfer"
 					sx={{ color: "#9F9F9F" }}
+					// {...register("radio", {
+					// 	required
+					// })}
 				/>
 			</div>
 
@@ -201,7 +205,7 @@ export default function Billing(){
 						border: "1px solid black",
 					}}
 				>
-					Place holder
+					Place Order
 				</Button>
 			</Stack>
 

@@ -6,6 +6,8 @@ import { Grid } from "@mui/material"
 import classes from "./checkout.module.css"
 
 export default function CheckoutSection() {
+
+	
 	return (
 		<Grid
 			container
@@ -18,7 +20,7 @@ export default function CheckoutSection() {
 			</Grid>
 
 			<Grid item xs={12} sm={12} md={6} lg={6}>
-		<Billing />
+		<Billing  />
 			</Grid>
 		</Grid>
 	)
