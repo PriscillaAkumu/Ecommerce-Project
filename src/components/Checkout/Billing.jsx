@@ -5,14 +5,19 @@ import Elipse2 from "../../assets/contact/Ellipse 1.png"
 import { Stack, Button, Typography, Box } from "@mui/material"
 import Radio from "@mui/material/Radio"
 import FormControlLabel from "@mui/material/FormControlLabel"
+import { useForm } from "react-hook-form"
 
-export default function Billing() {
+export default function Billing(){
+	// const form = useForm()
+	// const { register, control, formState } = form
+
 	return (
 		<Box>
+			<form>
 			<div
-				className="item"
 				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
 			>
+
 				<Typography
 					sx={{
 						fontSize: "24px",
@@ -199,6 +204,8 @@ export default function Billing() {
 					Place holder
 				</Button>
 			</Stack>
+
+			</form>
 		</Box>
 	)
 }
