@@ -5,7 +5,8 @@ import Elipse2 from "../../assets/contact/Ellipse 1.png"
 import { Stack, Button, Typography, Box } from "@mui/material"
 import Radio from "@mui/material/Radio"
 import FormControlLabel from "@mui/material/FormControlLabel"
-// import { useForm } from "react-hook-form"
+// import { useForm } from "react-hook-form";
+// import AlertDialogSlide from "../Modals/Modal";
 
 
 export default function Billing(){
@@ -15,7 +16,7 @@ export default function Billing(){
 		<Box>
 			<form >
 			<div
-				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
+				style={{ display: "flex", gap: "40px", marginBottom: "20px"}}
 			>
 
 				<Typography
@@ -23,6 +24,7 @@ export default function Billing(){
 						fontSize: "24px",
 						fontWeight: "500",
 						lineHeight: "36px",
+						flex:"1"
 					}}
 				>
 					Product
@@ -32,6 +34,7 @@ export default function Billing(){
 						fontSize: " 24px",
 						fontWeight: "500",
 						lineHeight: "36px",
+						flex:"1"
 					}}
 				>
 					Subtotal
@@ -41,11 +44,12 @@ export default function Billing(){
 				className="item"
 				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
 			>
-				<p>
+				<p style={{flex:"1"}}>
 					{" "}
 					<span
 						style={{
 							color: "#9F9F9F",
+							
 						}}
 					>
 						Asgaard{" "}
@@ -53,7 +57,7 @@ export default function Billing(){
 					x 1
 				</p>
 				<Typography
-					sx={{ fontWeight: "300", FontSize: "16px", lineHeight: "24px" }}
+					sx={{ fontWeight: "300", FontSize: "16px", lineHeight: "24px",flex:"1" }}
 				>
 					Rs. 250,000.00
 				</Typography>
@@ -66,13 +70,14 @@ export default function Billing(){
 					sx={{
 						fontSize: "16px",
 						fontWeight: "400",
+						flex:"1",
 						lineHeight: "24px",
 					}}
 				>
 					Subtotal
 				</Typography>
 				<Typography
-					sx={{ fontWeight: "300", fontSize: "16px", lineHeight: "24px" }}
+					sx={{ fontWeight: "300", fontSize: "16px", lineHeight: "24px",flex:"1" }}
 				>
 					Rs. 250,000.00
 				</Typography>
@@ -86,6 +91,7 @@ export default function Billing(){
 						fontSize: "16px",
 						fontWeight: "400",
 						lineHeight: "24px",
+						flex:"1"
 					}}
 				>
 					Total
@@ -96,13 +102,14 @@ export default function Billing(){
 						fontSize: "24px",
 						fontWeight: "700",
 						lineHeight: "36px",
+						flex:"1"
 						// textAlign:"left"
 					}}
 				>
 					Rs. 250,000.00
 				</Typography>
 			</div>
-			<Divider />
+			<Divider variant="middle"  />
 
 			<div style={{ marginTop: "20px" }}>
 				<div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>
@@ -112,6 +119,7 @@ export default function Billing(){
 						style={{
 							width: "12px",
 							height: "12px",
+			
 						}}
 					/>
 					<Typography
@@ -195,7 +203,7 @@ export default function Billing(){
 				}}
 			>
 				<Button
-					// size="large"
+					size="large"
 					type="submit"
 					sx={{
 						color: "black",

@@ -39,42 +39,49 @@ export default function ContactForm() {
 			<Box>
 				<form onSubmit={handleSubmit(onSubmit)} noValidate>
 					<Stack
-						direction="column"
-						sx={{ display: "flex", flexDirection: "column" }}
+						direction="row"
+						spacing={2}
 					>
-						<Typography mb={2}>First name</Typography>
-						<TextField
-							size="small"
-							mb={2}
-							type="text"
-							id="first name"
-							{...register("firstname", {
-								required: {
-									value: /^[a-zA-Z]+$/,
-									message: "Enter your First name",
-								},
-							})}
-						/>
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.firstname?.message}
-						</Typography>
+						<div  style={{flex:1}}>
+							<Typography mb={2}>First name</Typography>
+							<TextField
+								size="small"
+								sx={{width:"100%"}}
+								mb={2}
+								type="text"
+								id="first name"
+								{...register("firstname", {
+									required: {
+										value: /^[a-zA-Z]+$/,
+										message: "Enter your First name",
+									},
+								})}
+							/>
 
-						<Typography mb={2}>Second name</Typography>
-						<TextField
-							size="small"
-							mb={2}
-							type="text"
-							id="secondname"
-							{...register("secondname", {
-								required: {
-									value: /^[a-zA-Z]+$/,
-									message: "Enter your second name",
-								},
-							})}
-						/>
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.secondname?.message}
-						</Typography>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.firstname?.message}
+							</Typography>
+						</div>
+
+						<div style={{ flex: 1 }}>
+							<Typography mb={2}>Last name</Typography>
+							<TextField
+								sx={{ width: "100%" }}
+								size="small"
+								mb={2}
+								type="text"
+								id="lastname"
+								{...register("lastname", {
+									required: {
+										value: /^[a-zA-Z]+$/,
+										message: "Enter your last name",
+									},
+								})}
+							/>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.lastname?.message}
+							</Typography>
+						</div>
 					</Stack>
 
 					<Stack>
@@ -87,37 +94,28 @@ export default function ContactForm() {
 							// placeholder="Abc@def.com"
 							{...register(
 								"company"
-								// required: {
-								// 	value:
-								// 		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/,
-								// 	message: "Enter your Email Address",
-								// },
 							)}
 						/>
-						{/* <Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-								{errors.email?.message}
-							</Typography> */}
+						
 					</Stack>
 
 					<Stack>
 						<Typography mb={2}>Country / Region </Typography>
-
-						{/* <InputLabel  mb={2}>Country /Region </InputLabel> */}
 						<Select
 							size="small"
 							id="country"
 							mb={2}
 							name="country"
 							{...register("country", {
-								required: "Select a country"
-									
-								
+								required: "Select a country",
 							})}
 						>
 							{/* <MenuItem value="_none" selected>
 								-None-
 							</MenuItem> */}
-							<MenuItem value="italy" selected>Italy</MenuItem>
+							<MenuItem value="italy" selected>
+								Italy
+							</MenuItem>
 							<MenuItem value="sri lanka">Sri Lanka</MenuItem>
 							<MenuItem value="germany">Germany</MenuItem>
 							<MenuItem value="uganda">Uganda</MenuItem>
@@ -126,7 +124,7 @@ export default function ContactForm() {
 						</Select>
 
 						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-{/* {errors.country && <span style={{color:"red"}}>{errors.country.message}</span>} */}
+							{/* {errors.country && <span style={{color:"red"}}>{errors.country.message}</span>} */}
 							{errors.country?.message}
 						</Typography>
 					</Stack>
@@ -138,13 +136,9 @@ export default function ContactForm() {
 							mb={2}
 							type="text"
 							id="street"
-							// placeholder="This is optional"
+							placeholder="This is optional"
 							{...register("street")}
 						/>
-
-						{/* <Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-								{errors.email?.message}
-							</Typography> */}
 					</Stack>
 
 					<Stack>
@@ -161,8 +155,6 @@ export default function ContactForm() {
 
 					<Stack>
 						<Typography mb={2}>Province</Typography>
-
-						{/* <InputLabel  mb={2}>Country /Region </InputLabel> */}
 						<Select
 							size="small"
 							id="province"
@@ -170,15 +162,10 @@ export default function ContactForm() {
 							name="province"
 							{...register("province", {
 								required: {
-									// 	value:
-									// 		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/,
 									message: "Select a pronvince",
 								},
 							})}
 						>
-							{/* <MenuItem  value="_none" selected>
-                    -None-
-                  </MenuItem> */}
 							<MenuItem value="western province" selected>
 								Western Province{" "}
 							</MenuItem>
@@ -203,9 +190,6 @@ export default function ContactForm() {
 							// placeholder="This is optional"
 							{...register("zipCode")}
 						/>
-						{/* <Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-								{errors.email?.message}
-							</Typography> */}
 					</Stack>
 
 					<Stack>
@@ -215,7 +199,6 @@ export default function ContactForm() {
 							mb={2}
 							type="number"
 							id="phone"
-							// placeholder="This is optional"
 							{...register("phone", {
 								required: "Contact is required",
 								minLength: {
@@ -240,9 +223,8 @@ export default function ContactForm() {
 							mb={2}
 							type="email"
 							id="email"
-							// placeholder="This is optional"
 							{...register("email", {
-								required: {
+								pattern: {
 									value:
 										/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/,
 									message: "Enter your Email Address",
@@ -275,16 +257,15 @@ export default function ContactForm() {
 						</Typography>
 					</Stack>
 
-					{/* <Stack direction="row">
+					<Stack direction="row">
 						<Button
 							size="large"
 							type="submit"
 							sx={{ color: "black", border: "1px solid black" }}
 						>
-						>
 							Submit
 						</Button>
-					</Stack> */}
+					</Stack>
 				</form>
 				<DevTool control={control} />
 			</Box>
