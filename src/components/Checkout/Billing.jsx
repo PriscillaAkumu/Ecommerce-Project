@@ -5,12 +5,21 @@ import Elipse2 from "../../assets/contact/Ellipse 1.png"
 import { Stack, Button, Typography, Box } from "@mui/material"
 import Radio from "@mui/material/Radio"
 import FormControlLabel from "@mui/material/FormControlLabel"
-// import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools"
 // import AlertDialogSlide from "../Modals/Modal";
 
 
 export default function Billing(){
 
+	// const form = useForm()
+
+	// const { register, control, handleSubmit, formState } = form
+
+	// // handling form submission
+	// const onSubmit = (data) => {
+	// 	console.log("form submited", data)
+	// }
 
 	return (
 		<Box>

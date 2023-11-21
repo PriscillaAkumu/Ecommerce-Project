@@ -17,7 +17,7 @@ import {
 	Box,
 } from "@mui/material"
 
-export default function ContactForm() {
+export default function CheckoutForm() {
 	const form = useForm()
 
 	const { register, control, handleSubmit, formState } = form
@@ -49,7 +49,7 @@ export default function ContactForm() {
 								sx={{width:"100%"}}
 								mb={2}
 								type="text"
-								id="first name"
+								id="firstname"
 								{...register("firstname", {
 									required: {
 										value: /^[a-zA-Z]+$/,
@@ -257,7 +257,7 @@ export default function ContactForm() {
 						</Typography>
 					</Stack>
 
-					<Stack direction="row">
+					{/* <Stack direction="row">
 						<Button
 							size="large"
 							type="submit"
@@ -265,7 +265,7 @@ export default function ContactForm() {
 						>
 							Submit
 						</Button>
-					</Stack>
+					</Stack> */}
 				</form>
 				<DevTool control={control} />
 			</Box>
