@@ -12,15 +12,12 @@ const Footer = () => {
         <div>
           <h6>Links</h6>
           <nav>
-            <li>Home</li>
-            <li>shop</li>
-            <li>About</li>
-            <li>Contact</li>
+          
 
-            {/* <Link to="/">Home</Link>
+             <Link to="/">Home</Link>
                         <Link to="/shop">Shop</Link>
                         <Link to="/about">About</Link>
-                        <Link to="/contact">Contact</Link> */}
+               <Link to="/contact">Contact</Link> 
           </nav>
         </div>
         <div>
