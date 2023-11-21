@@ -25,7 +25,9 @@ import {
 import Billing from "./Billing"
 
 export default function CheckoutSection() {
-	const form = useForm()
+	const form = useForm({
+		mode:"all"
+	})
 
 	const { register, control, handleSubmit, formState } = form
 
@@ -109,9 +111,7 @@ export default function CheckoutSection() {
 								mb={2}
 								name="country"
 								{...register("country", {
-									required: {
-										message:"Select a country"
-									}
+									required: "Select a country"
 								})}
 							>
 								<MenuItem value="italy" selected>
@@ -161,9 +161,8 @@ export default function CheckoutSection() {
 								mb={2}
 								name="provincearea"
 								{...register("provincearea", {
-									required: {
-										message: "Select a province",
-									},
+									required: "Select a province",
+							
 								})}
 							>
 								<MenuItem value="western province" selected>
