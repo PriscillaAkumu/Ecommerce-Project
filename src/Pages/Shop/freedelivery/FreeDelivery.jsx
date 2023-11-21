@@ -1,4 +1,5 @@
-import ContainerStyle from "./ContainerStyle";
+import ContainerStyle from "../ContainerStyle";
+
 const FreeDelivery = () => {
   return (
     <>

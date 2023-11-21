@@ -1,6 +1,6 @@
 import "./Shop.css";
-import Filter from "./Filter";
-import ShopList from "./ShopList";
+import Filter from "./filter/Filter";
+import ShopList from "./shoplist/ShopList";
 const Shop = () => {
   return (
     <>

@@ -145,4 +145,7 @@
     margin-bottom: 20px;
     width: 60%;
   }
+  .filter-inner {
+    flex-direction: column;
+  }
 }

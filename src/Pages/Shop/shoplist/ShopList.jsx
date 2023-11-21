@@ -1,8 +1,8 @@
-import ContainerStyle from "./ContainerStyle";
-import Pagination from "./Pagination";
+import ContainerStyle from "../ContainerStyle";
+import Pagination from "../pagination/Pagination";
 import productData from "/src/productData";
-import ProductCard from "./ProductCard";
-import FreeDelivery from "./FreeDelivery";
+import ProductCard from "../productcard/ProductCard";
+import FreeDelivery from "../freedelivery/FreeDelivery";
 const ShopList = () => {
   return (
     <>

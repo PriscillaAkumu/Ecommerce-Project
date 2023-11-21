@@ -1,7 +1,7 @@
 import TuneIcon from "@mui/icons-material/Tune";
 import ViewDayIcon from "@mui/icons-material/ViewDay";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import ContainerStyle from "./ContainerStyle";
+import ContainerStyle from "../ContainerStyle";
 import WindowIcon from "@mui/icons-material/Window";
 const Filter = () => {
   return (
