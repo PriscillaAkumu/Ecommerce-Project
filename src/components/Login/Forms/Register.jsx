@@ -14,6 +14,7 @@ export default function LoginForm() {
 
 	// handling form submission
 	const onSubmit = (data) => {
+		e.preventDefault();
 		// console.log("form submited", data)
 	}
 	// handling errors

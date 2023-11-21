@@ -30,6 +30,7 @@ export default function LoginForm() {
 
 	// handling form submission
 	const onSubmit = (data) => {
+		e.preventDefault();
 		authenticate(data)
 
 		// console.log("form submited", data)

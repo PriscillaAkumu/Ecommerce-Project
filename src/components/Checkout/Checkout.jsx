@@ -4,10 +4,11 @@ import CheckoutForm from './Form';
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import Elipse from "../../assets/contact/Ellipse 2.png"
-import Radio from "@mui/material/Radio"
+
+
 import {
-  TextField,
-  Typography,
+  TextField, RadioGroup,Radio,
+  Typography,FormControl, 
   Grid,
   Button,
   Stack,
@@ -26,6 +27,7 @@ export default function CheckoutSection() {
 
   // handling form submission
   const onSubmit = (data) => {
+	e.preventDefault();
     console.log("form submitted", data);
     // Handle the submission logic for both forms here
   };
@@ -397,27 +399,37 @@ export default function CheckoutSection() {
 				</Typography>
 				</div>
 
-			<div>
-				<FormControlLabel
-					value="other"
-					id="radio"
-					control={<Radio />}
-					label="Direct Bank Transfer"
-					sx={{ color: "#9F9F9F" }}
-					// {...register("radio", {
-					// 	required
-					// })}
-				/>
+			<div >
+		<FormControl>
+		<RadioGroup
+		aria-labelledby="payment-mode-group-label"
+		sx={{ color: "#9F9F9F" }}
+		// id="radiobtn"
+		mb={2}
+		name="radiobtn"
+		{...register("radiobtn", {
+			required: "Select a payment mode",
+		})}
+
+      >
+
+        <FormControlLabel value="directBankTransfer" control={<Radio />} label="Direct Bank Transfer" />
+       <FormControlLabel value="cash" control={<Radio />} label="Cash on Delivery"/>
+
+      </RadioGroup>
+	  <Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+							{errors.radiobtn?.message}
+						</Typography>
+
+			</FormControl>  
+     
+  
+	  
+		
 			</div> 
 
-			 <div>
-				<FormControlLabel
-					value="other"
-					control={<Radio />}
-					label="Cash On Delivery"
-					sx={{ color: "#9F9F9F" }}
-				/>
-			</div> 
+
+		
 			<div>
 			 <Typography variant="body-2">
 				Your personal data will be used to support your experience <br />

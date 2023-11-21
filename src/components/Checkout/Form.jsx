@@ -24,6 +24,7 @@ export default function CheckoutForm() {
 
 	// handling form submission
 	const onSubmit = (data) => {
+		e.preventDefault();
 		console.log("form submited", data)
 	}
 

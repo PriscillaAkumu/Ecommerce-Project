@@ -163,14 +163,7 @@ footer {
     list-style: none;
   }
   
-  // forms
-  // AuthLogin
-  // .form-container{
-  // display: 'flex',
-  // padding:"63px 100px",
-  // alignItems:"center",
-  // justifyContent: 'center'
-  // }
+ 
 
 
 
