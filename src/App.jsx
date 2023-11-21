@@ -22,7 +22,7 @@ function App() {
       maxWidth="xl"
       elevation={0}
       disableGutters={true}
-      sx={{ background: "primary.dark" }}
+    sx={{border:'1px solid red', margin:'0 auto',}}
     >
     
       <Router>

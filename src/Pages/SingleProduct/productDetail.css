@@ -1,5 +1,6 @@
 .grid-container {
   border-bottom: 1px solid #9F9F9F;
+  
 
 }
 
@@ -31,7 +32,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
   z-index: 2000; /* Ensure the overlay is above other elements */
 }
@@ -144,12 +144,13 @@
 @media screen and (min-width:320px) and (max-width: 420px) {
   .quantity {
     padding: 17px 0;
+   width:100px;
   }
 
 
   .add {
     padding: 15px 20px;
-    font-size: clamp(1rem, 0.7151rem + 0.5944vw, 1.25rem);
+    font-size: 14px;
   }
 
 

@@ -112,7 +112,7 @@ const ProductDetails = () => {
    
          < >
         
-         <Grid item xs={12} sx={{marginTop:'100px', padding: '0px 40px' }}>
+         <Grid item xs={12} sx={{marginTop:'40px', padding: '0px 40px' }}>
            <ProductBreadcrumb product={product} />
          </Grid>
          <Grid className='grid-container' container wrap='nowrap' direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{

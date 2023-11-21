@@ -15,6 +15,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 import DrawerComp from "./DrawerComp";
+import CssBaseline from '@mui/material/CssBaseline';
 
 
 
@@ -41,9 +42,10 @@ const Navbar = () => {
 
   return (
 
-    <Box sx={{ position: 'relative', zIndex: 999}}>
-    <AppBar  sx={{ background: '#fff', postion:'fixed', }}>
-      <Toolbar>
+<React.Fragment>
+<CssBaseline />
+<AppBar position="static"  sx={{ background: '#fff', }}>
+      <Toolbar disableGutters='true' >
 
         {isMatch ? (
           <>
@@ -109,7 +111,9 @@ const Navbar = () => {
         )}
       </Toolbar>
     </AppBar>
-    </Box>
+  
+</React.Fragment>
+   
   );
 };
 
