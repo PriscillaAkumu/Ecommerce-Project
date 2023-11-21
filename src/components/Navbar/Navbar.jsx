@@ -41,7 +41,8 @@ const Navbar = () => {
 
   return (
 
-    <AppBar position="sticky" sx={{ background: "#fff", }}>
+    <Box sx={{ position: 'relative', zIndex: 999}}>
+    <AppBar  sx={{ background: '#fff', postion:'fixed', }}>
       <Toolbar>
 
         {isMatch ? (
@@ -75,19 +76,19 @@ const Navbar = () => {
                 <Button href="/" style={menuButton}>
                   Home
                 </Button>
-                <Button href="/Shop" style={menuButton}>
+                <Button href="/shop" style={menuButton}>
                   Shop
                 </Button>
-                <Button href="/Account" style={menuButton}>
-                  Account
+                <Button href="/about" style={menuButton}>
+                  About
                 </Button>
-                <Button href="/Contact" style={menuButton}>
+                <Button href="/contact" style={menuButton}>
                   Contact
                 </Button>
 
               </Box>
               <Box  >
-                <Button >
+                <Button href="/account" >
                   <img src={User} alt='user' />
                 </Button>
                 <Button style={myButton}>
@@ -108,7 +109,7 @@ const Navbar = () => {
         )}
       </Toolbar>
     </AppBar>
-
+    </Box>
   );
 };
 

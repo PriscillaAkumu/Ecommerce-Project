@@ -4,18 +4,26 @@ import Home from "../Pages/Home/Home";
 import Shop from "../Pages/Shop/Shop";
 import Account from '../Pages/Account/Account';
 import Contact from "../Pages/Contact/Contact";
+import Cart from "../Pages/Cart/Cart";
+import CartProvider from '../context/CartContext';
+import SingleProduct from '../Pages/SingleProduct/SingleProduct';
 
 
 const CustomRoute = () => {
   return (
+    <CartProvider>
     <Routes>
       
      <Route path='/' element={<Home/>}/>
-     <Route path='/Shop' element={<Shop/>}/>
-     <Route path='/Account' element={<Account/>}/>
-     <Route path='/Contact' element={<Contact/>}/>
+     <Route path='/shop' element={<Shop/>}/>
+     <Route path='/shop/:id' element={<SingleProduct/>}/>
+     {/* <Route path='/Shop/:id' element={<SingleProduct/>}/> */}
+     <Route path='/account' element={<Account/>}/>
+     <Route path='/contact' element={<Contact/>}/>
+     <Route path='/cart' element={<Cart/>}/>
 
      </Routes>
+     </CartProvider>
   );
 }
 
