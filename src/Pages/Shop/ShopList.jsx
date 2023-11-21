@@ -2,7 +2,7 @@ import ContainerStyle from "./ContainerStyle";
 import Pagination from "./Pagination";
 import productData from "/src/productData";
 import ProductCard from "./ProductCard";
-
+import FreeDelivery from "./FreeDelivery";
 const ShopList = () => {
   return (
     <>
@@ -16,6 +16,7 @@ const ShopList = () => {
         </ContainerStyle>
       </div>
       <Pagination />
+      <FreeDelivery />
     </>
   );
 };
