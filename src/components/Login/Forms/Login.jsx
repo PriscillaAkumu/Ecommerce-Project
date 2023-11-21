@@ -29,8 +29,8 @@ export default function LoginForm() {
 	const { register, control, handleSubmit, formState } = form
 
 	// handling form submission
-	const onSubmit = (data) => {
-		e.preventDefault();
+	const onSubmit = (data, event) => {
+		event.preventDefault();
 		authenticate(data)
 
 		// console.log("form submited", data)

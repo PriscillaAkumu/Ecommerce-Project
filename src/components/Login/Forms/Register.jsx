@@ -13,7 +13,7 @@ export default function LoginForm() {
 	const { register, control, handleSubmit, formState } = form
 
 	// handling form submission
-	const onSubmit = (data) => {
+	const onSubmit = (data , e) => {
 		e.preventDefault();
 		// console.log("form submited", data)
 	}
