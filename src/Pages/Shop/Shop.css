@@ -37,8 +37,8 @@
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Update to 4 columns */
-  gap: 40px; /* Adjust the gap as needed */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   row-gap: 40px;
 }
 .shop-list .shop-list-inner .shop-item {
