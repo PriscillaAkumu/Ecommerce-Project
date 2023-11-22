@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { DevTool } from "@hookform/devtools"
@@ -17,28 +15,19 @@ import {
 	Box,
 } from "@mui/material"
 
-export default function CheckoutForm() {
-	const form = useForm()
+export default function CheckoutForm({ 
+	register,
+    control,
+    handleSubmit,
+    formState,
+}) {
+	  // handling errors
+	  const { errors } = formState
 
-	const { register, control, handleSubmit, formState } = form
-
-	// handling form submission
-	const onSubmit = (data) => {
-		e.preventDefault();
-		console.log("form submited", data)
-	}
-
-	// handling errors
-	const { errors } = formState
-
-	// console.log("working!")
-
-	// to check authenication
 
 	return (
 		<>
 			<Box>
-				<form onSubmit={handleSubmit(onSubmit)} noValidate>
 					<Stack
 						direction="row"
 						spacing={2}
@@ -92,7 +81,6 @@ export default function CheckoutForm() {
 							mb={2}
 							type="text"
 							id="company"
-							// placeholder="Abc@def.com"
 							{...register(
 								"company"
 							)}
@@ -111,9 +99,6 @@ export default function CheckoutForm() {
 								required: "Select a country",
 							})}
 						>
-							{/* <MenuItem value="_none" selected>
-								-None-
-							</MenuItem> */}
 							<MenuItem value="italy" selected>
 								Italy
 							</MenuItem>
@@ -125,9 +110,8 @@ export default function CheckoutForm() {
 						</Select>
 
 						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{/* {errors.country && <span style={{color:"red"}}>{errors.country.message}</span>} */}
-							{errors.country?.message}
-						</Typography>
+								{errors.country?.message}
+							</Typography>
 					</Stack>
 
 					<Stack>
@@ -149,37 +133,34 @@ export default function CheckoutForm() {
 							mb={2}
 							type="text"
 							id="town"
-							// placeholder="This is optional"
 							{...register("town")}
 						/>
 					</Stack>
 
 					<Stack>
-						<Typography mb={2}>Province</Typography>
-						<Select
-							size="small"
-							id="province"
-							mb={2}
-							name="province"
-							{...register("province", {
-								required: {
-									message: "Select a pronvince",
-								},
-							})}
-						>
-							<MenuItem value="western province" selected>
-								Western Province{" "}
-							</MenuItem>
-							<MenuItem value="eastern province">Eastern Province</MenuItem>
-							<MenuItem value="northern province">Northern Province</MenuItem>
-							<MenuItem value="southern province">Southern Province</MenuItem>
-							<MenuItem value="other">Other</MenuItem>
-						</Select>
+							<Typography mb={2}>Province</Typography>
+							<Select
+								size="small"
+								id="provincearea"
+								mb={2}
+								name="provincearea"
+								{...register("provincearea", {
+									required: "Select a province",
+								})}
+							>
+								<MenuItem value="western province" selected>
+									Western Province{" "}
+								</MenuItem>
+								<MenuItem value="eastern province">Eastern Province</MenuItem>
+								<MenuItem value="northern province">Northern Province</MenuItem>
+								<MenuItem value="southern province">Southern Province</MenuItem>
+								<MenuItem value="other">Other</MenuItem>
+							</Select>
 
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.province?.message}
-						</Typography>
-					</Stack>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.provincearea?.message}
+							</Typography>
+						</Stack>
 
 					<Stack>
 						<Typography mb={2}>ZIP code</Typography>
@@ -194,80 +175,69 @@ export default function CheckoutForm() {
 					</Stack>
 
 					<Stack>
-						<Typography mb={2}>Phone</Typography>
-						<TextField
-							size="small"
-							mb={2}
-							type="number"
-							id="phone"
-							{...register("phone", {
-								required: "Contact is required",
-								minLength: {
-									value: 12,
-									message: "contact must be 12 characters long",
-								},
-								maxLength: {
-									value: 12,
-									message: "contact must be 12 characters long",
-								},
-							})}
-						/>
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.phone?.message}
-						</Typography>
-					</Stack>
+							<Typography mb={2}>Phone</Typography>
+							<TextField
+								size="small"
+								mb={2}
+								type="number"
+								id="phone"
+								{...register("phone", {
+									required: "Contact is required",
+									minLength: {
+										value: 12,
+										message: "contact must be 12 characters long",
+									},
+									maxLength: {
+										value: 12,
+										message: "contact must be 12 characters long",
+									},
+								})}
+							/>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.phone?.message}
+							</Typography>
+						</Stack>
 
-					<Stack>
-						<Typography mb={2}>Email address</Typography>
-						<TextField
-							size="small"
-							mb={2}
-							type="email"
-							id="email"
-							{...register("email", {
-								pattern: {
-									value:
-										/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/,
-									message: "Enter your Email Address",
-								},
-							})}
-						/>
+						<Stack>
+							<Typography mb={2}>Email address</Typography>
+							<TextField
+								size="small"
+								mb={2}
+								type="email"
+								id="email"
+								{...register("email", {
+									required: {
+										value:
+											/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/,
+										message: "Enter a valid Email Address",
+									},
+								})}
+							/>
 
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.email?.message}
-						</Typography>
-					</Stack>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.email?.message}
+							</Typography>
+						</Stack>
 
-					<Stack>
-						<br />
-						<TextField
-							mb={2}
-							size="small"
-							type="text"
-							id="message"
-							placeholder="Additional Information"
-							{...register("message", {
-								required: {
-									value: /^[a-zA-Z0-9]+$/,
-									message: "Enter Additional Message",
-								},
-							})}
-						/>
-						<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
-							{errors.message?.message}
-						</Typography>
-					</Stack>
-
-					{/* <Stack direction="row">
-						<Button
-							size="large"
-							type="submit"
-							sx={{ color: "black", border: "1px solid black" }}
-						>
-							Submit
-						</Button>
-					</Stack> */}
-				</form>
+						<Stack>
+							<br />
+							<TextField
+								mb={2}
+								size="small"
+								type="text"
+								id="message"
+								placeholder="Additional Information"
+								{...register("message", {
+									required: {
+										value: /^[a-zA-Z0-9]+$/,
+										message: "Enter Additional Message",
+									},
+								})}
+							/>
+							<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+								{errors.message?.message}
+							</Typography>
+						</Stack>
 				<DevTool control={control} />
 			</Box>
 		</>

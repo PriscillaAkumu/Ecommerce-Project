@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CheckoutSection from "../../components/Checkout/Checkout"
+import CheckoutSection from '../../components/Checkout/Checkout';
 import Banner from '../../components/Banner/Banner';
 // import  MainForm from '../../trial/check';
 
@@ -17,8 +17,7 @@ const Bill = () => {
       breadcrumbItems={breadcrumbItems}
 
       />
- {/* < MainForm /> */}
-
+      
  <CheckoutSection />
     </>
   );

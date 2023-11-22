@@ -1,39 +1,32 @@
+/** @format */
+
 import React from "react"
 import Divider from "@mui/material/Divider"
 import Elipse from "../../assets/contact/Ellipse 2.png"
 import Elipse2 from "../../assets/contact/Ellipse 1.png"
 import { Stack, Button, Typography, Box } from "@mui/material"
-import Radio from "@mui/material/Radio"
-import FormControlLabel from "@mui/material/FormControlLabel"
-import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools"
+
+import classes from "./checkout.module.css"
 // import AlertDialogSlide from "../Modals/Modal";
 
-
-export default function Billing(){
-
-	// const form = useForm()
-
-	// const { register, control, handleSubmit, formState } = form
-
-	// // handling form submission
-	// const onSubmit = (data) => {
-	// 	console.log("form submited", data)
-	// }
+export default function Billing({
+	register,
+	control,
+	handleSubmit,
+	formState,
+}) {
+	// handling errors
+	const { errors } = formState
 
 	return (
 		<Box>
-			<form >
-			<div
-				style={{ display: "flex", gap: "40px", marginBottom: "20px"}}
-			>
-
+			<div style={{ display: "flex", gap: "40px", marginBottom: "20px" }}>
 				<Typography
 					sx={{
 						fontSize: "24px",
 						fontWeight: "500",
 						lineHeight: "36px",
-						flex:"1"
+						flex: "1",
 					}}
 				>
 					Product
@@ -43,22 +36,22 @@ export default function Billing(){
 						fontSize: " 24px",
 						fontWeight: "500",
 						lineHeight: "36px",
-						flex:"1"
+						flex: "1",
 					}}
 				>
 					Subtotal
 				</Typography>
 			</div>
+
 			<div
 				className="item"
 				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
 			>
-				<p style={{flex:"1"}}>
+				<p style={{ flex: "1" }}>
 					{" "}
 					<span
 						style={{
 							color: "#9F9F9F",
-							
 						}}
 					>
 						Asgaard{" "}
@@ -66,11 +59,17 @@ export default function Billing(){
 					x 1
 				</p>
 				<Typography
-					sx={{ fontWeight: "300", FontSize: "16px", lineHeight: "24px",flex:"1" }}
+					sx={{
+						fontWeight: "300",
+						FontSize: "16px",
+						lineHeight: "24px",
+						flex: "1",
+					}}
 				>
 					Rs. 250,000.00
 				</Typography>
 			</div>
+
 			<div
 				className="item"
 				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
@@ -79,28 +78,31 @@ export default function Billing(){
 					sx={{
 						fontSize: "16px",
 						fontWeight: "400",
-						flex:"1",
+						flex: "1",
 						lineHeight: "24px",
 					}}
 				>
 					Subtotal
 				</Typography>
 				<Typography
-					sx={{ fontWeight: "300", fontSize: "16px", lineHeight: "24px",flex:"1" }}
+					sx={{
+						fontWeight: "300",
+						fontSize: "16px",
+						lineHeight: "24px",
+						flex: "1",
+					}}
 				>
 					Rs. 250,000.00
 				</Typography>
 			</div>
-			<div
-				className="item"
-				style={{ display: "flex", gap: "40px", marginBottom: "20px" }}
-			>
+
+			<div style={{ display: "flex", gap: "40px", marginBottom: "20px" }}>
 				<Typography
 					sx={{
 						fontSize: "16px",
 						fontWeight: "400",
 						lineHeight: "24px",
-						flex:"1"
+						flex: "1",
 					}}
 				>
 					Total
@@ -111,97 +113,90 @@ export default function Billing(){
 						fontSize: "24px",
 						fontWeight: "700",
 						lineHeight: "36px",
-						flex:"1"
+						flex: "1",
 						// textAlign:"left"
 					}}
 				>
 					Rs. 250,000.00
 				</Typography>
 			</div>
-			<Divider variant="middle"  />
 
-			<div style={{ marginTop: "20px" }}>
-				<div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>
-					<img
-						src={Elipse}
-						alt="logo"
-						style={{
-							width: "12px",
-							height: "12px",
-			
-						}}
-					/>
-					<Typography
-						variant="h4"
-						style={{
-							fontSize: "16px",
-							fontWeight: "400",
-							lineHeight: " 24px",
-						}}
-					>
-						{" "}
-						Direct Bank Transfer
-					</Typography>
-				</div>
+			<Divider variant="middle" />
 
-				<p style={{ color: "#9F9F9F" }}>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					gap: "10px",
+					marginBottom: "10px",
+					marginTop: "20px",
+				}}
+			>
+				<img
+					src={Elipse}
+					alt="logo"
+					style={{
+						width: "18px",
+						height: "18px",
+					}}
+				/>
+				<Typography
+					variant="h4"
+					style={{
+						fontSize: "16px",
+						fontWeight: "400",
+						lineHeight: "24px",
+					}}
+				>
+					Direct Bank Transfer
+				</Typography>
+			</div>
+
+			<div style={{ color: "#9F9F9F" }}>
+				<Typography variant="body-2">
 					{" "}
 					Make your payment directly into our bank account. Please use <br />
 					your Order ID as payment reference. Your order will not be <br />
 					shipped until the funds have cleared in our account.
-				</p>
+				</Typography>
 			</div>
-
-			{/* <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
-				<img
-					src={Elipse2}
-					alt="logo"
-					style={{
-						width: "14px",
-						height: "14px",
-					}}
-				/>
-				<div>
-					<h1
-						style={{
-							// fontSize: "24px",
-							// fontWeight: "500",
-							// lineHeight: " 36px",
-							color: "#9F9F9F",
-						}}
-					>
-						{" "}
-						Direct Bank Transfer
-					</h1>
-				</div>
-			</div> */}
 			<div>
-				<FormControlLabel
-					value="other"
-					id="radio"
-					control={<Radio />}
-					label="Direct Bank Transfer"
-					sx={{ color: "#9F9F9F" }}
-					// {...register("radio", {
-					// 	required
-					// })}
+				<input
+					{...register("paymentMode", {
+						required: "Select a payment mode",
+					})}
+					type="radio"
+					name="paymentMode"
+					value="direct-bank-transfer"
+					id="field-radio"
+					className={classes.input}
 				/>
+				Direct Bank Transfer
+				<br />
+				{/* <label htmlFor="field-sun"> */}
+				<input
+					{...register("paymentMode", {
+						required: "Select a payment mode",
+					})}
+					type="radio"
+					name="paymentMode"
+					value="cashondelivery"
+					id="field-radio"
+				/>
+				Cash On Delivery
+				<br />
+				<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
+					{errors.paymentMode?.message}
+				</Typography>
 			</div>
 
 			<div>
-				<FormControlLabel
-					value="other"
-					control={<Radio />}
-					label="Cash On Delivery"
-					sx={{ color: "#9F9F9F" }}
-				/>
+				<Typography variant="body-2">
+					Your personal data will be used to support your experience <br />
+					throughout this website, to manage access to your account and for
+					other purposes described in our <b>privacy policy.</b>
+				</Typography>
 			</div>
-
-			<p>
-				Your personal data will be used to support your experience <br />
-				throughout this website, to manage access to your account and for other
-				purposes described in our <b>privacy policy.</b>
-			</p>
 
 			<Stack
 				direction="row"
@@ -212,7 +207,6 @@ export default function Billing(){
 				}}
 			>
 				<Button
-					size="large"
 					type="submit"
 					sx={{
 						color: "black",
@@ -225,8 +219,6 @@ export default function Billing(){
 					Place Order
 				</Button>
 			</Stack>
-
-			</form>
 		</Box>
 	)
 }
