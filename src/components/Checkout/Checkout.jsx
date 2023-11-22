@@ -6,7 +6,7 @@ import Billing from "./Billing"
 import classes from "./checkout.module.css"
 
 export default function CheckoutSection() {
-    const form = useForm()
+    const form = useForm({mode:"all"})
     const { handleSubmit } = form
 
     const onSubmit = (data, event) => {
