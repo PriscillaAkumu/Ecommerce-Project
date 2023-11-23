@@ -1,8 +1,8 @@
 .hero {
   background: #fbebb5;
-  width: 100vw;
-  max-width: 1440px;
-  width: 100%;
+
+  /* max-width: 1440px;
+  width: 100%; */
   padding: 100px 0;
   overflow: hidden;
 }

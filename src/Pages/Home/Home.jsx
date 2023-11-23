@@ -5,9 +5,11 @@ import TopPicks from "./TopPicks";
 import NewArrival from "./NewArrival";
 import OurBlogs from "./OurBlogs";
 import OurInstagram from "./OurInstagram";
+import Navbar from './AppBar';
 const Home = () => {
   return (
     <>
+    <Navbar/>
       <Hero />
       <FeatProducts />
       <TopPicks />
