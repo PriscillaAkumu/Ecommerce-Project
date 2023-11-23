@@ -1,5 +1,6 @@
 import "./Home.css";
-import Asgaard_sofa from "./img/Asgaard_sofa.png";
+
+import Asgaard_sofa from "/src/assets/img/Asgaard_sofa.png";
 import ContainerStyle from "./ContainerStyle";
 import SecondaryBtn from "./SecondaryBtn";
 const NewArrival = () => {

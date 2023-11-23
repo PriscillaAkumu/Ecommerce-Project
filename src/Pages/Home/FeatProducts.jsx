@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import ContainerStyle from "./ContainerStyle";
 import MainButton from "./ButtonStyle";
-import side_table1 from "./img/Granite_square.png";
-import side_table2 from "./img/Cloud_sofa.png";
+import side_table1 from "/src/assets/img//Granite_square.png";
+import side_table2 from "/src/assets/img/Cloud_sofa.png";
 
 const FeatProducts = () => {
   return (

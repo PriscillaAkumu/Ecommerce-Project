@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import heroImg from "./img/heroimg.png";
+import heroImg from "/src/assets/img/heroimg.png";
 import ContainerStyle from "./ContainerStyle";
 
 const MainButton = styled.button`

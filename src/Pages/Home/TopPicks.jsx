@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import MainButton from "./ButtonStyle";
 import ContainerStyle from "./ContainerStyle";
-import Trenton_modular_sofa from "./img/Trenton_modular_sofa_.png";
-import granite_dining_table from "./img/granite_dining_table.png";
-import Outdoor_bar from "./img/Outdoor_bar.png";
-import Place_console from "./img/plain_console.png";
+
+import Trenton_modular_sofa from "/src/assets/img/Trenton_modular_sofa_.png";
+import granite_dining_table from "/src/assets/img/granite_dining_table.png";
+import Outdoor_bar from "/src/assets/img/Outdoor_bar.png";
+import Place_console from "/src/assets/img/plain_console.png";
 const TopPicks = () => {
   return (
     <>
