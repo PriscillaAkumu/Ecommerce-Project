@@ -1,7 +1,7 @@
-.info-section {
+.payment-section {
   background-color: #faf4f4;
 }
-.info-section .content {
+.payment-section .payment-content {
   max-width: 1440px;
   width: 100%;
   padding: 96px clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
@@ -11,23 +11,23 @@
   gap: 45px;
 }
 @media screen and (max-width: 770px) {
-  .info-section .content {
+  .payment-section .payment-content {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
 }
-.info-section .container {
+/* .info-section .container {
   width: 376px;
-}
-.info-section h4 {
+} */
+.payment-section .heading-text {
   font-size: clamp(1.5rem, 1.234rem + 0.8511vw, 2rem);
   font-weight: 500;
   line-height: clamp(2rem, 1.4681rem + 1.7021vw, 3rem);
 }
-.info-section p {
+.payment-section .paragraph-text {
   font-size: clamp(1rem, 0.867rem + 0.4255vw, 1.25rem);
   font-weight: 400;
   line-height: clamp(1.5rem, 1.3005rem + 0.6383vw, 1.875rem);
   color: #9f9f9f;
-} /*# sourceMappingURL=infoSection.css.map */
+} 

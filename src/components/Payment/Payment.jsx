@@ -1,53 +1,38 @@
 import React from 'react';
 import './Payment.css';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Box } from '@mui/material';
 
 export default function PaymentPlan() {
   return (
-    <div className='info-section'>
-      <div className='content'>
+    <Box className='payment-section'>
+      <Box className='payment-content'>
         <Grid item sx={{ width: '376px' }}>
-          <Typography variant='h4'>Free Delivery</Typography>
-          <Typography
-            sx={{
-              fontSize: 'clamp(1rem, 0.867rem + 0.4255vw, 1.25rem)',
-              fontWeight: '400',
-              lineHeight: 'clamp(1.5rem, 1.3005rem + 0.6383vw, 1.875rem)',
-              color: '#9F9F9F',
-            }}
-          >
+          <Typography variant='h4' className='heading-text'>
+            Free Delivery
+          </Typography>
+          <Typography className='paragraph-text'>
             {' '}
             For all oders over $50, consectetur adipim scing elit.
           </Typography>
         </Grid>
         <Grid item sx={{ width: '376px' }}>
-          <Typography variant='h4'>90 Days Return</Typography>
-          <Typography
-            sx={{
-              fontSize: 'clamp(1rem, 0.867rem + 0.4255vw, 1.25rem)',
-              fontWeight: '400',
-              lineHeight: 'clamp(1.5rem, 1.3005rem + 0.6383vw, 1.875rem)',
-              color: '#9F9F9F',
-            }}
-          >
+          <Typography variant='h4' className='heading-text'>
+            90 Days Return
+          </Typography>
+          <Typography className='paragraph-text'>
             {' '}
             If goods have problems, consectetur adipim scing elit.{' '}
           </Typography>
         </Grid>
         <Grid item sx={{ width: '376px' }}>
-          <Typography variant='h4'>Secure Payment</Typography>
-          <Typography
-            sx={{
-              fontSize: 'clamp(1rem, 0.867rem + 0.4255vw, 1.25rem)',
-              fontWeight: '400',
-              lineHeight: 'clamp(1.5rem, 1.3005rem + 0.6383vw, 1.875rem)',
-              color: '#9F9F9F',
-            }}
-          >
+          <Typography variant='h4' className='heading-text'>
+            Secure Payment
+          </Typography>
+          <Typography className='paragraph-text'>
             100% secure payment, consectetur adipim scing elit.
           </Typography>
         </Grid>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
