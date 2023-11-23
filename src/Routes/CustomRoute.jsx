@@ -11,7 +11,7 @@ const CustomRoute = () => {
     <Routes>
       
      <Route path='/' element={<Home/>}/>
-     <Route path='/Shop' element={<Shop/>}/>
+     <Route path='/shop' element={<Shop/>}/>
      <Route path='/Account' element={<Account/>}/>
      <Route path='/Contact' element={<Contact/>}/>
 
