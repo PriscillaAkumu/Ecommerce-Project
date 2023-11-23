@@ -7,7 +7,22 @@ import { useAuth } from '../../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 // mui
 import { TextField, Typography, Grid, Checkbox, Button, Stack, Box } from '@mui/material';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import ModalWithConfirmation from '../../Modals/Modal';
+
+// const StyledButton =styled(Button)({
+//   color: 'black',
+//     width: '318px',
+//     height: '64px',
+//     borderRadius: '15px',
+//     border: '1px solid black',
+// })
+// const styles = {
+//   color: 'black',
+//       width: '318px',
+//       height: '64px',
+//       borderRadius: '15px',
+//       border: '1px solid black',
+// }
 
 export default function LoginForm() {
   // state for authenication

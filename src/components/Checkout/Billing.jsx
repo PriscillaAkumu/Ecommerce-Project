@@ -1,13 +1,19 @@
-/** @format */
-
 import React from 'react';
 import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
-import Elipse2 from '../../assets/contact/Ellipse 1.png';
-import { Stack, Button, Typography, Box } from '@mui/material';
+import ModalButton from '../Modals/Modal';
+import { Stack, Button, Typography, Box, styled } from '@mui/material';
 
 import classes from './checkout.module.css';
 // import AlertDialogSlide from "../Modals/Modal";
+
+// const StyledButton =styled(Button)({
+//   color: 'black',
+//     width: '318px',
+//     height: '64px',
+//     borderRadius: '15px',
+//     border: '1px solid black',
+// })
 
 export default function Billing({ register, control, handleSubmit, formState }) {
   // handling errors
@@ -103,7 +109,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             fontWeight: '700',
             lineHeight: '36px',
             flex: '1',
-            // textAlign:"left"
           }}
         >
           Rs. 250,000.00
@@ -195,6 +200,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           marginTop: '20px',
         }}
       >
+        {/* < ModalButton
+        type={"Place Order"} 
+        /> */}
         <Button
           type='submit'
           sx={{

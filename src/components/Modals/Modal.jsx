@@ -1,51 +1,65 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Slide from '@mui/material/Slide';
+import React, { useState } from 'react';
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Typography,
+} from '@mui/material';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='up' ref={ref} {...props} />;
-});
+// const StyledButton =styled(Button)({
+//   color: 'black',
+//     width: '318px',
+//     height: '64px',
+//     borderRadius: '15px',
+//     border: '1px solid black',
+// })
 
-export default function AlertDialogSlide() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
+const Modal = ({ open, handleClose, type, handleSubmit }) => {
+  return (
+    <Dialog open={open} onClose={handleClose}>
+      <DialogTitle>Confirmation</DialogTitle>
+      <DialogContent>
+        <Typography>
+          Are you sure you want to
+          {` ${type ? type : ''}`}?
+        </Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose} color='primary'>
+          No
+        </Button>
+        <Button
+          // onClick={handleSubmit}
+          handleSubmit={handleSubmit}
+          sx={{ color: 'blue' }}
+        >
+          Yes
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
+const ModalWithConfirmation = ({ handleSubmit, node, type, register, control, formState }) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
-
+  // const handleYes = () => {
+  //   // Handle 'Yes' action
+  //   console.log('User clicked Yes');
+  //   setOpen(false); // Close the modal
+  // };
   return (
-    <React.Fragment>
-      <Button variant='outlined' onClick={handleClickOpen}>
-        Place order
-      </Button>
-      <Dialog
-        open={open}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={handleClose}
-        aria-describedby='alert-dialog-slide-description'
-      >
-        <DialogTitle>{'Are you sure you want to place an order ?'}</DialogTitle>
-        <DialogContent>
-          {/* <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText> */}
-        </DialogContent>
-        <DialogActions sx={{ alignItems: 'center' }}>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose}>Agree</Button>
-        </DialogActions>
-      </Dialog>
-    </React.Fragment>
+    <div>
+      <Button onClick={handleOpen}>{type}</Button>
+
+      <Modal type={type} open={open} handleClose={handleClose} onOk={handleSubmit} />
+    </div>
   );
-}
+};
+export default ModalWithConfirmation;
