@@ -1,8 +1,8 @@
 .hero {
   background: #fbebb5;
   width: 100vw;
-  max-width: 1440px;
-  width: 100%;
+  /* max-width: 1440px; */
+  /* width: 100%; */
   padding: 100px 0;
   overflow: hidden;
 }
@@ -194,7 +194,7 @@
 }
 
 .blog-list .blog-item {
-  width: 33.33%;
+  width: 100%;
 }
 .blog-list .blog-item img {
   width: 100%;
@@ -267,12 +267,14 @@
   margin-top: 18px;
   box-shadow: 1px 6px 5px 3px rgba(0, 0, 0, 0.23);
 }
+
 /* Media Query for screens up to 768px */
 
 @media screen and (max-width: 768px) {
   .hero__inner {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
+    /* background-color: black; */
   }
 
   .hero__inner .hero__text,
@@ -288,7 +290,7 @@
   }
 
   .feat .feat-products {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
   }
 
@@ -299,7 +301,7 @@
   /* Top pick component mobile */
 
   .top-pick .top-pick__inner {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
   }
   .new-arrival {
@@ -318,19 +320,59 @@
   /* Our blog component */
 
   .blog-list {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
     align-items: center;
   }
   .blog-list .blog-item {
-    width: 100%;
+    width: 30%;
   }
   .blog-list .blog-item img {
-    width: 60%;
+    /* width: 60%; */
   }
 }
+
 @media screen and (max-width: 480px) {
+  .hero__inner,
+  .feat .feat-products {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
   .hero__inner .hero__text .hero__text__title {
     font-size: 36px;
+  }
+  .feat .feat-products .feat_product_title,
+  .top-pick__title {
+    font-size: 28px;
+  }
+  .top-pick .top-pick__inner {
+    flex-direction: column;
+  }
+  .top-pick__desc {
+    font-size: 14px;
+  }
+  .top-pick__product .top-pick__product__title,
+  .top-pick__product .top-pick__product__price {
+    font-size: 14px;
+  }
+  .blog-list {
+    flex-direction: column;
+  }
+  .blog-list .blog-item {
+    width: 100%;
+  }
+  .blog-list .blog-item .blog-list-title {
+    font-size: 18px;
+  }
+  .our-instagram .our-instagram-title {
+    font-size: 30px;
+  }
+  .our-instagram .our-instagram-desc {
+    font-size: 16px;
+  }
+  .followbtn {
+    font-size: 14px;
+    padding: 10px 50px;
   }
 }

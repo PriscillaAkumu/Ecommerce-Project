@@ -1,8 +1,8 @@
 import ContainerStyle from "./ContainerStyle";
 import ButtonStyle from "./ButtonStyle";
-import blogimg1 from "./img/blogimg1.png";
-import blogimg2 from "./img/blogimg2.png";
-import blogimg3 from "./img/blogimg3.png";
+import blogimg1 from "/src/assets/img/blogimg1.png";
+import blogimg2 from "/src/assets/img/blogimg2.png";
+import blogimg3 from "/src/assets/img/blogimg3.png";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 
