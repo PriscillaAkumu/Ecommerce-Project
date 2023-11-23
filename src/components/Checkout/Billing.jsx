@@ -121,7 +121,11 @@ export default function Billing({
 				</Typography>
 			</div>
 
-			<Divider variant="middle" />
+
+<Divider variant="middle" />
+
+
+			
 
 			<div
 				style={{
@@ -160,7 +164,7 @@ export default function Billing({
 					shipped until the funds have cleared in our account.
 				</Typography>
 			</div>
-			<div>
+			<div style={{color: "#9F9F9F"}}>
 				<input
 					{...register("paymentMode", {
 						required: "Select a payment mode",
@@ -170,7 +174,7 @@ export default function Billing({
 					value="direct-bank-transfer"
 					id="field-radio"
 					className={classes.input}
-				/>
+				/> { " "} 
 				Direct Bank Transfer
 				<br />
 				{/* <label htmlFor="field-sun"> */}
@@ -182,7 +186,7 @@ export default function Billing({
 					name="paymentMode"
 					value="cashondelivery"
 					id="field-radio"
-				/>
+				/> { " "}
 				Cash On Delivery
 				<br />
 				<Typography variant="body-3" sx={{ color: "red" }} mb={2}>
