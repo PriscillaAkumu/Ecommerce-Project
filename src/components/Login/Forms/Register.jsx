@@ -60,7 +60,23 @@ export default function LoginForm() {
           </Typography>
         </Stack>
 
-        <Button size='large' type='submit' sx={{ color: 'black', border: '1px solid black' }}>
+        <Button
+          size='large'
+          type='submit'
+          sx={{
+            color: 'black',
+            marginTop: '13px',
+            borderRadius: '15px',
+            width: '237px',
+            height: '48px',
+            padding: '12px 89px',
+            fontWeight: '400',
+            fontSize: '16px',
+            lineHeight: '24px',
+            backgroundColor: 'white',
+            border: '1px solid black',
+          }}
+        >
           Register
         </Button>
       </form>
