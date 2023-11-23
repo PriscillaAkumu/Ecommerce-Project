@@ -10,18 +10,26 @@ const Filter = () => {
         <ContainerStyle>
           <div className="filter-inner">
             <div className="filter-col">
-              <TuneIcon />
-              <p className="filter-text">Filter</p>
-              <WindowIcon />
-              <ViewDayIcon />
-              <NavigateNextIcon />
+              <div>
+                <TuneIcon />
+                <p className="filter-text">Filter</p>
+                <WindowIcon />
+                <ViewDayIcon />
+                <NavigateNextIcon />
+              </div>
               <p className="filter-text">Showing 1–16 of 32 results</p>
             </div>
             <div className="filter-col">
-              <p>Show</p>
-              <label htmlFor="">16</label>
-              <p>Sort by</p>
-              <label htmlFor="">Default</label>
+              <div>
+                <div>
+                  <p>Show</p>
+                  <label htmlFor="">16</label>
+                </div>
+                <div>
+                  <p>Sort by</p>
+                  <label htmlFor="">Default</label>
+                </div>
+              </div>
             </div>
           </div>
         </ContainerStyle>
