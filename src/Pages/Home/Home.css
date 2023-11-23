@@ -324,9 +324,9 @@
   .blog-list .blog-item {
     width: 30%;
   }
-  .blog-list .blog-item img {
-    /* width: 60%; */
-  }
+  /* .blog-list .blog-item img {
+    width: 60%;
+  } */
 }
 
 @media screen and (max-width: 480px) {
