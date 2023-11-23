@@ -1,21 +1,26 @@
-import { Box } from '@mui/material';
-
-
+import { Outlet, Route, Routes } from 'react-router-dom';
 import ProductDetails from '../../components/ProductDetails/ProductDetails';
 import ProductDescription from '../../components/ProductDescription/ProductDescription';
 import RelatedProduct from '../../components/RelatedProducts/RelatedProduct';
 import './productDetail.css';
-import Appbar from '../../components/Navbar/Appbar';
 import Navbar from '../../components/Navbar/Navbar';
 import { ThemeProvider } from '@mui/material';
 import theme from '../../Theme';
 const SingleProduct = () => {
+ 
+
   return (
     <>
-      {/* <Appbar/> */}
+    
       <ThemeProvider theme={theme} >
         <Navbar />
-        <ProductDetails />
+      {/* Use Outlet to render nested routes */}
+      <Outlet />
+      {/* Nested routes for SingleProductPage */}
+      <Routes>
+        <Route path="/" element={<ProductDetails />} />
+      </Routes>
+
         <ProductDescription />
         <RelatedProduct />
       </ThemeProvider>

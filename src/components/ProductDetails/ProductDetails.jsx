@@ -1,15 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import productData from '../../Data/productData';
-import './productDetail.css';
+import '../../Pages/SingleProduct/productDetail.css';
 import { CartContext } from '../../context/CartContext';
 import Size from '../Size/Size';
 import Color from '../Color/Color';
 import FooterIcon from '../Icons/FooterIcon';
 import ProductBreadcrumb from '../Breadcrumb/ProductBreadCrumb';
-// import Navbar from '../Navbar/Navbar';
 import CartSidebar from '../CartSidebar/CartSidebar';
-import { Grid, Stack, Box, Typography, Button } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Rating from '../Icons/Rating';
@@ -50,6 +49,7 @@ const imageBig= {
 }
 
 const ProductDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   console.log(id);
   // declare variable for products array
@@ -99,12 +99,17 @@ const ProductDetails = () => {
   // addToCart Context
   const { addToCart } = useContext(CartContext);
   const [addedToCart, setAddedToCart] = useState(false);
+  
   const [isSidebarVisible, setSidebarVisible] = useState(false);
+
   const handleAddToCart = () => {
     addToCart(product, selectedSize, selectedColor, quantity);
     setAddedToCart(true);
     setSidebarVisible(true);
-    console.log('Add to Cart clicked');
+
+    setTimeout(() => {
+      navigate('/cart');
+    }, 60000); 
   };
 
  
@@ -140,7 +145,7 @@ const ProductDetails = () => {
            </Grid>
            <Grid className='grid-item' item xs={12} sm={12} md={6} lg={8} height='680px' sx={{ padding: '5px 20px' }}>
              <Typography variant='h4' color='#000' >{product.name}</Typography>
-             <Typography variant='h6' >RS.{product.price}</Typography>
+             <Typography variant='h5' >RS.{product.price}</Typography>
              <Stack spacing={2} direction='row' marginBottom='20px'>
                <Rating />
                <img src={Line} alt='line' />
@@ -162,13 +167,10 @@ const ProductDetails = () => {
                  <AddIcon onClick={increaseQuantity} />
                </button>
    
-               
-                 <button  className='add'  onClick={handleAddToCart}>
-                  Add To Cart
-                
-                  </button>
               
-   
+               <button  className='add'  onClick={handleAddToCart}>
+                  Add To Cart
+                  </button>
              </Stack>
              <hr className='hr' />
              <FooterIcon />
@@ -178,11 +180,12 @@ const ProductDetails = () => {
          </Grid>
 
          {isSidebarVisible && (
-      <div className="overlay" onClick={() => setSidebarVisible(false)} />
-    )}
-       
-         {isSidebarVisible && <CartSidebar />}
-   
+        <>
+          <div className="overlay" onClick={() => setSidebarVisible(false)} />
+          <CartSidebar />
+        </>
+      )}
+
        </>   
 
   );

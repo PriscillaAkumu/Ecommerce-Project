@@ -11,7 +11,7 @@ const imageStyle = {
     borderRadius: '8px',
     overflow: 'hidden',
     objectFit: 'contain',
-    objectPosition: 'center'
+    objectPosition: 'center',
 
 }
 const ProductDescription = () => {
@@ -34,11 +34,11 @@ const ProductDescription = () => {
                 </Grid>
 
             </Grid>
-            <Grid container spacing={2} sx={{ padding: '10px 40px' }} direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row' }}>
-                <Grid item xs={12} xm={12} md={6} lg={6} >
+            <Grid container spacing={2} wrap='nowrap' direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row' }} sx={{ padding: '10px 40px' }} >
+                <Grid item xs={12} sm={12} md={6} lg={6}  >
                     <img src={CloudSofa1} alt='sofa' style={imageStyle} />
                 </Grid>
-                <Grid item xs={12} xm={12} md={6} lg={6} > 
+                <Grid item xs={12} sm={12} md={6} lg={6} > 
                     <img src={CloudSofa2} alt='sofa' style={imageStyle} />
                 </Grid>
             </Grid>

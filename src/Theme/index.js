@@ -24,10 +24,16 @@ const theme = createTheme ({
       fontWeight: 400,
       marginBottom: "20px",
     },
-    h6: {
+    h5:{
       fontSize: "18px",
       fontWeight: 500,
       marginBottom: "20px",
+    },
+    h6: {
+   
+fontSize: '16px',
+fontWeight: 400,
+
     },
     body: {
       fontSize: "13px",

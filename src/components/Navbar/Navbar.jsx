@@ -45,7 +45,7 @@ const Navbar = () => {
 <React.Fragment>
 <CssBaseline />
 <AppBar position="static"  sx={{ background: '#fff', }}>
-      <Toolbar disableGutters='true' >
+      <Toolbar disableGutters >
 
         {isMatch ? (
           <>
