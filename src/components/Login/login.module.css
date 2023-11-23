@@ -1,13 +1,11 @@
-.container{
-    /* background-color:red; */
-    padding: 63px 100px;
-    /* margin:0 auto; */
-    /* gap:2px; */
-
+.container {
+  /* background-color:red; */
+  padding: 63px 100px;
+  /* margin:0 auto; */
+  /* gap:2px; */
 }
-@media only screen and (min-width:320px) and (max-width:768px){
-
-    .container{
-        padding:20px 20px;
-    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding: 20px 20px;
+  }
 }

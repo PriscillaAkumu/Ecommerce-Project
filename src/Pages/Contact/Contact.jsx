@@ -10,14 +10,10 @@ const Contact = () => {
 
   return (
     <>
-    <Banner
-      pageTitle="Contact"
-      breadcrumbItems={breadcrumbItems}
-
-      />
+      <Banner pageTitle='Contact' breadcrumbItems={breadcrumbItems} />
       <ContactSection />
     </>
   );
-}
+};
 
 export default Contact;

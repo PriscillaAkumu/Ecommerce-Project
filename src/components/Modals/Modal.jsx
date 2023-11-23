@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Slide direction='up' ref={ref} {...props} />;
 });
 
 export default function AlertDialogSlide() {
@@ -24,9 +24,7 @@ export default function AlertDialogSlide() {
 
   return (
     <React.Fragment>
-      <Button  
-variant="outlined"
-      onClick={handleClickOpen}>
+      <Button variant='outlined' onClick={handleClickOpen}>
         Place order
       </Button>
       <Dialog
@@ -34,16 +32,16 @@ variant="outlined"
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
+        aria-describedby='alert-dialog-slide-description'
       >
-        <DialogTitle>{"Are you sure you want to place an order ?"}</DialogTitle>
+        <DialogTitle>{'Are you sure you want to place an order ?'}</DialogTitle>
         <DialogContent>
           {/* <DialogContentText id="alert-dialog-slide-description">
             Let Google help apps determine location. This means sending anonymous
             location data to Google, even when no apps are running.
           </DialogContentText> */}
         </DialogContent>
-        <DialogActions sx={{alignItems:"center"}}>
+        <DialogActions sx={{ alignItems: 'center' }}>
           <Button onClick={handleClose}>Disagree</Button>
           <Button onClick={handleClose}>Agree</Button>
         </DialogActions>

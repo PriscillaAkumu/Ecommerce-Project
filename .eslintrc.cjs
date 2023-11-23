@@ -8,20 +8,12 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:prettier',
     'plugin:material-ui',
-    
-    
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh', 'prettier', 'material-ui'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
-
-
-
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
-}
+};

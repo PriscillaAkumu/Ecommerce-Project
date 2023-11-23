@@ -12,56 +12,11 @@ const Bill = () => {
 
   return (
     <>
-    <Banner
-      pageTitle="Checkout"
-      breadcrumbItems={breadcrumbItems}
+      <Banner pageTitle='Checkout' breadcrumbItems={breadcrumbItems} />
 
-      />
-      
- <CheckoutSection />
+      <CheckoutSection />
     </>
   );
-}
+};
 
 export default Bill;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
