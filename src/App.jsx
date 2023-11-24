@@ -5,7 +5,6 @@ import { Container } from "@mui/material";
 import CustomRoute from "./Routes/CustomRoute";
 import Footer from "./components/Footer/Footer";
 
-
 function App() {
   return (
     <Container
@@ -14,15 +13,12 @@ function App() {
       disableGutters={true}
       sx={{ background: "primary.dark" }}
     >
-    <div>
-      <Router>
-      
+   
+       <Router>
         <CustomRoute />
         <Footer />
       </Router>
-    </div>
-
-     </Container>
+    </Container>
   );
 }
 

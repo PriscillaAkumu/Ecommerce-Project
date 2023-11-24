@@ -1,8 +1,8 @@
 import "./Shop.css";
-import Navbar from '../../components/Navbar/Navbar';
 import Banner from '../../components/Banner/Banner'
 import Filter from "./filter/Filter";
 import ShopList from "./shoplist/ShopList";
+import Navbar from "../../components/Navbar/Navbar";
 const Shop = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },

@@ -11,6 +11,7 @@ const myStyles ={
   backgroundPosition: 'center',
   height: '316px', // Set the desired height for the container
   width:'100%',
+  marginTop:'10px',
   
 }
 

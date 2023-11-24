@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {  useLocation } from 'react-router-dom';
 
 import {
   AppBar,
@@ -33,6 +34,11 @@ const menuButton = {
 }
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const navbarStyle = {
+    backgroundColor: isHomePage ? '#fbebb5' : '#fff',
+  };
 
   const theme = useTheme();
   console.log(theme);
@@ -41,7 +47,7 @@ const Navbar = () => {
 
   return (
 
-    <AppBar position="sticky" sx={{ background: "#fff", }}>
+    <AppBar position="sticky" style={navbarStyle}>
       <Toolbar>
 
         {isMatch ? (
@@ -75,19 +81,19 @@ const Navbar = () => {
                 <Button href="/" style={menuButton}>
                   Home
                 </Button>
-                <Button href="/Shop" style={menuButton}>
+                <Button href="/shop" style={menuButton}>
                   Shop
                 </Button>
-                <Button href="/Account" style={menuButton}>
-                  Account
+                <Button href="/about" style={menuButton}>
+                  About
                 </Button>
-                <Button href="/Contact" style={menuButton}>
+                <Button href="/contact" style={menuButton}>
                   Contact
                 </Button>
 
               </Box>
               <Box  >
-                <Button >
+                <Button href='/account'>
                   <img src={User} alt='user' />
                 </Button>
                 <Button style={myButton}>
@@ -96,7 +102,7 @@ const Navbar = () => {
                 <Button style={myButton}>
                   <FavoriteBorderOutlinedIcon />
                 </Button>
-                <Button style={myButton}>
+                <Button href='/cart' style={myButton}>
                   <ShoppingCartOutlinedIcon />
                 </Button>
               </Box>
