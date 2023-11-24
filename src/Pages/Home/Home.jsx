@@ -5,7 +5,7 @@ import TopPicks from "./TopPicks";
 import NewArrival from "./NewArrival";
 import OurBlogs from "./OurBlogs";
 import OurInstagram from "./OurInstagram";
-import Navbar from './AppBar';
+import Navbar from "../../components/Navbar/Navbar";
 const Home = () => {
   return (
     <>

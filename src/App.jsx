@@ -3,10 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import { Container } from "@mui/material";
 import CustomRoute from "./Routes/CustomRoute";
-import theme from "./style/Theme";
-
 import Footer from "./components/Footer/Footer";
-import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -16,8 +13,8 @@ function App() {
       disableGutters={true}
       sx={{ background: "primary.dark" }}
     >
-      <Router>
-
+   
+       <Router>
         <CustomRoute />
         <Footer />
       </Router>
