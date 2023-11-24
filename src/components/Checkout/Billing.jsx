@@ -1,19 +1,8 @@
 import React from 'react';
 import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
-import ModalButton from '../Modals/Modal';
 import { Stack, Button, Typography, Box, styled } from '@mui/material';
-
-import classes from './checkout.module.css';
 import FormDialog from '../Modals/Dialog';
-
-// const StyledButton =styled(Button)({
-//   color: 'black',
-//     width: '318px',
-//     height: '64px',
-//     borderRadius: '15px',
-//     border: '1px solid black',
-// })
 
 export default function Billing({ register, control, handleSubmit, formState }) {
   // handling errors
@@ -163,7 +152,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           name='paymentMode'
           value='direct-bank-transfer'
           id='field-radio'
-          className={classes.input}
         />{' '}
         Direct Bank Transfer
         <br />
@@ -210,7 +198,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             borderRadius: '15px',
             border: '1px solid black',
           }}
-          handleSubmit={handleSubmit}
         />
         {/* <Button
           type='submit'

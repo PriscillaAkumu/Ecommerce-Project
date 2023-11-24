@@ -26,13 +26,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <Box
-        style={
-          {
-            // backgroundColor: "red",
-          }
-        }
-      >
+      <Box>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Stack>
             <Typography mb={2}>Your name</Typography>

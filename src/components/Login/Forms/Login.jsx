@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-// import { DevTool } from "@hookform/devtools"
+import { DevTool } from '@hookform/devtools';
 import { useAuth } from '../../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 // mui
@@ -116,7 +116,7 @@ export default function LoginForm() {
               </Typography>
             </Stack>
           </form>
-          {/* <DevTool control={control} /> */}
+          <DevTool control={control} />
         </Box>
       )}
     </>
