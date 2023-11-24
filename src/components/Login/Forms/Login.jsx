@@ -7,22 +7,7 @@ import { useAuth } from '../../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 // mui
 import { TextField, Typography, Grid, Checkbox, Button, Stack, Box } from '@mui/material';
-import ModalWithConfirmation from '../../Modals/Modal';
-
-// const StyledButton =styled(Button)({
-//   color: 'black',
-//     width: '318px',
-//     height: '64px',
-//     borderRadius: '15px',
-//     border: '1px solid black',
-// })
-// const styles = {
-//   color: 'black',
-//       width: '318px',
-//       height: '64px',
-//       borderRadius: '15px',
-//       border: '1px solid black',
-// }
+import FormDialog from '../../Modals/Dialog';
 
 export default function LoginForm() {
   // state for authenication
@@ -108,9 +93,9 @@ export default function LoginForm() {
             </Stack>
 
             <Stack direction='row'>
-              <Button
-                size='large'
-                type='submit'
+              <FormDialog
+                type={'Login'}
+                label={'Login'}
                 sx={{
                   color: 'black',
                   border: '1px solid black',
@@ -125,9 +110,7 @@ export default function LoginForm() {
                   lineHeight: '24px',
                   backgroundColor: 'white',
                 }}
-              >
-                Login
-              </Button>
+              />
               <Typography variant='body-2' mt={2}>
                 Lost Your Password?
               </Typography>

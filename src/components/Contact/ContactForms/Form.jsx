@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 // import { DevTool } from "@hookform/devtools"
+import FormDialog from '../../Modals/Dialog';
 
 // mui
 import { TextField, Typography, Grid, Checkbox, Button, Stack, Box } from '@mui/material';
@@ -113,8 +114,9 @@ export default function ContactForm() {
           </Stack>
 
           <Stack direction='row'>
-            <Button
-              type='submit'
+            <FormDialog
+              type={'Contact'}
+              label={'submit'}
               sx={{
                 color: 'black',
                 border: '1px solid black',
@@ -128,9 +130,7 @@ export default function ContactForm() {
                 lineHeight: '24px',
                 backgroundColor: 'white',
               }}
-            >
-              Submit
-            </Button>
+            />
           </Stack>
         </form>
       </Box>

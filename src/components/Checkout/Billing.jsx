@@ -5,7 +5,7 @@ import ModalButton from '../Modals/Modal';
 import { Stack, Button, Typography, Box, styled } from '@mui/material';
 
 import classes from './checkout.module.css';
-// import AlertDialogSlide from "../Modals/Modal";
+import FormDialog from '../Modals/Dialog';
 
 // const StyledButton =styled(Button)({
 //   color: 'black',
@@ -200,11 +200,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           marginTop: '20px',
         }}
       >
-        {/* < ModalButton
-        type={"Place Order"} 
-        /> */}
-        <Button
-          type='submit'
+        <FormDialog
+          type={'Place Order'}
+          label={'Place Order'}
           sx={{
             color: 'black',
             width: '318px',
@@ -212,9 +210,14 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             borderRadius: '15px',
             border: '1px solid black',
           }}
+          handleSubmit={handleSubmit}
+        />
+        {/* <Button
+          type='submit'
+       
         >
           Place Order
-        </Button>
+        </Button> */}
       </Stack>
     </Box>
   );

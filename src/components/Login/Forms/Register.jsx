@@ -1,11 +1,10 @@
-/** @format */
-
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 // import { DevTool } from "@hookform/devtools"
 
 // mui
 import { TextField, Typography, Grid, Button, Stack, Box } from '@mui/material';
+import FormDialog from '../../Modals/Dialog';
 
 export default function LoginForm() {
   const form = useForm();
@@ -60,9 +59,9 @@ export default function LoginForm() {
           </Typography>
         </Stack>
 
-        <Button
-          size='large'
-          type='submit'
+        <FormDialog
+          type={'Register'}
+          label={'Register'}
           sx={{
             color: 'black',
             marginTop: '13px',
@@ -76,9 +75,7 @@ export default function LoginForm() {
             backgroundColor: 'white',
             border: '1px solid black',
           }}
-        >
-          Register
-        </Button>
+        />
       </form>
       {/* <DevTool control={control} /> */}
     </Box>

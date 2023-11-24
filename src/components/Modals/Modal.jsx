@@ -41,7 +41,7 @@ const Modal = ({ open, handleClose, type, handleSubmit }) => {
     </Dialog>
   );
 };
-const ModalWithConfirmation = ({ handleSubmit, node, type, register, control, formState }) => {
+const ModalWithConfirmation = ({ handleSubmit, node, type, register, sx, control, formState }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -56,7 +56,9 @@ const ModalWithConfirmation = ({ handleSubmit, node, type, register, control, fo
   // };
   return (
     <div>
-      <Button onClick={handleOpen}>{type}</Button>
+      <Button sx={sx} onClick={handleOpen}>
+        {type}
+      </Button>
 
       <Modal type={type} open={open} handleClose={handleClose} onOk={handleSubmit} />
     </div>
