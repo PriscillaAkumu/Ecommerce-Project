@@ -16,6 +16,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 import DrawerComp from "./DrawerComp";
+import CssBaseline from '@mui/material/CssBaseline';
 
 
 
@@ -38,17 +39,20 @@ const Navbar = () => {
   const isHomePage = location.pathname === '/';
   const navbarStyle = {
     backgroundColor: isHomePage ? '#fbebb5' : '#fff',
+    
   };
 
   const theme = useTheme();
   console.log(theme);
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // console.log(isMatch);
+
 
   return (
 
-    <AppBar position="sticky" style={navbarStyle}>
-      <Toolbar>
+<>
+<CssBaseline />
+<AppBar position="static"  style={navbarStyle}>
+      <Toolbar disableGutters >
 
         {isMatch ? (
           <>
@@ -68,16 +72,7 @@ const Navbar = () => {
 
             }}>
               <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
-                {/* {pages.map((page) => (
-                  <Button
-                    key={page}
-                    sx={{ }}
-                  >
-                    {page}
-                  </Button>
-                ))} */}
-
-
+              
                 <Button href="/" style={menuButton}>
                   Home
                 </Button>
@@ -93,7 +88,7 @@ const Navbar = () => {
 
               </Box>
               <Box  >
-                <Button href='/account'>
+                <Button href="/account" >
                   <img src={User} alt='user' />
                 </Button>
                 <Button style={myButton}>
@@ -114,7 +109,9 @@ const Navbar = () => {
         )}
       </Toolbar>
     </AppBar>
-
+  
+</>
+   
   );
 };
 

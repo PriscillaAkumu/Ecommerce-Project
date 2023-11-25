@@ -6,10 +6,11 @@ import NewArrival from "./NewArrival";
 import OurBlogs from "./OurBlogs";
 import OurInstagram from "./OurInstagram";
 import Navbar from "../../components/Navbar/Navbar";
+
 const Home = () => {
   return (
     <>
-    <Navbar/>
+      <Navbar/>
       <Hero />
       <FeatProducts />
       <TopPicks />

@@ -1,23 +1,30 @@
+
 import React from 'react';
-import Banner from '../../components/Banner/Banner';
-import './cart.css';
 import Navbar from '../../components/Navbar/Navbar';
+import Banner from '../../components/Banner/Banner';
+import CartItems from './CartItems';
+import './cart.css';
+
 
 const Cart = () => {
-    const breadcrumbItems = [
-        { label: 'Home', link: '/' },
-        { label: 'Cart', link: '/cart' },
-      ];
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Cart', link: '/cart' },
+  ];
   return (
-    <div >
-      <Navbar/>
+    <>
+      <Navbar />
       <Banner
-      pageTitle="Cart"
-      breadcrumbItems={breadcrumbItems}
-
+        pageTitle="Cart"
+        breadcrumbItems={breadcrumbItems}
       />
-     
-    </div>
+  
+      <div style={{marginTop:'50px'}}>
+    
+          <CartItems/>
+      </div>
+   
+    </>
   );
 }
 

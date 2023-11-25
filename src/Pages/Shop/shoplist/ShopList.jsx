@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ContainerStyle from "../ContainerStyle";
 import Pagination from "../pagination/Pagination";
 import productData from "/src/productData";
@@ -7,13 +8,18 @@ const ShopList = () => {
   return (
     <>
       <div className="shop-list">
+
         <ContainerStyle>
           <div className="shop-list-inner">
             {productData.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <Link to={`/shop/${product.id}`}>
+                <ProductCard key={product.id} product={product} />
+              </Link>
+
             ))}
           </div>
         </ContainerStyle>
+
       </div>
       <Pagination />
       <FreeDelivery />

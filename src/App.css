@@ -15,7 +15,7 @@ html,
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -23,5 +23,4 @@ a,
 a:visited,
 a:active {
   text-decoration: none !important;
-  /* color: #000 !important; */
 }
