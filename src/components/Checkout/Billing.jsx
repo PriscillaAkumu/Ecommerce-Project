@@ -199,12 +199,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             border: '1px solid black',
           }}
         />
-        {/* <Button
-          type='submit'
-       
-        >
-          Place Order
-        </Button> */}
+     
       </Stack>
     </Box>
   );

@@ -30,7 +30,7 @@ footer > div > div {
   flex-direction: column;
   gap: 55px;
 }
-footer .address {
+footer .footer-address {
   font-size: 16px;
   line-height: 24px;
   color: #9f9f9f;
@@ -53,14 +53,14 @@ footer nav {
   flex-direction: column;
   gap: 46px;
 }
-footer > div:last-child {
+footer .copy {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000;
   padding-top: 35px;
   border-top: 1px solid #d9d9d9;
-} /*# sourceMappingURL=footer.css.map */
+} 
 
 /* form part for the footer */
 footer {
@@ -108,14 +108,14 @@ footer nav {
   flex-direction: column;
   gap: 46px;
 }
-footer > div:last-child {
+footer .copy {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000;
   padding-top: 35px;
   border-top: 1px solid #d9d9d9;
-} /*# sourceMappingURL=footer.css.map */
+} 
 
 /* Newsletter */
 .newsletter-component {
@@ -149,6 +149,4 @@ footer > div:last-child {
   border-bottom: 1px solid #000;
   font-weight: 500;
 }
-li {
-  list-style: none;
-}
+

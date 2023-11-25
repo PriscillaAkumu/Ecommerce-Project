@@ -14,6 +14,7 @@ const Contact = () => {
     <Navbar/>
       <Banner pageTitle='Contact' breadcrumbItems={breadcrumbItems} />
       <ContactSection />
+      <PaymentPlan />
     </>
   );
 };
