@@ -11,7 +11,7 @@ const About = () => {
     <>
     <Navbar/>
     <Banner
-     pageTitle="Shop"
+     pageTitle="About"
      breadcrumbItems={breadcrumbItems}
     />
     </>

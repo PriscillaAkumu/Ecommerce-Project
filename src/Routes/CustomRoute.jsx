@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import Cart from "../Pages/Cart/Cart";
 import CartProvider from '../context/CartContext';
 import SingleProduct from '../Pages/SingleProduct/SingleProduct';
+import About from '../Pages/About/About';
 
 
 
@@ -18,6 +19,7 @@ const CustomRoute = () => {
      <Route path='/shop' element={<Shop/>}/>
      <Route path='/shop/:id/*' element={<SingleProduct/>}/>
      <Route path='/account' element={<Account/>}/>
+     <Route path='/about' element={<About/>}/>
      <Route path='/contact' element={<Contact/>}/>
      <Route path='/cart' element={<Cart/>}/>
      </Routes>
