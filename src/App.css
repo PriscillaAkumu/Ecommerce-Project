@@ -6,15 +6,19 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 #root {
-  max-width: 1440px;
   margin: 0 auto;
-  font-family: "Poppins";
+  font-family: 'Poppins'; 
+}
+
+body{
+  max-width:100%;
+  overflow-x:hidden;
 }
 
 a,
 a:visited,
 a:active {
   text-decoration: none !important;
-  /* color: #000 !important; */
 }

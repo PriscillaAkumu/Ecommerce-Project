@@ -1,0 +1,264 @@
+/* productDetail grid-container */
+.grid-container {
+  border-bottom: 1px solid #9F9F9F;
+  
+}
+
+/* size details */
+.sizes-container {
+  margin-top: 7px;
+}
+.sizes-container .title {
+  color: #9F9F9F;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.sizes-container .size-options {
+  display: flex;
+  gap: 16px;
+}
+.sizes-container button {
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #FAF4F4;
+}
+.sizes-container .selected {
+  background-color: #FBEBB5;
+  cursor: pointer;
+}
+
+/* Color details */
+.colors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 7px;
+}
+.colors-container .title {
+  color: #9F9F9F;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.colors-container .color-options {
+  display: flex;
+  gap: 16px;
+}
+.colors-container button {
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-indent: 100%;
+  white-space: nowrap;
+  color:#fff;
+}
+.colors-container .selected {
+  border: 2px solid #fff;
+  outline: 1px solid #dad5d5;
+}
+
+
+/* increase and add button */
+.quantity {
+  border: 1px solid #9F9F9F;
+  border-radius: 15px;
+  width: 123px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 17px 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.quantity span {
+  font-weight: 500;
+}
+
+/* addToCart button */
+
+.add {
+  padding: 15px 40px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  font-size: clamp(1rem, 0.7151rem + 0.5944vw, 1.25rem);
+}
+
+/* overlay effect on cartSidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000;
+  overflow: hidden; /* Ensure it's above the sidebar */
+  margin:0 auto;
+}
+
+.hr {
+  margin-top: 30px;
+}
+
+
+/* product description */
+.desc-container .subtitle2 {
+  padding: 0px 40px;
+  text-align: justify;
+}
+
+.desc-container .subtitle1 .title {
+  font-size: 24px;
+}
+
+
+/* related products */
+
+.product-container {
+  margin-top: 40px;
+  border-top: 1px solid #9F9F9F;
+  padding: 40px;
+}
+
+.product-container p {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 54px;
+  color: #000;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.image-wrapper {
+  margin: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.image-desc {
+  height: 96px;
+}
+
+.image-wrapper .title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  text-align: left;
+}
+
+.image-wrapper .price {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 10px;
+  text-align: left;
+
+}
+
+.responsive-image {
+  width: 100%;
+  height: 287px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-container .product-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.product-container .product-btn .btn {
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 10px 0px;
+  border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .desc-container .subtitle1 .title {
+    font-size: 16px;
+  }
+
+  .product-container p {
+    font-size: 24px;
+  }
+
+  .img-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width: 420px) {
+  .quantity {
+    padding: 17px 0;
+   width:100px;
+  }
+
+
+  .add {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+
+  .desc-container .subtitle1 .title {
+    font-size: 16px;
+  }
+
+  .desc-container .subtitle2 {
+    padding: 0px 8px;
+  }
+
+  .product-container p {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+
+  .img-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .image-wrapper {
+    margin-top: 0px;
+  }
+
+  .image-wrapper,
+  .title,
+  .price {
+    text-align: center;
+  }
+
+  .image-wrapper .price {
+    margin-top: 5px;
+  }
+}

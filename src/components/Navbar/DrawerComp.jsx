@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CssBaseline from '@mui/material/CssBaseline';
 import {
   Drawer,
@@ -9,7 +10,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  Paper,
+
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from '@mui/icons-material/MoreVert';
@@ -23,8 +24,6 @@ import User from '../../assets/user.png';
 
 const DrawerComp = () => {
   const drawerWidth = 150
-  // const drawerHeight = 300
-  // const pages = ["Home", "Shop", "ABout", "Contact"];
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -36,11 +35,7 @@ const DrawerComp = () => {
   };
 
 
-  const [selectedIndex, setSelectedIndex] = useState(1);
 
-  const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
-  };
 
   return (
     <React.Fragment>
@@ -57,33 +52,45 @@ const DrawerComp = () => {
         sx={{   display: { xs: 'block', sm: 'block' },
         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#FBEBB5' }, }}
       >
-        <List  sx={{
+        <List sx={{
           width: drawerWidth, backgroundColor: '#FBEBB5', boxSizing: 'border-box', paddingTop: '40px', justifyContent: 'center',
         }}>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Home</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          <Link to='/'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Home</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Shop</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          </Link>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Account</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          <Link to='/shop'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Shop</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
 
-          <ListItemButton >
-            <ListItemIcon>
-              <ListItemText>Contact</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+
+          <Link to='/about'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>About</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+
+
+          <Link to='/contact'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Contact</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+
 
         </List>
       </Drawer>
@@ -115,13 +122,20 @@ const DrawerComp = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>  <img src={User} alt='user' /></MenuItem>
+        <Link to='/account'>
+          <MenuItem onClick={handleClose} >  <img src={User} alt='user' /></MenuItem>
+        </Link>
 
         <MenuItem onClick={handleClose}>  <SearchOutlinedIcon /></MenuItem>
 
-        <MenuItem onClick={handleClose}> <FavoriteBorderOutlinedIcon /></MenuItem>
+        <Link>
+          <MenuItem onClick={handleClose}> <FavoriteBorderOutlinedIcon /></MenuItem>
+        </Link>
 
-        <MenuItem onClick={handleClose}><ShoppingCartOutlinedIcon /></MenuItem>
+        <Link to='/cart'>
+          <MenuItem onClick={handleClose}><ShoppingCartOutlinedIcon /></MenuItem>
+        </Link>
+
       </Menu>
     </React.Fragment>
   );

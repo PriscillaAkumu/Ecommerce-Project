@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
-import { Box, Grid } from '@mui/material';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 const Account = () => {
@@ -9,14 +9,15 @@ const Account = () => {
     { label: 'My Account', link: '/Account' },
   ];
   return (
-    <Box>
+    <>
+    <Navbar/>
       <Banner
         pageTitle="My Account"
         breadcrumbItems={breadcrumbItems}
       />
 
       <h2>My Account</h2>
-    </Box>
+    </>
   );
 }
 
