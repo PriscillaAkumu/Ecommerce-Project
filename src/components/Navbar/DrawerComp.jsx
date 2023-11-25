@@ -51,7 +51,6 @@ const DrawerComp = () => {
         onClose={() => setOpenDrawer(false)}
         sx={{   display: { xs: 'block', sm: 'block' },
         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#FBEBB5' }, }}
-
       >
         <List sx={{
           width: drawerWidth, backgroundColor: '#FBEBB5', boxSizing: 'border-box', paddingTop: '40px', justifyContent: 'center',
