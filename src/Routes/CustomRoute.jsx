@@ -16,8 +16,9 @@ const CustomRoute = () => {
     <>
       <AuthProvider>
         <Routes>
-          <Route path='/' element={<Bill />} />
+          <Route path='/' element={<Home />} />
           {/* <Route path='/' element={<Bill />}/> */}
+          {/* NotFound Route */}
           <Route path='*' element={<NotFound />} />
           <Route path='/login' element={<AuthLogin />} />
           {/* <Route path='/paymentplan' element={<PaymentPlan />}/> */}

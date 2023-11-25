@@ -7,7 +7,7 @@ import PaymentPlan from '../../components/Payment/Payment';
 const Bill = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
-    { label: 'Checkout', link: '/' },
+    { label: 'Checkout', link: '/checkout' },
   ];
 
   return (
