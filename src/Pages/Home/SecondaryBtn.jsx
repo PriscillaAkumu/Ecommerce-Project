@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SecondaryBtn = styled.button`
   border: 1px solid #000;

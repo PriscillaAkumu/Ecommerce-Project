@@ -1,7 +1,6 @@
 /* productDetail grid-container */
 .grid-container {
-  border-bottom: 1px solid #9F9F9F;
-  
+  border-bottom: 1px solid #9f9f9f;
 }
 
 /* size details */
@@ -9,7 +8,7 @@
   margin-top: 7px;
 }
 .sizes-container .title {
-  color: #9F9F9F;
+  color: #9f9f9f;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -26,10 +25,10 @@
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  background-color: #FAF4F4;
+  background-color: #faf4f4;
 }
 .sizes-container .selected {
-  background-color: #FBEBB5;
+  background-color: #fbebb5;
   cursor: pointer;
 }
 
@@ -41,7 +40,7 @@
   margin-top: 7px;
 }
 .colors-container .title {
-  color: #9F9F9F;
+  color: #9f9f9f;
   font-size: 14px;
   font-weight: 400;
   text-align: left;
@@ -59,17 +58,16 @@
   border-radius: 50px;
   text-indent: 100%;
   white-space: nowrap;
-  color:#fff;
+  color: #fff;
 }
 .colors-container .selected {
   border: 2px solid #fff;
   outline: 1px solid #dad5d5;
 }
 
-
 /* increase and add button */
 .quantity {
-  border: 1px solid #9F9F9F;
+  border: 1px solid #9f9f9f;
   border-radius: 15px;
   width: 123px;
   display: flex;
@@ -103,13 +101,12 @@
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   z-index: 1000;
   overflow: hidden; /* Ensure it's above the sidebar */
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .hr {
   margin-top: 30px;
 }
-
 
 /* product description */
 .desc-container .subtitle2 {
@@ -121,12 +118,11 @@
   font-size: 24px;
 }
 
-
 /* related products */
 
 .product-container {
   margin-top: 40px;
-  border-top: 1px solid #9F9F9F;
+  border-top: 1px solid #9f9f9f;
   padding: 40px;
 }
 
@@ -145,7 +141,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
 }
 
 .image-wrapper {
@@ -172,7 +167,6 @@
   line-height: 36px;
   margin-top: 10px;
   text-align: left;
-
 }
 
 .responsive-image {
@@ -215,18 +209,16 @@
   }
 }
 
-@media screen and (min-width:320px) and (max-width: 420px) {
+@media screen and (min-width: 320px) and (max-width: 420px) {
   .quantity {
     padding: 17px 0;
-   width:100px;
+    width: 100px;
   }
-
 
   .add {
     padding: 15px 20px;
     font-size: 14px;
   }
-
 
   .desc-container .subtitle1 .title {
     font-size: 16px;
@@ -240,7 +232,6 @@
     font-size: 18px;
     padding: 20px 40px;
   }
-
 
   .img-container {
     grid-template-columns: 1fr;

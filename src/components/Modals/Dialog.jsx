@@ -14,7 +14,6 @@ export default function FormDialog({ type, sx, label, register }) {
     console.log('form submitted', data);
     // Set a timeout and reload the page after the timeout
     setTimeout(() => {
-      
       console.log('Reloading the page after a delay');
       window.location.reload();
     }, 2000);

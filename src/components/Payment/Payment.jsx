@@ -6,7 +6,7 @@ export default function PaymentPlan() {
   return (
     <Box className='payment-section'>
       <Box className='payment-content'>
-        <Grid item >
+        <Grid item>
           <Typography variant='h4' className='heading-text'>
             Free Delivery
           </Typography>
@@ -15,7 +15,7 @@ export default function PaymentPlan() {
             For all oders over $50, consectetur adipim scing elit.
           </Typography>
         </Grid>
-        <Grid item >
+        <Grid item>
           <Typography variant='h4' className='heading-text'>
             90 Days Return
           </Typography>
@@ -24,7 +24,7 @@ export default function PaymentPlan() {
             If goods have problems, consectetur adipim scing elit.{' '}
           </Typography>
         </Grid>
-        <Grid item >
+        <Grid item>
           <Typography variant='h4' className='heading-text'>
             Secure Payment
           </Typography>

@@ -4,7 +4,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import AuthLogin from '../../components/Login/Auth';
 import PaymentPlan from '../../components/Payment/Payment';
 
-
 const Account = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
@@ -12,9 +11,9 @@ const Account = () => {
   ];
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <Banner pageTitle='My Account' breadcrumbItems={breadcrumbItems} />
-      <AuthLogin/>
+      <AuthLogin />
       <PaymentPlan />
     </>
   );

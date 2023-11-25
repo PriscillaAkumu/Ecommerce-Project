@@ -16,47 +16,47 @@ const PersonImage = styled('img')({
 
 const AboutPage = () => {
   return (
-    <Container >
+    <Container>
       <StyledPaper>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant='h4' gutterBottom>
           About Us
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant='body1' paragraph>
           Welcome to our About Us page. Here, you can provide information about your company,
           mission, vision, or any other relevant details.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant='body1' paragraph>
           Meet our team:
         </Typography>
         <Grid container spacing={3}>
           {/* Person 1 */}
           <Grid item xs={12} sm={4}>
             <PersonImage
-              src="https://placekitten.com/200/200" // Replace with the actual image URL
-              alt="Person 1"
+              src='https://placekitten.com/200/200' // Replace with the actual image URL
+              alt='Person 1'
             />
-            <Typography variant="subtitle1">John Doe</Typography>
-            <Typography variant="body2">CEO</Typography>
+            <Typography variant='subtitle1'>John Doe</Typography>
+            <Typography variant='body2'>CEO</Typography>
           </Grid>
 
           {/* Person 2 */}
           <Grid item xs={12} sm={4}>
             <PersonImage
-              src="https://placekitten.com/200/201" // Replace with the actual image URL
-              alt="Person 2"
+              src='https://placekitten.com/200/201' // Replace with the actual image URL
+              alt='Person 2'
             />
-            <Typography variant="subtitle1">Jane Smith</Typography>
-            <Typography variant="body2">CTO</Typography>
+            <Typography variant='subtitle1'>Jane Smith</Typography>
+            <Typography variant='body2'>CTO</Typography>
           </Grid>
 
           {/* Person 3 */}
           <Grid item xs={12} sm={4}>
             <PersonImage
-              src="https://placekitten.com/200/202" // Replace with the actual image URL
-              alt="Person 3"
+              src='https://placekitten.com/200/202' // Replace with the actual image URL
+              alt='Person 3'
             />
-            <Typography variant="subtitle1">Bob Johnson</Typography>
-            <Typography variant="body2">Lead Developer</Typography>
+            <Typography variant='subtitle1'>Bob Johnson</Typography>
+            <Typography variant='body2'>Lead Developer</Typography>
           </Grid>
         </Grid>
       </StyledPaper>

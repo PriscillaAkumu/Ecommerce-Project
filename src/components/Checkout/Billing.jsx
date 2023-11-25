@@ -14,7 +14,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
   let totalPrice = 0;
 
   return (
-    
     <Box>
       <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
         <Typography
@@ -39,58 +38,61 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         </Typography>
       </div>
       {cart.map((item) => {
-                const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
-                totalPrice += item.quantity * numericPrice;
-                return (
-<Box key={item.product.id}>
-<div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-        <p style={{ flex: '1' }}>
-          {' '}
-          <span
-            style={{
-              color: '#9F9F9F',
-            }}
-          >
-{item.product.name}
-          </span>
-          * {item.quantity}
-        </p>
-        <Typography
-          sx={{
-            fontWeight: '300',
-            FontSize: '16px',
-            lineHeight: '24px',
-            flex: '1',
-          }}
-        >
-          Rs. 250,000.00
-        </Typography>
-      </div>
+        const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
+        totalPrice += item.quantity * numericPrice;
+        return (
+          <Box key={item.product.id}>
+            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
+              <p style={{ flex: '1' }}>
+                {' '}
+                <span
+                  style={{
+                    color: '#9F9F9F',
+                  }}
+                >
+                  {item.product.name}
+                </span>
+                * {item.quantity}
+              </p>
+              <Typography
+                sx={{
+                  fontWeight: '300',
+                  FontSize: '16px',
+                  lineHeight: '24px',
+                  flex: '1',
+                }}
+              >
+                Rs. 250,000.00
+              </Typography>
+            </div>
 
-      <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-        <Typography
-          sx={{
-            fontSize: '16px',
-            fontWeight: '400',
-            flex: '1',
-            lineHeight: '24px',
-          }}
-        >
-          Subtotal
-        </Typography>
-        <Typography
-          sx={{
-            fontWeight: '300',
-            fontSize: '16px',
-            lineHeight: '24px',
-            flex: '1',
-          }}
-        >
-RS.{numericPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-        </Typography>
-      </div>
-
-</Box>
+            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
+              <Typography
+                sx={{
+                  fontSize: '16px',
+                  fontWeight: '400',
+                  flex: '1',
+                  lineHeight: '24px',
+                }}
+              >
+                Subtotal
+              </Typography>
+              <Typography
+                sx={{
+                  fontWeight: '300',
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  flex: '1',
+                }}
+              >
+                RS.
+                {numericPrice.toLocaleString(undefined, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </Typography>
+            </div>
+          </Box>
         );
       })}
 
@@ -114,7 +116,7 @@ RS.{numericPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFr
             flex: '1',
           }}
         >
-         RS.{totalPrice.toFixed(2)}
+          RS.{totalPrice.toFixed(2)}
         </Typography>
       </div>
 
@@ -213,7 +215,6 @@ RS.{numericPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFr
             border: '1px solid black',
           }}
         />
-     
       </Stack>
     </Box>
   );

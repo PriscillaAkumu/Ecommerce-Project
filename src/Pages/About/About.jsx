@@ -4,20 +4,17 @@ import Banner from '../../components/Banner/Banner';
 import Profile from './Profile';
 
 const About = () => {
-    const breadcrumbItems = [
-        { label: 'Home', link: '/' },
-        { label: 'About', link: '/about' },
-      ];
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'About', link: '/about' },
+  ];
   return (
     <>
-    <Navbar/>
-    <Banner
-     pageTitle="About"
-     breadcrumbItems={breadcrumbItems}
-    />
-    <Profile/>
+      <Navbar />
+      <Banner pageTitle='About' breadcrumbItems={breadcrumbItems} />
+      <Profile />
     </>
   );
-}
+};
 
 export default About;

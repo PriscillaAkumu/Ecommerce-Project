@@ -17,13 +17,6 @@ import Sofa3 from '../../assets/sofa3.png';
 import Sofa4 from '../../assets/sofa4.png';
 import Line from '../../assets/line.png';
 
-
-
-
-
-
-
-
 const imageStyle = {
   width: '76px',
   height: '80px',
@@ -33,19 +26,18 @@ const imageStyle = {
   borderRadius: '8px',
   overflow: 'hidden',
   objectFit: 'contain',
-  objectPosition: 'center'
-
+  objectPosition: 'center',
 };
 
-const imageBig= {
+const imageBig = {
   width: '100%',
   height: '100%',
   backgroundColor: '#FBEBB5',
   borderRadius: '8px',
   overflow: 'hidden',
   objectFit: 'contain',
-  objectPosition: 'center'
-}
+  objectPosition: 'center',
+};
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -69,7 +61,7 @@ const ProductDetails = () => {
     }
   };
 
-  // set useState for color 
+  // set useState for color
   const [selectedColor, setSelectedColor] = useState('');
   const handleColorClick = (color) => {
     if (selectedColor === color) {
@@ -80,7 +72,6 @@ const ProductDetails = () => {
       setSelectedColor(color);
     }
   };
-
 
   //set state for quantity
   const [quantity, setQuantity] = useState(1);
@@ -98,7 +89,7 @@ const ProductDetails = () => {
   // addToCart Context
   const { addToCart } = useContext(CartContext);
   const [addedToCart, setAddedToCart] = useState(false);
-  
+
   const [isSidebarVisible, setSidebarVisible] = useState(false);
 
   const handleAddToCart = () => {
@@ -108,86 +99,124 @@ const ProductDetails = () => {
 
     setTimeout(() => {
       navigate('/cart');
-    }, 60000); 
+    }, 60000);
   };
 
- 
   return (
-   
-         < >
-        
-         <Grid item xs={12} sx={{marginTop:'40px', padding: '0px 40px' }}>
-           <ProductBreadcrumb product={product} />
-         </Grid>
-         <Grid className='grid-container' container wrap='nowrap' direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{
-           margin: '0px auto', justifyContent: 'flex-start', padding: '20px',
-         }}
-   
-         >
-   
-           <Grid className='grid-item' item xs={12} sm={12} md={1} lg={1} sx={{ width: '100%', height: '100%', padding: { xs: '5px 20px', sm: '5px 20px', md: '5px 0px 5px 20px', lg: '5px 0px 5px 20px' } }}>
-             <Stack flexGrow={0} gap={1} direction={{ xs: 'row', sm: 'row', md: 'column' }}
-               sx={{ width: '100%', justifyContent: 'center' }}
-   
-             >
-               <img src={Sofa1} alt='sofa' style={imageStyle} />
-               <img src={Sofa2} alt='sofa' style={imageStyle} />
-               <img src={Sofa3} alt='sofa' style={imageStyle} />
-               <img src={Sofa4} alt='sofa' style={imageStyle} />
-             </Stack>
-           </Grid>
-           <Grid className='grid-item' item xs={12} sm={12} md={5} lg={3} sx={{ width: '100%', height: '500px', padding: '5px 20px ' }}>
-             <img
-               src={product.img}
-               alt={product.name}
-               style={imageBig} />
-           </Grid>
-           <Grid className='grid-item' item xs={12} sm={12} md={6} lg={8} height='680px' sx={{ padding: '5px 20px' }}>
-             <Typography variant='h4' color='#000' >{product.name}</Typography>
-             <Typography variant='h5' >RS.{product.price}</Typography>
-             <Stack spacing={2} direction='row' marginBottom='20px'>
-               <Rating />
-               <img src={Line} alt='line' />
-               <Typography>5 Customer Reviews</Typography>
-             </Stack>
-             <Typography variant='body' color='#000' textAlign='left' >
-               Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
-             </Typography>
-   
-             <Stack direction='column' marginBottom='20px'>
-               <Size product={product} selectedSize={selectedSize} handleSizeClick={handleSizeClick} />
-               <Color product={product} selectedColor={selectedColor} handleColorClick={handleColorClick} />
-             </Stack>
-   
-             <Stack direction='row' spacing={2} marginBottom='20px'>
-               <button className='quantity'>
-                 <RemoveIcon onClick={decreaseQuantity} />
-                 <span>{quantity}</span>
-                 <AddIcon onClick={increaseQuantity} />
-               </button>
-   
-              
-               <button  className='add'  onClick={handleAddToCart}>
-                  Add To Cart
-                  </button>
-             </Stack>
-             <hr className='hr' />
-             <FooterIcon />
-   
-           </Grid>
-   
-         </Grid>
+    <>
+      <Grid item xs={12} sx={{ marginTop: '40px', padding: '0px 40px' }}>
+        <ProductBreadcrumb product={product} />
+      </Grid>
+      <Grid
+        className='grid-container'
+        container
+        wrap='nowrap'
+        direction={{ xs: 'column', sm: 'column', md: 'row' }}
+        sx={{
+          margin: '0px auto',
+          justifyContent: 'flex-start',
+          padding: '20px',
+        }}
+      >
+        <Grid
+          className='grid-item'
+          item
+          xs={12}
+          sm={12}
+          md={1}
+          lg={1}
+          sx={{
+            width: '100%',
+            height: '100%',
+            padding: {
+              xs: '5px 20px',
+              sm: '5px 20px',
+              md: '5px 0px 5px 20px',
+              lg: '5px 0px 5px 20px',
+            },
+          }}
+        >
+          <Stack
+            flexGrow={0}
+            gap={1}
+            direction={{ xs: 'row', sm: 'row', md: 'column' }}
+            sx={{ width: '100%', justifyContent: 'center' }}
+          >
+            <img src={Sofa1} alt='sofa' style={imageStyle} />
+            <img src={Sofa2} alt='sofa' style={imageStyle} />
+            <img src={Sofa3} alt='sofa' style={imageStyle} />
+            <img src={Sofa4} alt='sofa' style={imageStyle} />
+          </Stack>
+        </Grid>
+        <Grid
+          className='grid-item'
+          item
+          xs={12}
+          sm={12}
+          md={5}
+          lg={3}
+          sx={{ width: '100%', height: '500px', padding: '5px 20px ' }}
+        >
+          <img src={product.img} alt={product.name} style={imageBig} />
+        </Grid>
+        <Grid
+          className='grid-item'
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={8}
+          height='680px'
+          sx={{ padding: '5px 20px' }}
+        >
+          <Typography variant='h4' color='#000'>
+            {product.name}
+          </Typography>
+          <Typography variant='h5'>RS.{product.price}</Typography>
+          <Stack spacing={2} direction='row' marginBottom='20px'>
+            <Rating />
+            <img src={Line} alt='line' />
+            <Typography>5 Customer Reviews</Typography>
+          </Stack>
+          <Typography variant='body' color='#000' textAlign='left'>
+            Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+            stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended
+            highs for a sound.
+          </Typography>
 
-         {isSidebarVisible && (
+          <Stack direction='column' marginBottom='20px'>
+            <Size product={product} selectedSize={selectedSize} handleSizeClick={handleSizeClick} />
+            <Color
+              product={product}
+              selectedColor={selectedColor}
+              handleColorClick={handleColorClick}
+            />
+          </Stack>
+
+          <Stack direction='row' spacing={2} marginBottom='20px'>
+            <button className='quantity'>
+              <RemoveIcon onClick={decreaseQuantity} />
+              <span>{quantity}</span>
+              <AddIcon onClick={increaseQuantity} />
+            </button>
+
+            <button className='add' onClick={handleAddToCart}>
+              Add To Cart
+            </button>
+          </Stack>
+          <hr className='hr' />
+          <FooterIcon />
+        </Grid>
+      </Grid>
+
+      {isSidebarVisible && (
         <>
-          <div className="overlay" onClick={() => setSidebarVisible(false)} />
+          <div className='overlay' onClick={() => setSidebarVisible(false)} />
           <CartSidebar />
         </>
       )}
-
-       </>   
-
+    </>
   );
-}
+};
 
 export default ProductDetails;

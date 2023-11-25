@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import FooterForm from "./FooterForm";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import FooterForm from './FooterForm';
 import './footer.css';
 
 const Footer = () => {

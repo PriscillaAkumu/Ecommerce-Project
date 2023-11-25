@@ -148,15 +148,13 @@ import {
   IconButton,
   styled,
 } from '@mui/material';
-import { tableCellClasses } from "@mui/material/TableCell";
+import { tableCellClasses } from '@mui/material/TableCell';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const StyledTable = styled(Table)({
   [`& .${tableCellClasses.root}`]: {
-    borderBottom: "none",
-
-
-  }
+    borderBottom: 'none',
+  },
 });
 
 const StyledBox = styled(Box)({
@@ -169,7 +167,6 @@ const StyledBox = styled(Box)({
   backgroundColor: '#FBEBB5',
 });
 
-
 // const StyledButton = styled(Button)({
 //     width:'32px',
 //     height:'32px',
@@ -180,7 +177,7 @@ const StyledBox = styled(Box)({
 //     fontWeight: 400,
 //     color: '#000',
 //     textAlign: 'center',
-    
+
 //   });
 
 const CartItems = () => {
@@ -193,12 +190,12 @@ const CartItems = () => {
     <Grid container className='cart-container'>
       {/* Grid item with table */}
       <Grid item xs={12} md={8} lg={9} sx={{ padding: '10px' }} className='grid-item'>
-        <TableContainer component={Box} elevation={0} >
+        <TableContainer component={Box} elevation={0}>
           <StyledTable>
             <TableHead>
               <TableRow sx={{ backgroundColor: '#FBEBB5' }}>
-                <TableCell sx={{ textAlign: 'center', verticalAlign: 'middle', }}>
-                  <Typography >Product</Typography>
+                <TableCell sx={{ textAlign: 'center', verticalAlign: 'middle' }}>
+                  <Typography>Product</Typography>
                 </TableCell>
                 <TableCell>
                   <Typography>Price</Typography>
@@ -223,17 +220,44 @@ const CartItems = () => {
                           <img
                             src={item.product.img}
                             alt={item.product.name}
-                            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              objectPosition: 'center',
+                            }}
                           />
                         </StyledBox>
-                        <Typography variant='5' color='#9F9F9F' width='100%'>{item.product.name}</Typography>
+                        <Typography variant='5' color='#9F9F9F' width='100%'>
+                          {item.product.name}
+                        </Typography>
                       </Stack>
                     </TableCell>
-                    <TableCell>RS.{numericPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</TableCell>
-                    <TableCell  sx={{ textAlign: 'center', verticalAlign: 'middle', }}><button className='button'>{item.quantity}</button></TableCell>
                     <TableCell>
-                      <Stack direction='row' alignItems='center' justifyContent='space-between' spacing={3}>
-                        <Typography> RS.{(item.quantity * numericPrice).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</Typography>
+                      RS.
+                      {numericPrice.toLocaleString(undefined, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
+                    </TableCell>
+                    <TableCell sx={{ textAlign: 'center', verticalAlign: 'middle' }}>
+                      <button className='button'>{item.quantity}</button>
+                    </TableCell>
+                    <TableCell>
+                      <Stack
+                        direction='row'
+                        alignItems='center'
+                        justifyContent='space-between'
+                        spacing={3}
+                      >
+                        <Typography>
+                          {' '}
+                          RS.
+                          {(item.quantity * numericPrice).toLocaleString(undefined, {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                          })}
+                        </Typography>
                         <IconButton color='#FBEBB5' onClick={() => removeFromCart(item)}>
                           <DeleteIcon />
                         </IconButton>
@@ -252,7 +276,7 @@ const CartItems = () => {
         <Paper style={{ backgroundColor: '#FBEBB5', padding: 0 }} elevation={0}>
           <Typography textAlign='center'>Cart Totals</Typography>
           <Stack direction='row' spacing={2}>
-            <Typography variant="h6">Subtotal</Typography>
+            <Typography variant='h6'>Subtotal</Typography>
             <Typography variant='h6'>RS.{totalPrice.toFixed(2)}</Typography>
           </Stack>
 

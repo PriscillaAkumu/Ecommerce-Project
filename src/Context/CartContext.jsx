@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from 'react';
 
 export const CartContext = createContext();
 
@@ -18,7 +18,7 @@ const CartProvider = ({ children }) => {
       (item) =>
         item.product.id === product.id &&
         item.selectedSize === selectedSize &&
-        item.selectedColor === selectedColor
+        item.selectedColor === selectedColor,
     );
 
     if (itemInCart) {
@@ -65,7 +65,7 @@ const CartProvider = ({ children }) => {
           item.product.id === itemToRemove.product.id &&
           item.selectedSize === itemToRemove.selectedSize &&
           item.selectedColor === itemToRemove.selectedColor
-        )
+        ),
     );
     setCart(updatedCart);
 
@@ -81,9 +81,3 @@ const CartProvider = ({ children }) => {
 };
 
 export default CartProvider;
-
-  
-      
-
-
-

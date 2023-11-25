@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import heroImg from "/src/assets/img/heroimg.png";
-import ContainerStyle from "./ContainerStyle";
+import styled from 'styled-components';
+import heroImg from '/src/assets/img/heroimg.png';
+import ContainerStyle from './ContainerStyle';
 
 const MainButton = styled.button`
   background-color: transparent;
@@ -18,19 +18,19 @@ const MainButton = styled.button`
 const Hero = () => {
   return (
     <>
-      <div className="hero">
+      <div className='hero'>
         <ContainerStyle>
-          <div className="hero__inner">
-            <div className="hero__text">
-              <h1 className="hero__text__title">
+          <div className='hero__inner'>
+            <div className='hero__text'>
+              <h1 className='hero__text__title'>
                 Rocket single
                 <br />
                 seater
               </h1>
               <MainButton>Shop Now</MainButton>
             </div>
-            <div className="hero__image">
-              <img src={heroImg} alt="rocket" className="heroImg" />
+            <div className='hero__image'>
+              <img src={heroImg} alt='rocket' className='heroImg' />
             </div>
           </div>
         </ContainerStyle>

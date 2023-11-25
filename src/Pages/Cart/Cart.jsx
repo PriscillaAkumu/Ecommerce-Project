@@ -1,11 +1,9 @@
-
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Banner from '../../components/Banner/Banner';
-import PaymentPlan from "../../components/Payment/Payment";
+import PaymentPlan from '../../components/Payment/Payment';
 import CartItems from './CartItems';
 import './cart.css';
-
 
 const Cart = () => {
   const breadcrumbItems = [
@@ -15,16 +13,12 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <Banner
-        pageTitle="Cart"
-        breadcrumbItems={breadcrumbItems}
-      />
-  
-      <div style={{marginTop:'50px'}}>
-          <CartItems/>
+      <Banner pageTitle='Cart' breadcrumbItems={breadcrumbItems} />
+
+      <div style={{ marginTop: '50px' }}>
+        <CartItems />
       </div>
-      <PaymentPlan/>
-   
+      <PaymentPlan />
     </>
   );
 };
