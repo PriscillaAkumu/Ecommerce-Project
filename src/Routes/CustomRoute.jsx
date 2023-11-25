@@ -29,6 +29,7 @@ const CustomRoute = () => {
                          <Route path='/account' element={<Account />} />
                          <Route path='/about' element={<About />} />
                          <Route path='/contact' element={<Contact />} />
+                         <Route path='/blog' element={<Blog />} />
                          <Route path='/cart' element={<Cart />} />
                     </Routes>
                     </CartProvider>

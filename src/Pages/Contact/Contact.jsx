@@ -2,6 +2,7 @@ import React from 'react';
 import ContactSection from '../../components/Contact/Contact';
 import Banner from '../../components/Banner/Banner';
 import Navbar from "../../components/Navbar/Navbar";
+import PaymentPlan from "../../components/Payment/Payment";
 
 const Contact = () => {
   const breadcrumbItems = [
@@ -14,7 +15,7 @@ const Contact = () => {
     <Navbar/>
       <Banner pageTitle='Contact' breadcrumbItems={breadcrumbItems} />
       <ContactSection />
-      <PaymentPlan />
+     <PaymentPlan/>
     </>
   );
 };
