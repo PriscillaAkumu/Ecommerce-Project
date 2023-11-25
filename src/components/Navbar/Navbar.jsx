@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import {  useLocation } from 'react-router-dom';
 
 import { AppBar, Button, Box, Typography, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 
@@ -6,11 +7,14 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
-import DrawerComp from './DrawerComp';
+import DrawerComp from "./DrawerComp";
+import CssBaseline from '@mui/material/CssBaseline';
+
+
 
 const myButton = {
   color: '#000',
-};
+}
 
 const menuButton = {
   my: 2,
@@ -18,57 +22,68 @@ const menuButton = {
   display: 'block',
   textTransform: 'capitalize',
   fontSize: '16px',
-};
+
+
+}
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const navbarStyle = {
+    backgroundColor: isHomePage ? '#fbebb5' : '#fff',
+    
+  };
+
   const theme = useTheme();
   console.log(theme);
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-  console.log(isMatch);
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
 
   return (
-    <AppBar position='sticky' sx={{ background: '#fff' }}>
-      <Toolbar>
+
+<>
+<CssBaseline />
+<AppBar position="static"  style={navbarStyle}>
+      <Toolbar disableGutters >
+
         {isMatch ? (
           <>
-            <DrawerComp />
+
+            <DrawerComp sx={{ height: '300px' }} />
+
           </>
         ) : (
           <>
-            <Box
-              gap={15}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                borderRadius: 1,
-                marginLeft: 'auto',
-              }}
-            >
-              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
-                {/* {pages.map((page) => (
-                  <Button
-                    key={page}
-                    sx={{ }}
-                  >
-                    {page}
-                  </Button>
-                ))} */}
 
-                <Button href='/' style={menuButton}>
+            <Box gap={15} sx={{
+              display: 'flex',
+              alignItems: 'center',
+              borderRadius: 1,
+              marginLeft: 'auto',
+
+
+            }}>
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
+              
+                <Button href="/" style={menuButton}>
                   Home
                 </Button>
-                <Button href='/Shop' style={menuButton}>
+                <Button href="/shop" style={menuButton}>
                   Shop
                 </Button>
-                <Button href='/Account' style={menuButton}>
-                  Account
+                <Button href="/about" style={menuButton}>
+                  About
                 </Button>
-                <Button href='/Contact' style={menuButton}>
+                <Button href="/contact" style={menuButton}>
                   Contact
                 </Button>
+                <Button href="/blog" style={menuButton}>
+                  Blog
+                </Button>
+
               </Box>
-              <Box>
-                <Button>
+              <Box  >
+                <Button href="/account" >
                   <img src={User} alt='user' />
                 </Button>
                 <Button style={myButton}>
@@ -77,15 +92,21 @@ const Navbar = () => {
                 <Button style={myButton}>
                   <FavoriteBorderOutlinedIcon />
                 </Button>
-                <Button style={myButton}>
+                <Button href='/cart' style={myButton}>
                   <ShoppingCartOutlinedIcon />
                 </Button>
               </Box>
+
             </Box>
+
+
           </>
         )}
       </Toolbar>
     </AppBar>
+  
+</>
+   
   );
 };
 

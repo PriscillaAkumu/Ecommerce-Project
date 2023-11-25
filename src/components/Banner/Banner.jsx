@@ -9,8 +9,10 @@ const myStyles = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '316px', // Set the desired height for the container
-  width: '100%',
-};
+  width:'100%',
+  marginTop:'10px',
+  
+}
 
 const textOverlay = {
   color: '#000',

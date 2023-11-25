@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FooterForm from './FooterForm';
+import React from "react";
+import { Link } from "react-router-dom";
+import FooterForm from "./FooterForm";
+import './footer.css';
 
 const Footer = () => {
   return (
@@ -22,9 +23,6 @@ const Footer = () => {
             <li>Payment Options</li>
             <li>Returns</li>
             <li>Privacy Policies</li>
-            {/* <Link to="/payment-options">Payment Options</Link>
-                        <Link to="/returns">Returns</Link>
-                        <Link to="/privacy-policies">Privacy Policies</Link> */}
           </nav>
         </div>
         <div className='newsletter'>

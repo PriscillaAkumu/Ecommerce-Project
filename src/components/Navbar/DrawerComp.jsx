@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import CssBaseline from '@mui/material/CssBaseline';
 import {
   Drawer,
   IconButton,
@@ -8,16 +10,20 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from '@mui/icons-material/MoreVert';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 
+
+
+
 const DrawerComp = () => {
-  // const pages = ["Home", "Shop", "ABout", "Contact"];
+  const drawerWidth = 150
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -28,55 +34,88 @@ const DrawerComp = () => {
     setAnchorEl(null);
   };
 
+
+
+
   return (
     <React.Fragment>
+      <CssBaseline />
       {/* menuItems */}
-      <Drawer anchor='left' open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        <List>
-          <ListItemButton>
-            <ListItemIcon>
-              <ListItemText>Home</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+      <Drawer
+        variant="temporary"
+        anchor="left"
+        open={openDrawer}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        onClose={() => setOpenDrawer(false)}
+        sx={{   display: { xs: 'block', sm: 'block' },
+        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#FBEBB5' }, }}
 
-          <ListItemButton>
-            <ListItemIcon>
-              <ListItemText>Shop</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+      >
+        <List sx={{
+          width: drawerWidth, backgroundColor: '#FBEBB5', boxSizing: 'border-box', paddingTop: '40px', justifyContent: 'center',
+        }}>
 
-          <ListItemButton>
-            <ListItemIcon>
-              <ListItemText>Account</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          <Link to='/'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Home</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
 
-          <ListItemButton>
-            <ListItemIcon>
-              <ListItemText>Contact</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          </Link>
+
+          <Link to='/shop'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Shop</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+
+
+          <Link to='/about'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>About</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+
+
+          <Link to='/contact'>
+            <ListItemButton >
+              <ListItemIcon>
+                <ListItemText>Contact</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+
+
         </List>
       </Drawer>
       <IconButton
-        sx={{ color: 'black', marginRight: 'auto' }}
+        sx={{ color: "black", marginRight: "auto" }}
         onClick={() => setOpenDrawer(!openDrawer)}
       >
-        <MenuIcon color='black' />
+        <MenuIcon color="black" />
       </IconButton>
 
       {/* option button for icons  */}
 
       <IconButton
         aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup='true'
+        aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        sx={{ color: '#000' }}
+
       >
-        <MoreIcon />
+        <MoreIcon color="black" />
       </IconButton>
       <Menu
-        id='basic-menu'
+        id="basic-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -84,24 +123,20 @@ const DrawerComp = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>
-          {' '}
-          <img src={User} alt='user' />
-        </MenuItem>
+        <Link to='/account'>
+          <MenuItem onClick={handleClose} >  <img src={User} alt='user' /></MenuItem>
+        </Link>
 
-        <MenuItem onClick={handleClose}>
-          {' '}
-          <SearchOutlinedIcon />
-        </MenuItem>
+        <MenuItem onClick={handleClose}>  <SearchOutlinedIcon /></MenuItem>
 
-        <MenuItem onClick={handleClose}>
-          {' '}
-          <FavoriteBorderOutlinedIcon />
-        </MenuItem>
+        <Link>
+          <MenuItem onClick={handleClose}> <FavoriteBorderOutlinedIcon /></MenuItem>
+        </Link>
 
-        <MenuItem onClick={handleClose}>
-          <ShoppingCartOutlinedIcon />
-        </MenuItem>
+        <Link to='/cart'>
+          <MenuItem onClick={handleClose}><ShoppingCartOutlinedIcon /></MenuItem>
+        </Link>
+
       </Menu>
     </React.Fragment>
   );
