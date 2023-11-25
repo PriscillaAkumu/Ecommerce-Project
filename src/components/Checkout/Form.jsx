@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { DevTool } from '@hookform/devtools';
+// import { DevTool } from '@hookform/devtools';
 
 // mui
 import {
@@ -213,7 +213,7 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
             {errors.message?.message}
           </Typography>
         </Stack>
-        <DevTool control={control} />
+        {/* <DevTool control={control} /> */}
       </Box>
     </>
   );
