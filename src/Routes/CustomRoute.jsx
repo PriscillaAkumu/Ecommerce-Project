@@ -9,6 +9,7 @@ import CartProvider from '../context/CartContext';
 import SingleProduct from '../Pages/SingleProduct/SingleProduct';
 
 
+
 const CustomRoute = () => {
   return (
     <CartProvider>

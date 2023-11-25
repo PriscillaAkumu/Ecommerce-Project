@@ -85,6 +85,9 @@ const Navbar = () => {
                 <Button href="/contact" style={menuButton}>
                   Contact
                 </Button>
+                <Button href="/blog" style={menuButton}>
+                  Blog
+                </Button>
 
               </Box>
               <Box  >
