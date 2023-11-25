@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
 import { Stack, Button, Typography, Box, styled } from '@mui/material';
@@ -8,7 +9,12 @@ export default function Billing({ register, control, handleSubmit, formState }) 
   // handling errors
   const { errors } = formState;
 
+  const { cart, removeFromCart } = useContext(CartContext);
+
+  let totalPrice = 0;
+
   return (
+    
     <Box>
       <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
         <Typography
@@ -32,8 +38,12 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           Subtotal
         </Typography>
       </div>
-
-      <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
+      {cart.map((item) => {
+                const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
+                totalPrice += item.quantity * numericPrice;
+                return (
+<Box key={item.product.id}>
+<div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
         <p style={{ flex: '1' }}>
           {' '}
           <span
@@ -41,9 +51,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
               color: '#9F9F9F',
             }}
           >
-            Asgaard{' '}
-          </span>{' '}
-          x 1
+{item.product.name}
+          </span>
+          * {item.quantity}
         </p>
         <Typography
           sx={{
@@ -76,9 +86,13 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             flex: '1',
           }}
         >
-          Rs. 250,000.00
+RS.{numericPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </Typography>
       </div>
+
+</Box>
+        );
+      })}
 
       <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
         <Typography
@@ -100,7 +114,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             flex: '1',
           }}
         >
-          Rs. 250,000.00
+         RS.{totalPrice.toFixed(2)}
         </Typography>
       </div>
 

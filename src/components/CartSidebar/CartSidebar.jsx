@@ -1,5 +1,6 @@
 
 import React, { useContext } from 'react';
+
 import CancelIcon from '@mui/icons-material/Cancel';
 import { ShoppingBagOutlined } from '@mui/icons-material';
 import { CartContext } from '../../context/CartContext';
@@ -50,7 +51,7 @@ const CartSidebar = () => {
             <hr className='cart-line' />
             <div className='cart-btn'>
                 <button className='view-cart '><a href='/cart'>View Cart</a></button>
-                <button className='checkout'><a href='#'>Checkout</a></button>
+                <button className='checkout'><a href='/checkout'>Checkout</a></button>
             </div>
         </div>
     );
