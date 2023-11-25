@@ -1,6 +1,6 @@
 import { createTheme, } from "@mui/material";
 
-const theme = createTheme ({
+const theme = createTheme({
 
 
   palette: {
@@ -24,15 +24,15 @@ const theme = createTheme ({
       fontWeight: 400,
       marginBottom: "20px",
     },
-    h5:{
+    h5: {
       fontSize: "18px",
       fontWeight: 500,
       marginBottom: "20px",
     },
     h6: {
-   
-fontSize: '16px',
-fontWeight: 400,
+
+      fontSize: '16px',
+      fontWeight: 400,
 
     },
     body: {
@@ -41,19 +41,19 @@ fontWeight: 400,
       lineHeight: "19.5px",
       marginTop: "10px",
     },
-subtitle1:{
- lineHeight: '36px',
- fontWeight:400,
-}, 
+    subtitle1: {
+      lineHeight: '36px',
+      fontWeight: 400,
+    },
 
-subtitle2:{
-  fontSize: '16px', 
-  fontWeight: 400, 
-  lineHeight: '24px',
-}
+    subtitle2: {
+      fontSize: '16px',
+      fontWeight: 400,
+      lineHeight: '24px',
+    }
   },
 })
-;
+  ;
 
 export default theme;
 

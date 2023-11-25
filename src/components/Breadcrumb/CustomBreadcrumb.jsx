@@ -7,13 +7,10 @@ import { Typography } from '@mui/material';
 
 const CustomBreadcrumb = ({ items }) => {
   return (
-    <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
+    <Breadcrumbs separator={<NavigateNextIcon fontSize='small' />} aria-label='breadcrumb'>
       {items.map((item, index) => (
-        <Link key={index} href={item.link} >
-          <Typography color='#000'>
-          {item.label}
-          </Typography>
-          
+        <Link key={index} href={item.link}>
+          <Typography color='#000'>{item.label}</Typography>
         </Link>
       ))}
     </Breadcrumbs>
