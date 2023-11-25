@@ -3,7 +3,9 @@ import ContainerStyle from "../ContainerStyle";
 import Pagination from "../pagination/Pagination";
 import productData from "/src/productData";
 import ProductCard from "../productcard/ProductCard";
-import FreeDelivery from "../freedelivery/FreeDelivery";
+import PaymentPlan from "../../../components/Payment/Payment";
+
+
 const ShopList = () => {
   return (
     <>
@@ -22,7 +24,7 @@ const ShopList = () => {
 
       </div>
       <Pagination />
-      <FreeDelivery />
+      <PaymentPlan/>
     </>
   );
 };

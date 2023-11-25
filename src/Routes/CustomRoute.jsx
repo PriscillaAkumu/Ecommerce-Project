@@ -5,7 +5,6 @@ import Shop from "../Pages/Shop/Shop";
 import Account from '../Pages/Account/Account';
 import Contact from "../Pages/Contact/Contact";
 import Cart from "../Pages/Cart/Cart";
-import CartProvider from '../context/CartContext';
 import SingleProduct from '../Pages/SingleProduct/SingleProduct';
 import Blog from '../Pages/Blog/Blog';
 import About from '../Pages/About/About';

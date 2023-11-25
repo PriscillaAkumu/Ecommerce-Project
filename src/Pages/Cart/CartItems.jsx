@@ -39,18 +39,6 @@ const StyledBox = styled(Box)({
 });
 
 
-// const StyledButton = styled(Button)({
-//     width:'32px',
-//     height:'32px',
-//     borderRadius:'5px',
-//     backgroundColor: 'transparent',
-//     border: '1px solid #9F9F9F',
-//     fontSize: '16px',
-//     fontWeight: 400,
-//     color: '#000',
-//     textAlign: 'center',
-    
-//   });
 
 const CartItems = () => {
   const navigate = useNavigate();

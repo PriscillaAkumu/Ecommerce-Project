@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import Banner from '../../components/Banner/Banner'
+import Banner from '../../components/Banner/Banner';
+import Profile from './Profile';
 
 const About = () => {
     const breadcrumbItems = [
@@ -11,9 +12,10 @@ const About = () => {
     <>
     <Navbar/>
     <Banner
-     pageTitle="Shop"
+     pageTitle="About"
      breadcrumbItems={breadcrumbItems}
     />
+    <Profile/>
     </>
   );
 }

@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import {  useLocation } from 'react-router-dom';
 
-import {
-  AppBar,
-  Button,
-  Box,
-  Typography,
-  Toolbar,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { AppBar, Button, Box, Typography, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
