@@ -189,7 +189,7 @@ const CartItems = () => {
   return (
     <Grid container className='cart-container'>
       {/* Grid item with table */}
-      <Grid item xs={12} md={8} lg={9} sx={{ padding: '10px' }} className='grid-item'>
+      <Grid item xs={12} md={8} lg={9} sx={{ padding: '10px' }} >
         <TableContainer component={Box} elevation={0}>
           <StyledTable>
             <TableHead>
@@ -272,7 +272,7 @@ const CartItems = () => {
       </Grid>
 
       {/* Grid item with subtotal */}
-      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px' }} className='grid-item'>
+      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px' }} >
         <Paper style={{ backgroundColor: '#FBEBB5', padding: 0 }} elevation={0}>
           <Typography textAlign='center'>Cart Totals</Typography>
           <Stack direction='row' spacing={2}>
