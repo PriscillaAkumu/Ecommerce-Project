@@ -17,7 +17,12 @@ const Cart = () => {
         pageTitle="Cart"
         breadcrumbItems={breadcrumbItems}
       />
-      <CartItems/>
+  
+      <div style={{marginTop:'50px'}}>
+    
+          <CartItems/>
+      </div>
+   
     </>
   );
 }

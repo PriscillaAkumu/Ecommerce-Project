@@ -1,10 +1,73 @@
+/* productDetail grid-container */
 .grid-container {
   border-bottom: 1px solid #9F9F9F;
   
+}
 
+/* size details */
+.sizes-container {
+  margin-top: 7px;
+}
+.sizes-container .title {
+  color: #9F9F9F;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.sizes-container .size-options {
+  display: flex;
+  gap: 16px;
+}
+.sizes-container button {
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #FAF4F4;
+}
+.sizes-container .selected {
+  background-color: #FBEBB5;
+  cursor: pointer;
+}
+
+/* Color details */
+.colors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 7px;
+}
+.colors-container .title {
+  color: #9F9F9F;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.colors-container .color-options {
+  display: flex;
+  gap: 16px;
+}
+.colors-container button {
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-indent: 100%;
+  white-space: nowrap;
+  color:#fff;
+}
+.colors-container .selected {
+  border: 2px solid #fff;
+  outline: 1px solid #dad5d5;
 }
 
 
+/* increase and add button */
 .quantity {
   border: 1px solid #9F9F9F;
   border-radius: 15px;
@@ -21,12 +84,16 @@
   font-weight: 500;
 }
 
+/* addToCart button */
+
 .add {
   padding: 15px 40px;
   border: 1px solid #000;
   border-radius: 15px;
   font-size: clamp(1rem, 0.7151rem + 0.5944vw, 1.25rem);
 }
+
+/* overlay effect on cartSidebar */
 .overlay {
   position: fixed;
   top: 0;
@@ -44,6 +111,7 @@
 }
 
 
+/* product description */
 .desc-container .subtitle2 {
   padding: 0px 40px;
   text-align: justify;
@@ -52,6 +120,9 @@
 .desc-container .subtitle1 .title {
   font-size: 24px;
 }
+
+
+/* related products */
 
 .product-container {
   margin-top: 40px;

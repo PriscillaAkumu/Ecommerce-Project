@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './size.css';
 
 const Size = ({product, selectedSize, handleSizeClick}) => {
   

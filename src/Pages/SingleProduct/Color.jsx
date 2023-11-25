@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './color.css';
+
 
 const Color = ({product, selectedColor, handleColorClick}) => {
     

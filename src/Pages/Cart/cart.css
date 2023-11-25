@@ -1,11 +1,27 @@
-.table-container{
-    padding:40px 20px;
+.cart-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
+}
+
+.button {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #9F9F9F;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    cursor:pointer;
 }
 
 
 
-@media screen and (min-width:320px) and (max-width: 420px){
-    .table-container{
-        padding: 40px 0px;
-    }
-}
+
+
+
+/* @media screen and (min-width:320px) and (max-width: 420px){
+   
+} */

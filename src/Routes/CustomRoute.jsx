@@ -16,7 +16,6 @@ const CustomRoute = () => {
      <Route path='/' element={<Home/>}/>
      <Route path='/shop' element={<Shop/>}/>
      <Route path='/shop/:id/*' element={<SingleProduct/>}/>
-     {/* <Route path='/shop/:id' element={<ProductDetails/>}/> */}
      <Route path='/account' element={<Account/>}/>
      <Route path='/contact' element={<Contact/>}/>
      <Route path='/cart' element={<Cart/>}/>
