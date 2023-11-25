@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {  useLocation } from 'react-router-dom';
 
 import {
   AppBar,
@@ -34,17 +35,23 @@ const menuButton = {
 }
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const navbarStyle = {
+    backgroundColor: isHomePage ? '#fbebb5' : '#fff',
+    
+  };
 
   const theme = useTheme();
   console.log(theme);
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // console.log(isMatch);
+
 
   return (
 
-<React.Fragment>
+<>
 <CssBaseline />
-<AppBar position="static"  sx={{ background: '#fff', }}>
+<AppBar position="static"  style={navbarStyle}>
       <Toolbar disableGutters >
 
         {isMatch ? (
@@ -65,16 +72,7 @@ const Navbar = () => {
 
             }}>
               <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
-                {/* {pages.map((page) => (
-                  <Button
-                    key={page}
-                    sx={{ }}
-                  >
-                    {page}
-                  </Button>
-                ))} */}
-
-
+              
                 <Button href="/" style={menuButton}>
                   Home
                 </Button>
@@ -99,7 +97,7 @@ const Navbar = () => {
                 <Button style={myButton}>
                   <FavoriteBorderOutlinedIcon />
                 </Button>
-                <Button style={myButton}>
+                <Button href='/cart' style={myButton}>
                   <ShoppingCartOutlinedIcon />
                 </Button>
               </Box>
@@ -112,7 +110,7 @@ const Navbar = () => {
       </Toolbar>
     </AppBar>
   
-</React.Fragment>
+</>
    
   );
 };

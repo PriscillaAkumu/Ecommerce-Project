@@ -5,6 +5,7 @@ import Banner from '../../components/Banner/Banner';
 import CartItems from './CartItems';
 import './cart.css';
 
+
 const Cart = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
