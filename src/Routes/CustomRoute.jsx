@@ -7,7 +7,7 @@ import Cart from '../Pages/Cart/Cart';
 import SingleProduct from '../Pages/SingleProduct/SingleProduct';
 import About from '../Pages/About/About';
 import Blog from '../Pages/Blog/Blog';
-import CartProvider from '../Context/CartContext';
+import CartProvider from '../context/CartContext';
 import AuthLogin from '../components/Login/Auth';
 import NotFound from '../components/NotFound';
 import AuthProvider from '../Auth/authContext';
