@@ -27,18 +27,17 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             <TableCell>
               <Typography variant="h6"   
               sx={{
-             fontSize: '24px',
+          
              fontWeight: '500',
-             lineHeight: '36px',
+           
 
           }}>Product</Typography>
             </TableCell>
             <TableCell sx={{textAlign:'right'}}>
               <Typography variant="h6"
               sx={{
-                            fontSize: ' 24px',
                             fontWeight: '500',
-                            lineHeight: '36px',
+                           
                             
                            }}
               >Subtotal</Typography>
@@ -69,8 +68,8 @@ export default function Billing({ register, control, handleSubmit, formState }) 
               <Typography variant="body1" 
                sx={{
                                  fontWeight: '300',
-                                   FontSize: '16px',
-                                   lineHeight: '24px',
+                             
+                             
                                   
                                }}
               >RS.{numericPrice.toLocaleString(undefined, numberOptions)} </Typography>
@@ -81,9 +80,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             <TableCell>
               <Typography variant="body1"
                 sx={{
-                                    fontSize: '16px',
+                                  
                                      fontWeight: '400',
-                                    lineHeight: '24px',
+                            
                               }}
               >Subtotal</Typography>
             </TableCell>
@@ -91,8 +90,8 @@ export default function Billing({ register, control, handleSubmit, formState }) 
               <Typography variant="body1" 
                  sx={{
                                      fontWeight: '300',
-                                     fontSize: '16px',
-                                     lineHeight: '24px',
+                                     
+                                     
                                      
                                    }}
               
@@ -107,9 +106,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
             <TableCell>
               <Typography variant="body1"
                sx={{
-                             fontSize: '16px',
+                            
                             fontWeight: '400',
-                            lineHeight: '24px',
+                      
                             
                            }}
               >Total</Typography>
@@ -119,10 +118,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
                
                          sx={{
                             color: '#B88E2F',
-                           fontSize: '24px',
                             fontWeight: '700',
-                            lineHeight: '36px',
-                            flex: '1',
+        
+                            
                           }}
               >   RS.{totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2, })}</Typography>
             </TableCell>
@@ -152,7 +150,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           style={{
             fontSize: '16px',
             fontWeight: '400',
-            lineHeight: '24px',
+          
           }}
         >
           Direct Bank Transfer
@@ -166,7 +164,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           shipped until the funds have cleared in our account.
         </Typography>
       </div>
-      <div style={{ color: '#9F9F9F', fontSize: '16px', fontWeight: '400', lineHeight: ' 24px' }}>
+      <div style={{ color: '#9F9F9F', fontSize: '16px', fontWeight: '400'}}>
         <input
           {...register('paymentMode', {
             required: 'Select a payment mode',
