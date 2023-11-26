@@ -5,7 +5,7 @@ import { CartContext } from '../../Context/CartContext';
 import Size from './Size';
 import Color from './Color';
 import FooterIcon from '../../components/Icons/FooterIcon';
-import ProductBreadcrumb from '../../components/Breadcrumb/ProductBreadCrumb';
+import ProductBreadcrumb from '../../components/Breadcrumb/ProductBreadcrumb';
 import CartSidebar from '../../components/CartSidebar/CartSidebar';
 import { Grid, Stack, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
