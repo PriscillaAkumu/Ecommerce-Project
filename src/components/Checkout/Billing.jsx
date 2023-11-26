@@ -2,134 +2,134 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
-import { Stack, Button, Typography, Box, styled } from '@mui/material';
+import { Stack, styled } from '@mui/material';
 import FormDialog from '../Modals/Dialog';
-
+import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Typography, Paper } from '@mui/material';
+import { tableCellClasses } from '@mui/material/TableCell';
+const StyledTable = styled(Table)({
+  [`& .${tableCellClasses.root}`]: {
+    borderBottom: 'none',
+    paddingLeft:0,
+  },
+});
 export default function Billing({ register, control, handleSubmit, formState }) {
   // handling errors
   const { errors } = formState;
-
-  const { cart, removeFromCart } = useContext(CartContext);
-
+  const { cart } = useContext(CartContext);
   let totalPrice = 0;
 
   return (
-    <Box >
-      <Stack 
-    spacing={8}
-    border={5}
-      >
-      <div style={{ display: 'flex', marginBottom: '20px', gap:"6.25rem" }}>
-        <Typography
-          sx={{
-            fontSize: '24px',
-            fontWeight: '500',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          Product
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: ' 24px',
-            fontWeight: '500',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          Subtotal
-        </Typography>
-      </div>
-      {cart.map((item) => {
+    <>
+    <TableContainer component={Paper} elevation={0}>
+      <StyledTable>
+        <TableHead>
+          <TableRow>
+            <TableCell>
+              <Typography variant="h6"   
+              sx={{
+             fontSize: '24px',
+             fontWeight: '500',
+             lineHeight: '36px',
+
+          }}>Product</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="h6"
+              sx={{
+                            fontSize: ' 24px',
+                            fontWeight: '500',
+                            lineHeight: '36px',
+                            
+                           }}
+              >Subtotal</Typography>
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        {cart.map((item) => {
         const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
+        const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
         totalPrice += item.quantity * numericPrice;
         return (
-          <Box key={item.product.id}>
-            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-              <p style={{ flex: '1' }}>
-                {' '}
-                <span
-                  style={{
-                    color: '#9F9F9F',
-                  }}
-                >
-                  {item.product.name}
-                </span>
-                * {item.quantity}
-              </p>
-              <Typography
+        <TableBody>
+          {/* Row 1 */}
+          <TableRow key={item.product.id}>
+            <TableCell>
+              <Stack direction='row'>
+              <Typography variant="body1"
+               style={{
+                                   color: '#9F9F9F',
+    }}
+              
+              
+              > {item.product.name}</Typography>
+              <Typography>*{item.quantity}</Typography>
+              </Stack>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1" 
+               sx={{
+                                 fontWeight: '300',
+                                   FontSize: '16px',
+                                   lineHeight: '24px',
+                                  
+                               }}
+              >RS.{numericPrice.toLocaleString(undefined, numberOptions)} </Typography>
+            </TableCell>
+          </TableRow>
+          {/* Row 2 */}
+          <TableRow>
+            <TableCell>
+              <Typography variant="body1"
                 sx={{
-                  fontWeight: '300',
-                  FontSize: '16px',
-                  lineHeight: '24px',
-                  flex: '1',
-                }}
-              >
-                Rs. 250,000.00
-              </Typography>
-            </div>
-
-            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-              <Typography
-                sx={{
-                  fontSize: '16px',
-                  fontWeight: '400',
-                  flex: '1',
-                  lineHeight: '24px',
-                }}
-              >
-                Subtotal
-              </Typography>
-              <Typography
-                sx={{
-                  fontWeight: '300',
-                  fontSize: '16px',
-                  lineHeight: '24px',
-                  flex: '1',
-                }}
-              >
-                RS.
-                {numericPrice.toLocaleString(undefined, {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </Typography>
-            </div>
-          </Box>
-        );
-      })}
-
-      <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-        <Typography
-          sx={{
-            fontSize: '16px',
-            fontWeight: '400',
-            lineHeight: '24px',
-            flex: '1',
-          }}
-        >
-          Total
-        </Typography>
-        <Typography
-          sx={{
-            color: '#B88E2F',
-            fontSize: '24px',
-            fontWeight: '700',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          RS.{totalPrice.toFixed(2)}
-        </Typography>
-      </div>
-
-      </Stack>
-   
-
-<hr />
-      {/* <Divider variant='middle' /> */}
-
+                                    fontSize: '16px',
+                                     fontWeight: '400',
+                                    lineHeight: '24px',
+                              }}
+              >Subtotal</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1" 
+                 sx={{
+                                     fontWeight: '300',
+                                     fontSize: '16px',
+                                     lineHeight: '24px',
+                                     
+                                   }}
+              
+              > RS.{(item.quantity * numericPrice).toLocaleString(undefined, numberOptions)}</Typography>
+            </TableCell>
+          </TableRow>
+          {/* Row 3 */}
+        </TableBody>
+          );
+        })}
+        <TableRow>
+            <TableCell>
+              <Typography variant="body1"
+               sx={{
+                             fontSize: '16px',
+                            fontWeight: '400',
+                            lineHeight: '24px',
+                            
+                           }}
+              >Total</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1" 
+               
+                         sx={{
+                            color: '#B88E2F',
+                           fontSize: '24px',
+                            fontWeight: '700',
+                            lineHeight: '36px',
+                            flex: '1',
+                          }}
+              >   RS.{totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2, })}</Typography>
+            </TableCell>
+          </TableRow>
+      </StyledTable>
+    </TableContainer>
+    <hr />
       <div
         style={{
           display: 'flex',
@@ -158,7 +158,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           Direct Bank Transfer
         </Typography>
       </div>
-
       <div style={{ color: '#9F9F9F' }}>
         <Typography variant='body-2'>
           {' '}
@@ -179,6 +178,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         />{' '}
         Direct Bank Transfer
         <br />
+        {/* <label htmlFor="field-sun"> */}
         <input
           {...register('paymentMode', {
             required: 'Select a payment mode',
@@ -194,15 +194,13 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           {errors.paymentMode?.message}
         </Typography>
       </div>
-
-      <div style={{marginTop:"20px"}}>
-        <Typography variant='body-2' >
+      <div>
+        <Typography variant='body-2'>
           Your personal data will be used to support your experience <br />
           throughout this website, to manage access to your account and for other purposes described
           in our <b>privacy policy.</b>
         </Typography>
       </div>
-
       <Stack
         direction='row'
         sx={{
@@ -223,6 +221,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           }}
         />
       </Stack>
-    </Box>
+    </>
   );
 }
