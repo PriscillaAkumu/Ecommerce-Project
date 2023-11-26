@@ -1,4 +1,4 @@
-import { createTheme,  } from '@mui/material';
+import { createTheme } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -24,7 +24,7 @@ const theme = createTheme({
       textAlign: 'center',
       color: '#000',
       '@media (max-width: 600px)': {
-        fontSize: '24px', 
+        fontSize: '24px',
       },
     },
     h4: {
@@ -58,28 +58,25 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: '24px',
     },
-    heading:{
-
-    },
-    poster:{
-      fontSize:'16px',
-      fontWeight:500,
+    heading: {},
+    poster: {
+      fontSize: '16px',
+      fontWeight: 500,
       lineHeight: '24px',
-      color:'#000',
-      
+      color: '#000',
     },
-    subtotal:{
-      fontSize:'16px',
-      fontWeight:400,
+    subtotal: {
+      fontSize: '16px',
+      fontWeight: 400,
       lineHeight: '24px',
-      color:'#9F9F9F',
+      color: '#9F9F9F',
     },
-    total:{
-      fontSize:'20px',
-      fontWeight:500,
+    total: {
+      fontSize: '20px',
+      fontWeight: 500,
       lineHeight: '30px',
-      color:'#B88E2F',
-    }
+      color: '#B88E2F',
+    },
   },
 });
 

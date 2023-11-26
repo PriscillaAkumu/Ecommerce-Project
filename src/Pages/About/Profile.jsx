@@ -25,19 +25,27 @@ const AboutPage = () => {
           About Us
         </Typography>
         <Typography variant='body1' paragraph textAlign='justify'>
-          Welcome to our About Us page. Our team comprises skilled and experienced software developers, engineers, and designers who are experts in their respective fields. We bring a wealth of knowledge and technical proficiency to every project, ensuring that our clients receive solutions that are not only robust but also innovative.
+          Welcome to our About Us page. Our team comprises skilled and experienced software
+          developers, engineers, and designers who are experts in their respective fields. We bring
+          a wealth of knowledge and technical proficiency to every project, ensuring that our
+          clients receive solutions that are not only robust but also innovative.
         </Typography>
         <Typography variant='body1' paragraph>
           Meet our team:
         </Typography>
-        <Grid container spacing={3} >
+        <Grid container spacing={3}>
           {/* Person 1 */}
-          <Grid item xs={12} sm={4} >
+          <Grid item xs={12} sm={4}>
             <PersonImage
               src={Priscilla} // Replace with the actual image URL
               alt='Person 1'
             />
-            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}>Priscilla Akumu</Typography>
+            <Typography
+              variant='subtitle1'
+              sx={{ fontSize: '18px', color: '#000', fontWeight: 500 }}
+            >
+              Priscilla Akumu
+            </Typography>
             <Typography variant='body2'>Lead developer, UI/UX designer</Typography>
           </Grid>
 
@@ -47,7 +55,12 @@ const AboutPage = () => {
               src={Sheila} // Replace with the actual image URL
               alt='Person 2'
             />
-            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}>Sheila Arinaitwe</Typography>
+            <Typography
+              variant='subtitle1'
+              sx={{ fontSize: '18px', color: '#000', fontWeight: 500 }}
+            >
+              Sheila Arinaitwe
+            </Typography>
             <Typography variant='body2'>Software Developer</Typography>
           </Grid>
 
@@ -57,7 +70,13 @@ const AboutPage = () => {
               src={Conrad} // Replace with the actual image URL
               alt='Person 3'
             />
-            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}> Conrad Obi</Typography>
+            <Typography
+              variant='subtitle1'
+              sx={{ fontSize: '18px', color: '#000', fontWeight: 500 }}
+            >
+              {' '}
+              Conrad Obi
+            </Typography>
             <Typography variant='body2'>Software Developer</Typography>
           </Grid>
         </Grid>

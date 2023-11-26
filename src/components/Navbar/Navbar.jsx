@@ -12,7 +12,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import classes from './navbar.module.css';
 import Tooltip from '@mui/material/Tooltip';
 import LogoutIcon from '@mui/icons-material/Logout';
-import { useAuth } from "../../context/authContext"
+import { useAuth } from '../../context/authContext';
 
 const myButton = {
   color: '#000',
@@ -20,10 +20,7 @@ const myButton = {
   hieght: '28px',
 };
 
-
-
 const Navbar = () => {
-
   const { signout } = useAuth();
   const handleLogout = () => {
     signout();
@@ -71,13 +68,9 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Box
-                className={classes.navbar}
-                gap={15}
-
-              >
-                <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px', }}>
-                  <Button variant='text' href='/' className={classes.menuButton} >
+              <Box className={classes.navbar} gap={15}>
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '30px' }}>
+                  <Button variant='text' href='/' className={classes.menuButton}>
                     Home
                   </Button>
                   <Button variant='text' href='/shop' className={classes.menuButton}>
@@ -93,35 +86,35 @@ const Navbar = () => {
                     Blog
                   </Button>
                 </Box>
-                <Box >
-                  <Tooltip title="Account" arrow>
-                  <Button href='/account'>
-                    <img src={User} alt='user' />
-                  </Button>
+                <Box>
+                  <Tooltip title='Account' arrow>
+                    <Button href='/account'>
+                      <img src={User} alt='user' />
+                    </Button>
                   </Tooltip>
-                <Tooltip title='search' arrow>
-                <Button style={myButton}>
-                    <SearchOutlinedIcon />
-                  </Button>
-                </Tooltip>
-                
+                  <Tooltip title='search' arrow>
+                    <Button style={myButton}>
+                      <SearchOutlinedIcon />
+                    </Button>
+                  </Tooltip>
+
                   <Tooltip title='favorite' arrow>
-                  <Button style={myButton}>
-                    <FavoriteBorderOutlinedIcon />
-                  </Button>
+                    <Button style={myButton}>
+                      <FavoriteBorderOutlinedIcon />
+                    </Button>
                   </Tooltip>
-                 
-                  <Tooltip title="cart" arrow>
-                  <Button href='/cart' style={myButton}>
-                    <ShoppingCartOutlinedIcon />
-                  </Button>
-                    </Tooltip>
-                 
-                    <Tooltip title="logout" arrow>
-                  <Button style={myButton}  onClick={handleLogout} >
-                    < LogoutIcon  />
-                  </Button>
-                    </Tooltip>
+
+                  <Tooltip title='cart' arrow>
+                    <Button href='/cart' style={myButton}>
+                      <ShoppingCartOutlinedIcon />
+                    </Button>
+                  </Tooltip>
+
+                  <Tooltip title='logout' arrow>
+                    <Button style={myButton} onClick={handleLogout}>
+                      <LogoutIcon />
+                    </Button>
+                  </Tooltip>
                 </Box>
               </Box>
             </>

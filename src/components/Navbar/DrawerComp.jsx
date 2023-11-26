@@ -20,9 +20,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 import classes from './navbar.module.css';
 
-
 // const StyledList = styled(MuiList)({
- 
+
 //   // hover states
 //   '& .MuiListItemButton-root:hover': {
 //     backgroundColor: 'orange',
@@ -32,9 +31,7 @@ import classes from './navbar.module.css';
 //   },
 // });
 
-
 const DrawerComp = () => {
-
   const { signout } = useAuth();
   const handleLogout = () => {
     signout();
@@ -55,7 +52,7 @@ const DrawerComp = () => {
     <React.Fragment>
       <CssBaseline />
       {/* menuItems */}
-     
+
       <Drawer
         variant='temporary'
         anchor='left'
@@ -74,49 +71,43 @@ const DrawerComp = () => {
           },
         }}
       >
-
-
         <List
-        
           sx={{
             width: drawerWidth,
             backgroundColor: '#FBEBB5',
             boxSizing: 'border-box',
-            marginTop:'50px',
+            marginTop: '50px',
             justifyContent: 'center',
             alignItems: 'center',
-            textAlign:'center',
+            textAlign: 'center',
           }}
         >
-
-
-
-          <Link to='/' >
-            <ListItemButton  >
+          <Link to='/'>
+            <ListItemButton>
               <ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/shop' >
-            <ListItemButton  >
+          <Link to='/shop'>
+            <ListItemButton>
               <ListItemIcon>
                 <ListItemText>Shop</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/about' >
-            <ListItemButton  >
+          <Link to='/about'>
+            <ListItemButton>
               <ListItemIcon>
                 <ListItemText>About</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/contact' >
-            <ListItemButton  >
+          <Link to='/contact'>
+            <ListItemButton>
               <ListItemIcon>
                 <ListItemText>Contact</ListItemText>
               </ListItemIcon>
@@ -131,7 +122,6 @@ const DrawerComp = () => {
         <MenuIcon color='black' />
       </IconButton>
 
-    
       {/* option button for icons  */}
 
       <IconButton
@@ -151,7 +141,7 @@ const DrawerComp = () => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-        sx={{height:"auto"}}
+        sx={{ height: 'auto' }}
       >
         <Link to='/account'>
           <MenuItem onClick={handleClose}>
@@ -172,17 +162,15 @@ const DrawerComp = () => {
           </MenuItem>
         </Link>
 
-
         <Link to='/cart'>
           <MenuItem onClick={handleClose}>
             <ShoppingCartOutlinedIcon />
           </MenuItem>
         </Link>
-       
-          <MenuItem onClick={handleLogout}>
-             < LogoutIcon  />
-          </MenuItem>
-       
+
+        <MenuItem onClick={handleLogout}>
+          <LogoutIcon />
+        </MenuItem>
       </Menu>
     </React.Fragment>
   );

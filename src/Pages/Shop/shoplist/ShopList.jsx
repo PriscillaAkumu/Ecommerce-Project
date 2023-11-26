@@ -14,7 +14,6 @@ const ShopList = () => {
           <div className='shop-list-inner'>
             {productData.map((product) => (
               <Link to={`/shop/${product.id}`}>
-
                 <ProductCard key={product.id} product={product} />
               </Link>
             ))}

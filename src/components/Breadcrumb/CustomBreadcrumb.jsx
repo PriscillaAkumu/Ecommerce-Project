@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
@@ -7,15 +6,15 @@ import { Typography } from '@mui/material';
 
 const CustomBreadcrumb = ({ items }) => {
   return (
-    <Breadcrumbs  separator={<NavigateNextIcon fontSize='medium' />} aria-label='breadcrumb'>
+    <Breadcrumbs separator={<NavigateNextIcon fontSize='medium' />} aria-label='breadcrumb'>
       {items.map((item, index) => (
         <Link key={index} href={item.link}>
           {index === 0 ? (
-            <Typography varaint='h5' sx={{color:'#000',  fontWeight: 500, fontSize: '16px', }} >
+            <Typography varaint='h5' sx={{ color: '#000', fontWeight: 500, fontSize: '16px' }}>
               {item.label}
             </Typography>
           ) : (
-            <Typography variant='h6' sx={{color:'#000',  fontWeight: 300, fontSize: '16px', }}>
+            <Typography variant='h6' sx={{ color: '#000', fontWeight: 300, fontSize: '16px' }}>
               {item.label}
             </Typography>
           )}
@@ -26,4 +25,3 @@ const CustomBreadcrumb = ({ items }) => {
 };
 
 export default CustomBreadcrumb;
-

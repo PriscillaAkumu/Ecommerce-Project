@@ -4,12 +4,21 @@ import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
 import { Stack, styled } from '@mui/material';
 import FormDialog from '../Modals/Dialog';
-import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Typography, Paper } from '@mui/material';
+import {
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Typography,
+  Paper,
+} from '@mui/material';
 import { tableCellClasses } from '@mui/material/TableCell';
 const StyledTable = styled(Table)({
   [`& .${tableCellClasses.root}`]: {
     borderBottom: 'none',
-    paddingLeft:0,
+    paddingLeft: 0,
   },
 });
 export default function Billing({ register, control, handleSubmit, formState }) {
@@ -20,114 +29,124 @@ export default function Billing({ register, control, handleSubmit, formState }) 
 
   return (
     <>
-    <TableContainer component={Paper} elevation={0}>
-      <StyledTable>
-        <TableHead>
+      <TableContainer component={Paper} elevation={0}>
+        <StyledTable>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                <Typography
+                  variant='h6'
+                  sx={{
+                    fontWeight: '500',
+                  }}
+                >
+                  Product
+                </Typography>
+              </TableCell>
+              <TableCell sx={{ textAlign: 'right' }}>
+                <Typography
+                  variant='h6'
+                  sx={{
+                    fontWeight: '500',
+                  }}
+                >
+                  Subtotal
+                </Typography>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          {cart.map((item) => {
+            const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
+            const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+            totalPrice += item.quantity * numericPrice;
+            return (
+              <TableBody>
+                {/* Row 1 */}
+                <TableRow key={item.product.id}>
+                  <TableCell>
+                    <Stack direction='row'>
+                      <Typography
+                        variant='body1'
+                        style={{
+                          color: '#9F9F9F',
+                        }}
+                      >
+                        {' '}
+                        {item.product.name}
+                      </Typography>
+                      <Typography>*{item.quantity}</Typography>
+                    </Stack>
+                  </TableCell>
+                  <TableCell sx={{ textAlign: 'right' }}>
+                    <Typography
+                      variant='body1'
+                      sx={{
+                        fontWeight: '300',
+                      }}
+                    >
+                      RS.{numericPrice.toLocaleString(undefined, numberOptions)}{' '}
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+                {/* Row 2 */}
+                <TableRow>
+                  <TableCell>
+                    <Typography
+                      variant='body1'
+                      sx={{
+                        fontWeight: '400',
+                      }}
+                    >
+                      Subtotal
+                    </Typography>
+                  </TableCell>
+                  <TableCell sx={{ textAlign: 'right' }}>
+                    <Typography
+                      variant='body1'
+                      sx={{
+                        fontWeight: '300',
+                      }}
+                    >
+                      {' '}
+                      RS.{(item.quantity * numericPrice).toLocaleString(undefined, numberOptions)}
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+                {/* Row 3 */}
+              </TableBody>
+            );
+          })}
           <TableRow>
             <TableCell>
-              <Typography variant="h6"   
-              sx={{
-          
-             fontWeight: '500',
-           
-
-          }}>Product</Typography>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="h6"
-              sx={{
-                            fontWeight: '500',
-                           
-                            
-                           }}
-              >Subtotal</Typography>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        {cart.map((item) => {
-        const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
-        const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
-        totalPrice += item.quantity * numericPrice;
-        return (
-        <TableBody>
-          {/* Row 1 */}
-          <TableRow key={item.product.id}>
-            <TableCell>
-              <Stack direction='row'>
-              <Typography variant="body1"
-               style={{
-                                   color: '#9F9F9F',
-    }}
-              
-              
-              > {item.product.name}</Typography>
-              <Typography>*{item.quantity}</Typography>
-              </Stack>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1" 
-               sx={{
-                                 fontWeight: '300',
-                             
-                             
-                                  
-                               }}
-              >RS.{numericPrice.toLocaleString(undefined, numberOptions)} </Typography>
-            </TableCell>
-          </TableRow>
-          {/* Row 2 */}
-          <TableRow>
-            <TableCell>
-              <Typography variant="body1"
+              <Typography
+                variant='body1'
                 sx={{
-                                  
-                                     fontWeight: '400',
-                            
-                              }}
-              >Subtotal</Typography>
+                  fontWeight: '400',
+                }}
+              >
+                Total
+              </Typography>
             </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1" 
-                 sx={{
-                                     fontWeight: '300',
-                                     
-                                     
-                                     
-                                   }}
-              
-              > RS.{(item.quantity * numericPrice).toLocaleString(undefined, numberOptions)}</Typography>
-            </TableCell>
-          </TableRow>
-          {/* Row 3 */}
-        </TableBody>
-          );
-        })}
-        <TableRow>
-            <TableCell>
-              <Typography variant="body1"
-               sx={{
-                            
-                            fontWeight: '400',
-                      
-                            
-                           }}
-              >Total</Typography>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1" 
-               
-                         sx={{
-                            color: '#B88E2F',
-                            fontWeight: '700',
-        
-                            
-                          }}
-              >   RS.{totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2, })}</Typography>
+            <TableCell sx={{ textAlign: 'right' }}>
+              <Typography
+                variant='body1'
+                sx={{
+                  color: '#B88E2F',
+                  fontWeight: '700',
+                }}
+              >
+                {' '}
+                RS.
+                {totalPrice.toLocaleString(undefined, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </Typography>
             </TableCell>
           </TableRow>
-      </StyledTable>
-    </TableContainer>
-    <hr />
+        </StyledTable>
+      </TableContainer>
+      <hr />
       <div
         style={{
           display: 'flex',
@@ -150,7 +169,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           style={{
             fontSize: '16px',
             fontWeight: '400',
-          
           }}
         >
           Direct Bank Transfer
@@ -164,7 +182,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           shipped until the funds have cleared in our account.
         </Typography>
       </div>
-      <div style={{ color: '#9F9F9F', fontSize: '16px', fontWeight: '400'}}>
+      <div style={{ color: '#9F9F9F', fontSize: '16px', fontWeight: '400' }}>
         <input
           {...register('paymentMode', {
             required: 'Select a payment mode',

@@ -106,11 +106,10 @@ export default function Socials() {
               lineHeight: '24px',
             }}
           >
-            Monday-Friday: 9:00 <br/>
+            Monday-Friday: 9:00 <br />
             - 22:00
             <br />
-            Saturday-Sunday: 9:00 <br/> 
-            - 21:00
+            Saturday-Sunday: 9:00 <br />- 21:00
           </p>
         </div>
       </div>

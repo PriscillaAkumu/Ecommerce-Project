@@ -29,9 +29,8 @@ const Hero = () => {
                 seater
               </h1>
               <Link to='/account'>
-              <MainButton>Shop Now</MainButton>
+                <MainButton>Shop Now</MainButton>
               </Link>
-            
             </div>
             <div className='hero__image'>
               <img src={heroImg} alt='rocket' className='heroImg' />

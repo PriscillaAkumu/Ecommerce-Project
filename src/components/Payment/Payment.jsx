@@ -5,8 +5,12 @@ import { Typography, Grid, Box } from '@mui/material';
 export default function PaymentPlan() {
   return (
     <Box className='payment-section'>
-      <Grid container direction={{ xs: 'column', sm: 'column', md: 'row' }} className='payment-content' >
-        <Grid item xs={12} md={4}  className='grid-item'>
+      <Grid
+        container
+        direction={{ xs: 'column', sm: 'column', md: 'row' }}
+        className='payment-content'
+      >
+        <Grid item xs={12} md={4} className='grid-item'>
           <Typography variant='h4' className='heading-text'>
             Free Delivery
           </Typography>
@@ -14,7 +18,7 @@ export default function PaymentPlan() {
             For all orders over $50, consectetur adipiscing elit.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4}  className='grid-item'>
+        <Grid item xs={12} md={4} className='grid-item'>
           <Typography variant='h4' className='heading-text'>
             90 Days Return
           </Typography>
@@ -22,7 +26,7 @@ export default function PaymentPlan() {
             If goods have problems, consectetur adipiscing elit.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4}  className='grid-item'>
+        <Grid item xs={12} md={4} className='grid-item'>
           <Typography variant='h4' className='heading-text'>
             Secure Payment
           </Typography>

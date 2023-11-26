@@ -23,39 +23,42 @@ const CustomRoute = () => {
             <Route path='/' element={<Home />} />
             <Route path='*' element={<NotFound />} />
             <Route path='/login' element={<AuthLogin />} />
-            <Route path='/shop' element={
-                 <ProtectedRoute>
-    <Shop />
-                 </ProtectedRoute> 
-        
-            
-            } />
-            <Route path='/shop/:id/*' element={
+            <Route
+              path='/shop'
+              element={
                 <ProtectedRoute>
-<SingleProduct />
-                </ProtectedRoute> 
-            
-          
-          } />
+                  <Shop />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path='/shop/:id/*'
+              element={
+                <ProtectedRoute>
+                  <SingleProduct />
+                </ProtectedRoute>
+              }
+            />
             <Route path='/account' element={<Account />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/blog' element={<Blog />} />
-            <Route path='/cart' element={
-            
-            <ProtectedRoute>
-<Cart />
-            </ProtectedRoute>
-            } />
-            <Route path='/checkout' element={
-             <ProtectedRoute>
-<CheckoutSection />
-             </ProtectedRoute>
-
-          
-            
-            
-            } />
+            <Route
+              path='/cart'
+              element={
+                <ProtectedRoute>
+                  <Cart />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path='/checkout'
+              element={
+                <ProtectedRoute>
+                  <CheckoutSection />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </CartProvider>
       </AuthProvider>

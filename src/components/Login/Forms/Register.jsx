@@ -29,7 +29,9 @@ export default function LoginForm() {
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <Stack>
-          <Typography mb={2} mt={2}>Email address</Typography>
+          <Typography mb={2} mt={2}>
+            Email address
+          </Typography>
           <TextField
             size='small'
             mb={2}

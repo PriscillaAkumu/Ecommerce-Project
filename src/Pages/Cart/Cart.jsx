@@ -14,13 +14,13 @@ const Cart = () => {
   ];
   return (
     <>
-    <ThemeProvider theme={theme}>
-    <Navbar />
-      <Banner pageTitle='Cart' breadcrumbItems={breadcrumbItems} />
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Banner pageTitle='Cart' breadcrumbItems={breadcrumbItems} />
 
-      <div style={{ marginTop: '50px', backgroundColor:'#fff', }}>
-        <CartItems />
-      </div>
+        <div style={{ marginTop: '50px', backgroundColor: '#fff' }}>
+          <CartItems />
+        </div>
       </ThemeProvider>
       <PaymentPlan />
     </>

@@ -2,14 +2,15 @@
   background: #fbebb5;
   padding: 100px 0;
   overflow: hidden;
- 
 }
+
 .hero__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
+
 .hero__inner .hero__text,
 .hero__inner .hero__image {
   flex: 50%;
@@ -18,6 +19,7 @@
 .heroImg {
   width: 100%;
 }
+
 .hero__inner .hero__text .hero__text__title {
   color: #000;
 
@@ -33,6 +35,7 @@
   background-color: #faf4f4;
   width: 100vw;
 }
+
 .feat .feat-products {
   display: flex;
   justify-content: space-between;
@@ -60,11 +63,13 @@
   background-color: #ffffff;
   width: 100vw;
 }
+
 .top-pick .top-pick__head,
 .top-pick__foot {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .top-pick .top-pick__head .top-pick__title {
   font-family: Poppins;
   font-size: 36px;
@@ -81,6 +86,7 @@
   font-style: normal;
   font-weight: 500;
 }
+
 .top-pick .top-pick__inner {
   display: flex;
   gap: 40px;
@@ -90,9 +96,11 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
 .top-pick__product {
   flex: 1;
 }
+
 .top-pick .top-pick__inner .top-pick__product .top-pick__product__img {
   width: 100%;
   margin-bottom: 20px;
@@ -107,6 +115,7 @@
   line-height: normal;
   margin-bottom: 16px;
 }
+
 .top-pick__product .top-pick__product__price {
   color: #000;
   font-family: Poppins;
@@ -121,22 +130,27 @@
   background-color: #fff9e5;
   width: 100vw;
 }
+
 .new-arrival__inner {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
 }
+
 .new-arrival__inner .new_arrival_img {
   width: 60%;
 }
+
 .new-arrival__inner .new_arrival_img img {
   width: 100%;
 }
+
 .new-arrival__inner .new_arrival_content {
   width: 40%;
   text-align: center;
 }
+
 .new-arrival__inner .new_arrival_content .new_arrival_product_heading {
   color: #000;
   font-family: Poppins;
@@ -145,6 +159,7 @@
   font-weight: 500;
   line-height: normal;
 }
+
 .new-arrival__inner .new_arrival_content .new_arrival_product_title {
   color: #000;
   font-family: Poppins;
@@ -154,20 +169,24 @@
   line-height: normal;
   margin-bottom: 33px;
 }
+
 .secondarybtn {
   border: 1px solid #000;
   padding: 17px 75px;
   background: #fff9e5;
 }
+
 /* Blog Section */
 .blog {
   padding: 80px 0;
   background-color: #ffffff;
   width: 100vw;
 }
+
 .blog .blog-head {
   text-align: center;
 }
+
 .blog .blog-head .blog-head-title {
   font-family: Poppins;
   font-size: 36px;
@@ -176,6 +195,7 @@
   line-height: normal;
   margin-bottom: 16px;
 }
+
 .blog .blog-head .blog-head-desc {
   color: #9f9f9f;
   font-family: Poppins;
@@ -183,6 +203,7 @@
   font-style: normal;
   font-weight: 500;
 }
+
 .blog-list {
   display: flex;
   justify-content: space-between;
@@ -194,9 +215,11 @@
 .blog-list .blog-item {
   width: 100%;
 }
+
 .blog-list .blog-item img {
   width: 100%;
 }
+
 .blog-list .blog-item .blog-list-title {
   color: #000;
   font-family: Poppins;
@@ -214,6 +237,7 @@
   align-items: center;
   margin: 20px;
 }
+
 .blog-meta .blog-meta-item {
   display: flex;
   gap: 5px;
@@ -238,6 +262,7 @@
   background-position: center;
   background-size: cover;
 }
+
 .our-instagram .our-instagram-title {
   color: #000;
   font-family: Poppins;
@@ -255,6 +280,7 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .followbtn {
   border-radius: 50px;
   background: #faf4f4;
@@ -279,6 +305,7 @@
   .hero__inner .hero__image {
     width: 100%;
   }
+
   .hero__inner .hero__text .hero__text__title {
     font-size: 48px;
   }
@@ -302,19 +329,24 @@
     /* flex-direction: column; */
     gap: 20px;
   }
+
   .new-arrival {
     padding: 50px 0;
   }
+
   .new-arrival__inner {
     flex-direction: column-reverse;
   }
+
   .new-arrival__inner .new_arrival_img {
     width: 100%;
   }
+
   .new-arrival__inner .new_arrival_content {
     width: 100%;
     text-align: center;
   }
+
   /* Our blog component */
 
   .blog-list {
@@ -322,9 +354,11 @@
     gap: 20px;
     align-items: center;
   }
+
   .blog-list .blog-item {
     width: 30%;
   }
+
   /* .blog-list .blog-item img {
     width: 60%;
   } */
@@ -337,38 +371,49 @@
     text-align: center;
     gap: 40px;
   }
+
   .hero__inner .hero__text .hero__text__title {
     font-size: 36px;
   }
+
   .feat .feat-products .feat_product_title,
   .top-pick__title {
     font-size: 28px;
   }
+
   .top-pick .top-pick__inner {
     flex-direction: column;
   }
+
   .top-pick__desc {
     font-size: 14px;
   }
+
   .top-pick__product .top-pick__product__title,
   .top-pick__product .top-pick__product__price {
     font-size: 14px;
   }
+
   .blog-list {
     flex-direction: column;
   }
+
   .blog-list .blog-item {
     width: 100%;
   }
+
   .blog-list .blog-item .blog-list-title {
     font-size: 18px;
   }
+
   .our-instagram .our-instagram-title {
     font-size: 30px;
   }
+
   .our-instagram .our-instagram-desc {
     font-size: 16px;
   }
+
   .followbtn {
     font-size: 14px;
     padding: 10px 50px;

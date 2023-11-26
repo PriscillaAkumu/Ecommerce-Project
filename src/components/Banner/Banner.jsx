@@ -10,19 +10,17 @@ const myStyles = {
   backgroundPosition: 'center',
   height: '316px',
   width: '100%',
-  
 };
 
 const textOverlay = {
   color: '#000',
-  fontFamily:'Poppins',
-  fontWeight:500,
-fontSize:'48px',
+  fontFamily: 'Poppins',
+  fontWeight: 500,
+  fontSize: '48px',
 };
 
 const Banner = ({ pageTitle, breadcrumbItems }) => {
   return (
-
     <Grid container elevation={0} style={myStyles} alignItems='center'>
       <Grid item xs={12}>
         <Stack
@@ -36,7 +34,7 @@ const Banner = ({ pageTitle, breadcrumbItems }) => {
           <Typography variant='h4' style={textOverlay}>
             {pageTitle}
           </Typography>
-          <CustomBreadcrumb items={breadcrumbItems} margintop='30px'/>
+          <CustomBreadcrumb items={breadcrumbItems} margintop='30px' />
         </Stack>
       </Grid>
     </Grid>

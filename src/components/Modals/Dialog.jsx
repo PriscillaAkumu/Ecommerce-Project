@@ -35,10 +35,10 @@ export default function FormDialog({ type, sx, label, register }) {
           <DialogTitle>Submit : {type} form?</DialogTitle>
           <DialogActions>
             <Button onClick={handleClose}>
-              <CancelIcon sx={{color:"red"}}/>
+              <CancelIcon sx={{ color: 'red' }} />
             </Button>
             <Button type='submit'>
-              <ThumbUpAltIcon  />
+              <ThumbUpAltIcon />
             </Button>
           </DialogActions>
         </form>
