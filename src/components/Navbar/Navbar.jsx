@@ -99,13 +99,13 @@ const Navbar = () => {
                     <img src={User} alt='user' />
                   </Button>
                   </Tooltip>
-                <Tooltip title='favorite' arrow>
+                <Tooltip title='search' arrow>
                 <Button style={myButton}>
                     <SearchOutlinedIcon />
                   </Button>
                 </Tooltip>
                 
-                  <Tooltip title='search' arrow>
+                  <Tooltip title='favorite' arrow>
                   <Button style={myButton}>
                     <FavoriteBorderOutlinedIcon />
                   </Button>

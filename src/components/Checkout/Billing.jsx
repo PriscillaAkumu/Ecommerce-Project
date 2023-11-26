@@ -179,7 +179,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         />{' '}
         Direct Bank Transfer
         <br />
-        {/* <label htmlFor="field-sun"> */}
         <input
           {...register('paymentMode', {
             required: 'Select a payment mode',
@@ -196,8 +195,8 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         </Typography>
       </div>
 
-      <div>
-        <Typography variant='body-2'>
+      <div style={{marginTop:"20px"}}>
+        <Typography variant='body-2' >
           Your personal data will be used to support your experience <br />
           throughout this website, to manage access to your account and for other purposes described
           in our <b>privacy policy.</b>
