@@ -19,7 +19,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 import classes from './navbar.module.css';
-import { useAuth } from '../../context/authContext';
+import { useAuth } from '../../Auth/authContext';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 

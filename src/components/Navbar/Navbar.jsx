@@ -12,7 +12,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import classes from './navbar.module.css';
 import Tooltip from '@mui/material/Tooltip';
 import LogoutIcon from '@mui/icons-material/Logout';
-import { useAuth } from '../../context/authContext';
+import { useAuth } from '../../Auth/authContext';
 
 const myButton = {
   color: '#000',
