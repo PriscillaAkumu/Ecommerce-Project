@@ -14,8 +14,12 @@ export default function Billing({ register, control, handleSubmit, formState }) 
   let totalPrice = 0;
 
   return (
-    <Box>
-      <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
+    <Box >
+      <Stack 
+    spacing={8}
+    border={5}
+      >
+      <div style={{ display: 'flex', marginBottom: '20px', gap:"6.25rem" }}>
         <Typography
           sx={{
             fontSize: '24px',
@@ -119,6 +123,9 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           RS.{totalPrice.toFixed(2)}
         </Typography>
       </div>
+
+      </Stack>
+   
 
 <hr />
       {/* <Divider variant='middle' /> */}

@@ -66,12 +66,12 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
         </Stack>
 
         <Stack>
-          <Typography mb={2}>Company Name (optional)</Typography>
+          <Typography mb={2} mt={2}>Company Name (optional)</Typography>
           <TextField size='small' mb={2} type='text' id='company' {...register('company')} />
         </Stack>
 
         <Stack>
-          <Typography mb={2}>Country / Region </Typography>
+          <Typography mb={2} mt={2}>Country / Region </Typography>
           <Select
             size='small'
             id='country'
@@ -109,12 +109,12 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
         </Stack>
 
         <Stack>
-          <Typography mb={2}>Town/City</Typography>
+          <Typography mb={2} mt={2} >Town/City</Typography>
           <TextField size='small' mb={2} type='text' id='town' {...register('town')} />
         </Stack>
 
         <Stack>
-          <Typography mb={2}>Province</Typography>
+          <Typography mb={2} mt={2} >Province</Typography>
           <Select
             size='small'
             id='provincearea'
@@ -151,7 +151,7 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
         </Stack>
 
         <Stack>
-          <Typography mb={2}>Phone</Typography>
+          <Typography mb={2} mt={2}>Phone</Typography>
           <TextField
             size='small'
             mb={2}

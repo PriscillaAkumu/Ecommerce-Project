@@ -29,7 +29,7 @@ export default function LoginForm() {
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <Stack>
-          <Typography mb={2}>Email address</Typography>
+          <Typography mb={2} mt={2}>Email address</Typography>
           <TextField
             size='small'
             mb={2}
@@ -42,7 +42,7 @@ export default function LoginForm() {
               },
             })}
           />
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+          <Typography variant='body-3' sx={{ color: 'red' }} mb={2} mt={2}>
             {errors.email?.message}
           </Typography>
         </Stack>

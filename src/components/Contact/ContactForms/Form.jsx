@@ -83,6 +83,7 @@ export default function ContactForm() {
           <Stack>
             <Typography
               mb={2}
+              mt={2}
               sx={{
                 fontSize: '16px',
                 color: '#000',
