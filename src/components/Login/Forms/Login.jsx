@@ -37,7 +37,7 @@ export default function LoginForm() {
   // to check authenication
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');
+      navigate("/shop");
     }
   }, [isAuthenticated]);
 

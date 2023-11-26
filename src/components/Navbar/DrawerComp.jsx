@@ -18,7 +18,8 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
-
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useAuth } from '../../context/authContext';
 
 const hoverStyles = {
 border: '1px solid',
@@ -30,6 +31,12 @@ border: '1px solid',
 
 
 const DrawerComp = () => {
+
+  const { signout } = useAuth();
+  const handleLogout = () => {
+    signout();
+  };
+
   const drawerWidth = 150;
   const drawerHeight = 300;
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -145,6 +152,7 @@ const DrawerComp = () => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
+        sx={{height:"auto"}}
       >
         <Link to='/account'>
           <MenuItem onClick={handleClose}>
@@ -165,11 +173,17 @@ const DrawerComp = () => {
           </MenuItem>
         </Link>
 
+
         <Link to='/cart'>
           <MenuItem onClick={handleClose}>
             <ShoppingCartOutlinedIcon />
           </MenuItem>
         </Link>
+       
+          <MenuItem onClick={handleLogout}>
+             < LogoutIcon  />
+          </MenuItem>
+       
       </Menu>
     </React.Fragment>
   );

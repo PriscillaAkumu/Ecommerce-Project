@@ -120,7 +120,8 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         </Typography>
       </div>
 
-      <Divider variant='middle' />
+<hr />
+      {/* <Divider variant='middle' /> */}
 
       <div
         style={{
