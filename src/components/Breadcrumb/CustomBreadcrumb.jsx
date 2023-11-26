@@ -4,7 +4,6 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { Typography } from '@mui/material';
-import classes from './breadcrumb.module.css';
 
 const CustomBreadcrumb = ({ items }) => {
   return (
