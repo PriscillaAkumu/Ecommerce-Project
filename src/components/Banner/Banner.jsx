@@ -15,6 +15,9 @@ const myStyles = {
 
 const textOverlay = {
   color: '#000',
+  fontFamily:'Poppins',
+  fontWeight:500,
+fontSize:'48px',
 };
 
 const Banner = ({ pageTitle, breadcrumbItems }) => {
@@ -30,10 +33,10 @@ const Banner = ({ pageTitle, breadcrumbItems }) => {
           style={textOverlay}
         >
           <img src={Logo} alt='logo' />
-          <Typography variant='h4' align='center'>
+          <Typography variant='h4' style={textOverlay}>
             {pageTitle}
           </Typography>
-          <CustomBreadcrumb items={breadcrumbItems} />
+          <CustomBreadcrumb items={breadcrumbItems} margintop='30px'/>
         </Stack>
       </Grid>
     </Grid>
