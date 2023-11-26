@@ -19,17 +19,10 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 import classes from './navbar.module.css';
+import { useAuth } from '../../context/authContext';
+import LogoutIcon from '@mui/icons-material/Logout';
 
-// const StyledList = styled(MuiList)({
 
-//   // hover states
-//   '& .MuiListItemButton-root:hover': {
-//     backgroundColor: 'orange',
-//     '&, & .MuiListItemIcon-root': {
-//       color: 'yellow',
-//     },
-//   },
-// });
 
 const DrawerComp = () => {
   const { signout } = useAuth();

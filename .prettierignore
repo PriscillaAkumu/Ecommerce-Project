@@ -8,4 +8,8 @@ vite.config.js
 .gitignore
 .storybook
 .main.jsx
+dist
+dist-ssr
+*.local
+
 
