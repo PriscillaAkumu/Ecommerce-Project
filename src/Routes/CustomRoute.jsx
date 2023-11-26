@@ -10,7 +10,6 @@ import Blog from '../Pages/Blog/Blog';
 import CartProvider from '../context/CartContext';
 import AuthLogin from '../components/Login/Auth';
 import NotFound from '../components/NotFound';
-import Dashboard from '../components/Dashboard';
 import AuthProvider from '../context/authContext';
 import ProtectedRoute from '../components/ProtectedRoutes';
 import CheckoutSection from '../Pages/Checkout/CheckoutSection';
@@ -24,15 +23,39 @@ const CustomRoute = () => {
             <Route path='/' element={<Home />} />
             <Route path='*' element={<NotFound />} />
             <Route path='/login' element={<AuthLogin />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/shop/:id/*' element={<SingleProduct />} />
+            <Route path='/shop' element={
+                 <ProtectedRoute>
+    <Shop />
+                 </ProtectedRoute> 
+        
+            
+            } />
+            <Route path='/shop/:id/*' element={
+                <ProtectedRoute>
+<SingleProduct />
+                </ProtectedRoute> 
+            
+          
+          } />
             <Route path='/account' element={<Account />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/blog' element={<Blog />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/checkout' element={<CheckoutSection />} />
+            <Route path='/cart' element={
+            
+            <ProtectedRoute>
+<Cart />
+            </ProtectedRoute>
+            } />
+            <Route path='/checkout' element={
+             <ProtectedRoute>
+<CheckoutSection />
+             </ProtectedRoute>
+
+          
+            
+            
+            } />
           </Routes>
         </CartProvider>
       </AuthProvider>

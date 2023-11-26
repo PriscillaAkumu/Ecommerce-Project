@@ -16,12 +16,12 @@ export default function CheckoutSection() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-      <Grid container spacing={2} className={classes.container}>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <CheckoutForm {...form} />
+      <Grid container  className={classes.container}>
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{padding:"1.25rem"}}>
+          <CheckoutForm {...form}  />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{padding:"1.25rem"}}>
           <Billing {...form} />
         </Grid>
       </Grid>

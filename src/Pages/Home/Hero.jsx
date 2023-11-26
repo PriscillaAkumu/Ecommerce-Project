@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import heroImg from '/src/assets/img/heroimg.png';
 import ContainerStyle from './ContainerStyle';
+import { Link } from 'react-router-dom';
 
 const MainButton = styled.button`
   background-color: transparent;
@@ -27,7 +28,10 @@ const Hero = () => {
                 <br />
                 seater
               </h1>
+              <Link to='/account'>
               <MainButton>Shop Now</MainButton>
+              </Link>
+            
             </div>
             <div className='hero__image'>
               <img src={heroImg} alt='rocket' className='heroImg' />

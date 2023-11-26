@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import Header from './Header';
 import FormSocials from './ContactForms/FormSocials';

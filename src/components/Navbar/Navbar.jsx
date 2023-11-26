@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
+import { useLocation } from 'react-router-dom';
 import { AppBar, Button, Box, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -11,6 +11,8 @@ import DrawerComp from './DrawerComp';
 import CssBaseline from '@mui/material/CssBaseline';
 import classes from './navbar.module.css';
 import Tooltip from '@mui/material/Tooltip';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useAuth } from "../../context/authContext"
 
 const myButton = {
   color: '#000',
@@ -21,6 +23,12 @@ const myButton = {
 
 
 const Navbar = () => {
+
+  const { signout } = useAuth();
+  const handleLogout = () => {
+    signout();
+  };
+
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -91,13 +99,13 @@ const Navbar = () => {
                     <img src={User} alt='user' />
                   </Button>
                   </Tooltip>
-                <Tooltip title='favorite' arrow>
+                <Tooltip title='search' arrow>
                 <Button style={myButton}>
                     <SearchOutlinedIcon />
                   </Button>
                 </Tooltip>
                 
-                  <Tooltip title='search' arrow>
+                  <Tooltip title='favorite' arrow>
                   <Button style={myButton}>
                     <FavoriteBorderOutlinedIcon />
                   </Button>
@@ -109,6 +117,11 @@ const Navbar = () => {
                   </Button>
                     </Tooltip>
                  
+                    <Tooltip title="logout" arrow>
+                  <Button style={myButton}  onClick={handleLogout} >
+                    < LogoutIcon  />
+                  </Button>
+                    </Tooltip>
                 </Box>
               </Box>
             </>

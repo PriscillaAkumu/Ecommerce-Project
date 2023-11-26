@@ -34,6 +34,12 @@ import classes from './navbar.module.css';
 
 
 const DrawerComp = () => {
+
+  const { signout } = useAuth();
+  const handleLogout = () => {
+    signout();
+  };
+
   const drawerWidth = 150;
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -145,6 +151,7 @@ const DrawerComp = () => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
+        sx={{height:"auto"}}
       >
         <Link to='/account'>
           <MenuItem onClick={handleClose}>
@@ -165,11 +172,17 @@ const DrawerComp = () => {
           </MenuItem>
         </Link>
 
+
         <Link to='/cart'>
           <MenuItem onClick={handleClose}>
             <ShoppingCartOutlinedIcon />
           </MenuItem>
         </Link>
+       
+          <MenuItem onClick={handleLogout}>
+             < LogoutIcon  />
+          </MenuItem>
+       
       </Menu>
     </React.Fragment>
   );
