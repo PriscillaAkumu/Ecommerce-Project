@@ -10,6 +10,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
+  Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import MoreIcon from '@mui/icons-material/MoreVert';
@@ -18,8 +19,19 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
 
+
+const hoverStyles = {
+border: '1px solid',
+  backgroundColor: '#fff',
+  color: '#FBEBB5',
+
+};
+
+
+
 const DrawerComp = () => {
   const drawerWidth = 150;
+  const drawerHeight = 300;
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -34,6 +46,7 @@ const DrawerComp = () => {
     <React.Fragment>
       <CssBaseline />
       {/* menuItems */}
+     
       <Drawer
         variant='temporary'
         anchor='left'
@@ -48,20 +61,32 @@ const DrawerComp = () => {
             boxSizing: 'border-box',
             width: drawerWidth,
             backgroundColor: '#FBEBB5',
+            transition: 'background-color 0.3s ease',
+           
+            
           },
         }}
       >
+
+
         <List
+        
           sx={{
             width: drawerWidth,
             backgroundColor: '#FBEBB5',
             boxSizing: 'border-box',
-            paddingTop: '40px',
+            marginTop:'50px',
             justifyContent: 'center',
+            alignItems: 'center',
+            textAlign:'center'
+           
           }}
         >
+
+
+
           <Link to='/'>
-            <ListItemButton>
+            <ListItemButton  sx={{'&:hover': hoverStyles,  }}>
               <ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemIcon>
@@ -69,15 +94,15 @@ const DrawerComp = () => {
           </Link>
 
           <Link to='/shop'>
-            <ListItemButton>
+            <ListItemButton  sx={{  '&:hover': hoverStyles,  }}>
               <ListItemIcon>
                 <ListItemText>Shop</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/about'>
-            <ListItemButton>
+          <Link to='/about' >
+            <ListItemButton  sx={{  '&:hover': hoverStyles,   }}>
               <ListItemIcon>
                 <ListItemText>About</ListItemText>
               </ListItemIcon>
@@ -85,7 +110,7 @@ const DrawerComp = () => {
           </Link>
 
           <Link to='/contact'>
-            <ListItemButton>
+            <ListItemButton  sx={{  '&:hover': hoverStyles,   }}>
               <ListItemIcon>
                 <ListItemText>Contact</ListItemText>
               </ListItemIcon>
@@ -100,6 +125,7 @@ const DrawerComp = () => {
         <MenuIcon color='black' />
       </IconButton>
 
+    
       {/* option button for icons  */}
 
       <IconButton

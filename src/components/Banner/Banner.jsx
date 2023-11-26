@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Paper, Stack, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import Logo from '../../assets/logo.png';
 import CustomBreadcrumb from '../Breadcrumb/CustomBreadcrumb';
 
@@ -8,8 +8,9 @@ const myStyles = {
   background: `url('/src/assets/hero-bg.png')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '316px', // Set the desired height for the container
+  height: '316px',
   width: '100%',
+  
 };
 
 const textOverlay = {
@@ -18,6 +19,7 @@ const textOverlay = {
 
 const Banner = ({ pageTitle, breadcrumbItems }) => {
   return (
+
     <Grid container elevation={0} style={myStyles} alignItems='center'>
       <Grid item xs={12}>
         <Stack
