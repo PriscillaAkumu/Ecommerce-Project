@@ -1,18 +1,23 @@
 .payment-section {
   background-color: #faf4f4;
-  margin-top: 20px;
-}
- .payment-content {
-  padding: 0 clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
-  margin: 0 auto;
+  margin-top: 5px;
+  padding:  clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
  
 }
 
-.grid-item{
-  padding: 40px 15px;
-  text-align: left;
+.payment-content {
+ margin:auto;
 
 }
+
+.grid-item {
+  margin:0 auto;
+ padding: 20px ;
+  text-align: left;
+ 
+  
+}
+
 
 
 .payment-section .heading-text {

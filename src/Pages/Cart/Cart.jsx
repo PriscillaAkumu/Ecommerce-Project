@@ -15,7 +15,7 @@ const Cart = () => {
       <Navbar />
       <Banner pageTitle='Cart' breadcrumbItems={breadcrumbItems} />
 
-      <div style={{ marginTop: '50px' }}>
+      <div style={{ marginTop: '50px', backgroundColor:'#fff', }}>
         <CartItems />
       </div>
       <PaymentPlan />

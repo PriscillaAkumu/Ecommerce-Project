@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 100%;
   padding: 0 clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
+
 }
 
 .button {
