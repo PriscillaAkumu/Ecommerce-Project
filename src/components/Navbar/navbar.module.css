@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.menuButton {
+  margin: 16px 0px;
+  display: block;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #000;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  border: none;
+  font-family: 'poppins', sans-serif;
+
+  &:hover {
+    background-color: #fff;
+    color: #fff;
+  }
+}
+
+.menuButton:hover {
+  background-color: #fff;
+  /* Change to your desired hover background color */
+  color: #000;
+  /* Change to your desired hover text color */
+}

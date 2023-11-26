@@ -1,0 +1,152 @@
+.cart-sidebar {
+  gap: 10px;
+  width: 320px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.shopping-cart p {
+  font-size: 24px;
+  color: #000;
+  font-weight: 600;
+  text-align: left;
+}
+
+.shopping-line {
+  width: 240px;
+  border: 1px solid #d9d9d9;
+  margin: 20px;
+}
+
+.shopping-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.shopping-items-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; /* Added width property */
+  height: 100px;
+  background-color: #fbebb5;
+  border-radius: 8px;
+}
+
+.shopping-items-img img {
+  width: 100px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shopping-items-desc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+
+.shopping-items-desc h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.shopping-items-desc .remove {
+  position: absolute;
+  background: transparent;
+  color: #9f9f9f;
+  cursor: pointer;
+  right: -3%;
+  top: 10px;
+  border: none;
+}
+
+.shopping-items-desc .qty {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  color: black;
+}
+
+.shopping-items-desc .multiply {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #000;
+}
+
+.shopping-items-desc .price {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #b88e2f;
+}
+
+.subtotal {
+  display: flex;
+  gap: 70px;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+
+.subtotal .title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.subtotal .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b88e2f;
+}
+
+.cart-line {
+  border: 1px solid #d9d9d9;
+  margin: 20px 0px;
+}
+
+.cart-btn {
+  padding: 0px 20px;
+  display: flex;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.view-cart,
+.checkout {
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.view-cart,
+.checkout,
+a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+}
