@@ -18,20 +18,23 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import User from '../../assets/user.png';
+import classes from './navbar.module.css';
 
 
-const hoverStyles = {
-border: '1px solid',
-  backgroundColor: '#fff',
-  color: '#FBEBB5',
-
-};
-
+// const StyledList = styled(MuiList)({
+ 
+//   // hover states
+//   '& .MuiListItemButton-root:hover': {
+//     backgroundColor: 'orange',
+//     '&, & .MuiListItemIcon-root': {
+//       color: 'yellow',
+//     },
+//   },
+// });
 
 
 const DrawerComp = () => {
   const drawerWidth = 150;
-  const drawerHeight = 300;
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -62,8 +65,6 @@ const DrawerComp = () => {
             width: drawerWidth,
             backgroundColor: '#FBEBB5',
             transition: 'background-color 0.3s ease',
-           
-            
           },
         }}
       >
@@ -78,23 +79,22 @@ const DrawerComp = () => {
             marginTop:'50px',
             justifyContent: 'center',
             alignItems: 'center',
-            textAlign:'center'
-           
+            textAlign:'center',
           }}
         >
 
 
 
-          <Link to='/'>
-            <ListItemButton  sx={{'&:hover': hoverStyles,  }}>
+          <Link to='/' >
+            <ListItemButton  >
               <ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/shop'>
-            <ListItemButton  sx={{  '&:hover': hoverStyles,  }}>
+          <Link to='/shop' >
+            <ListItemButton  >
               <ListItemIcon>
                 <ListItemText>Shop</ListItemText>
               </ListItemIcon>
@@ -102,15 +102,15 @@ const DrawerComp = () => {
           </Link>
 
           <Link to='/about' >
-            <ListItemButton  sx={{  '&:hover': hoverStyles,   }}>
+            <ListItemButton  >
               <ListItemIcon>
                 <ListItemText>About</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           </Link>
 
-          <Link to='/contact'>
-            <ListItemButton  sx={{  '&:hover': hoverStyles,   }}>
+          <Link to='/contact' >
+            <ListItemButton  >
               <ListItemIcon>
                 <ListItemText>Contact</ListItemText>
               </ListItemIcon>

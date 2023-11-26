@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme,  } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -17,6 +17,16 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins, sans-serif',
+    cart: {
+      fontSize: '32px',
+      fontWeight: 600,
+      lineHeight: '48px',
+      textAlign: 'center',
+      color: '#000',
+      '@media (max-width: 600px)': {
+        fontSize: '24px', 
+      },
+    },
     h4: {
       fontSize: '1.875rem',
       fontWeight: 400,
@@ -30,6 +40,7 @@ const theme = createTheme({
     h6: {
       fontSize: '16px',
       fontWeight: 400,
+      lineHeight: '24px',
     },
     body: {
       fontSize: '13px',
@@ -47,6 +58,29 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: '24px',
     },
+    heading:{
+
+    },
+    poster:{
+      fontSize:'16px',
+      fontWeight:500,
+      lineHeight: '24px',
+      color:'#000',
+      
+    },
+    subtotal:{
+      fontSize:'16px',
+      fontWeight:400,
+      lineHeight: '24px',
+      color:'#9F9F9F',
+    },
+    total:{
+      fontSize:'20px',
+      fontWeight:500,
+      lineHeight: '30px',
+      color:'#B88E2F',
+    }
   },
 });
+
 export default theme;

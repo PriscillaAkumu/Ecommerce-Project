@@ -2,123 +2,88 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Divider from '@mui/material/Divider';
 import Elipse from '../../assets/contact/Ellipse 2.png';
-import { Stack, Button, Typography, Box, styled } from '@mui/material';
+import { Stack, styled } from '@mui/material';
 import FormDialog from '../Modals/Dialog';
+import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Typography, Paper } from '@mui/material';
+import { tableCellClasses } from '@mui/material/TableCell';
 
+const StyledTable = styled(Table)({
+  [`& .${tableCellClasses.root}`]: {
+    borderBottom: 'none',
+    paddingLeft:0,
+  },
+});
 export default function Billing({ register, control, handleSubmit, formState }) {
   // handling errors
   const { errors } = formState;
 
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   let totalPrice = 0;
 
   return (
-    <Box>
-      <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-        <Typography
-          sx={{
-            fontSize: '24px',
-            fontWeight: '500',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          Product
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: ' 24px',
-            fontWeight: '500',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          Subtotal
-        </Typography>
-      </div>
-      {cart.map((item) => {
+    <>
+    
+    <TableContainer component={Paper} elevation={0}>
+      <StyledTable>
+        <TableHead>
+          <TableRow>
+            <TableCell>
+              <Typography variant="h6">Product</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="h6">Subtotal</Typography>
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        {cart.map((item) => {
         const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
+        const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
         totalPrice += item.quantity * numericPrice;
         return (
-          <Box key={item.product.id}>
-            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-              <p style={{ flex: '1' }}>
-                {' '}
-                <span
-                  style={{
-                    color: '#9F9F9F',
-                  }}
-                >
-                  {item.product.name}
-                </span>
-                * {item.quantity}
-              </p>
-              <Typography
-                sx={{
-                  fontWeight: '300',
-                  FontSize: '16px',
-                  lineHeight: '24px',
-                  flex: '1',
-                }}
-              >
-                Rs. 250,000.00
-              </Typography>
-            </div>
+        <TableBody>
+          {/* Row 1 */}
+          <TableRow key={item.product.id}>
+            <TableCell>
+              <Stack direction='row'>
+              <Typography variant="body1"> {item.product.name}</Typography>
+              <Typography>*{item.quantity}</Typography>
+              </Stack>
+            
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1">RS.{numericPrice.toLocaleString(undefined, numberOptions)} </Typography>
+            </TableCell>
+          </TableRow>
 
-            <div className='item' style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-              <Typography
-                sx={{
-                  fontSize: '16px',
-                  fontWeight: '400',
-                  flex: '1',
-                  lineHeight: '24px',
-                }}
-              >
-                Subtotal
-              </Typography>
-              <Typography
-                sx={{
-                  fontWeight: '300',
-                  fontSize: '16px',
-                  lineHeight: '24px',
-                  flex: '1',
-                }}
-              >
-                RS.
-                {numericPrice.toLocaleString(undefined, {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </Typography>
-            </div>
-          </Box>
-        );
-      })}
+          {/* Row 2 */}
+          <TableRow>
+            <TableCell>
+              <Typography variant="body1">Subtotal</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1"> RS.{(item.quantity * numericPrice).toLocaleString(undefined, numberOptions)}</Typography>
+            </TableCell>
+          </TableRow>
 
-      <div style={{ display: 'flex', gap: '40px', marginBottom: '20px' }}>
-        <Typography
-          sx={{
-            fontSize: '16px',
-            fontWeight: '400',
-            lineHeight: '24px',
-            flex: '1',
-          }}
-        >
-          Total
-        </Typography>
-        <Typography
-          sx={{
-            color: '#B88E2F',
-            fontSize: '24px',
-            fontWeight: '700',
-            lineHeight: '36px',
-            flex: '1',
-          }}
-        >
-          RS.{totalPrice.toFixed(2)}
-        </Typography>
-      </div>
+          {/* Row 3 */}
+          
+        </TableBody>
+          );
+        })}
+        <TableRow>
+            <TableCell>
+              <Typography variant="body1">Total</Typography>
+            </TableCell>
+            <TableCell sx={{textAlign:'right'}}>
+              <Typography variant="body1">   RS.{totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2, })}</Typography>
+            </TableCell>
+          </TableRow>
+      </StyledTable>
+    
+    </TableContainer>
+  
+
 
       <Divider variant='middle' />
 
@@ -216,6 +181,7 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           }}
         />
       </Stack>
-    </Box>
+    </>
+    
   );
 }

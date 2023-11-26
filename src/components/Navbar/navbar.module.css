@@ -14,11 +14,15 @@
     line-height: 24px !important;
     border: none;
     font-family: 'poppins', sans-serif;
- 
     &:hover {
-        background-color: #FBEBB5 !important;
-        color:#000;
-      }
-    
+        background-color: #fff;
+        color: #fff;
+      };
 }
 
+.menuButton:hover {
+    background-color: #fff; /* Change to your desired hover background color */
+    color: #000; /* Change to your desired hover text color */
+  }
+
+  

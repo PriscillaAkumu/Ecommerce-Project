@@ -52,10 +52,20 @@
   justify-content: space-between;
   /* height: 300px; */
   align-items: center;
+  margin-top: 10px;
+}
+
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  
 }
 .shop-list .shop-list-inner .shop-item .inner-wrapper {
   width: 100%;
-  /* height: 100px; */
+  height:96px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

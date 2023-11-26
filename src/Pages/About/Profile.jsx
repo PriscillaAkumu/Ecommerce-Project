@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Typography, Paper, Grid } from '@mui/material';
 import { styled } from '@mui/system';
+import Priscilla from '../../assets/profile/priscilla.jpg';
+import Sheila from '../../assets/profile/sheila.jpg';
+import Conrad from '../../assets/profile/conrad.jpg';
 
 const StyledPaper = styled(Paper)({
   padding: '20px',
@@ -9,7 +12,7 @@ const StyledPaper = styled(Paper)({
 
 const PersonImage = styled('img')({
   width: '100%',
-  height: 'auto',
+  height: '420px',
   borderRadius: '8px',
   marginBottom: '8px',
 });
@@ -17,46 +20,45 @@ const PersonImage = styled('img')({
 const AboutPage = () => {
   return (
     <Container>
-      <StyledPaper>
+      <StyledPaper elevation={0}>
         <Typography variant='h4' gutterBottom>
           About Us
         </Typography>
-        <Typography variant='body1' paragraph>
-          Welcome to our About Us page. Here, you can provide information about your company,
-          mission, vision, or any other relevant details.
+        <Typography variant='body1' paragraph textAlign='justify'>
+          Welcome to our About Us page. Our team comprises skilled and experienced software developers, engineers, and designers who are experts in their respective fields. We bring a wealth of knowledge and technical proficiency to every project, ensuring that our clients receive solutions that are not only robust but also innovative.
         </Typography>
         <Typography variant='body1' paragraph>
           Meet our team:
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} >
           {/* Person 1 */}
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} >
             <PersonImage
-              src='https://placekitten.com/200/200' // Replace with the actual image URL
+              src={Priscilla} // Replace with the actual image URL
               alt='Person 1'
             />
-            <Typography variant='subtitle1'>John Doe</Typography>
-            <Typography variant='body2'>CEO</Typography>
+            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}>Priscilla Akumu</Typography>
+            <Typography variant='body2'>Lead developer, UI/UX designer</Typography>
           </Grid>
 
           {/* Person 2 */}
           <Grid item xs={12} sm={4}>
             <PersonImage
-              src='https://placekitten.com/200/201' // Replace with the actual image URL
+              src={Sheila} // Replace with the actual image URL
               alt='Person 2'
             />
-            <Typography variant='subtitle1'>Jane Smith</Typography>
-            <Typography variant='body2'>CTO</Typography>
+            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}>Sheila Arinaitwe</Typography>
+            <Typography variant='body2'>Software Developer</Typography>
           </Grid>
 
           {/* Person 3 */}
           <Grid item xs={12} sm={4}>
             <PersonImage
-              src='https://placekitten.com/200/202' // Replace with the actual image URL
+              src={Conrad} // Replace with the actual image URL
               alt='Person 3'
             />
-            <Typography variant='subtitle1'>Bob Johnson</Typography>
-            <Typography variant='body2'>Lead Developer</Typography>
+            <Typography variant='subtitle1' sx={{fontSize:'18px', color:'#000', fontWeight:500,}}> Conrad Obi</Typography>
+            <Typography variant='body2'>Software Developer</Typography>
           </Grid>
         </Grid>
       </StyledPaper>
