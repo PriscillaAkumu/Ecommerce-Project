@@ -15,28 +15,10 @@ const StyledTable = styled(Table)({
 export default function Billing({ register, control, handleSubmit, formState }) {
   // handling errors
   const { errors } = formState;
-
-  const { cart } = useContext(CartContext);
-
   const { cart } = useContext(CartContext);
   let totalPrice = 0;
 
   return (
-    <>
-    
-    <TableContainer component={Paper} elevation={0}>
-      <StyledTable>
-        <TableHead>
-          <TableRow>
-            <TableCell>
-              <Typography variant="h6">Product</Typography>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="h6">Subtotal</Typography>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        {cart.map((item) => {
     <>
     <TableContainer component={Paper} elevation={0}>
       <StyledTable>
@@ -65,55 +47,8 @@ export default function Billing({ register, control, handleSubmit, formState }) 
         {cart.map((item) => {
         const numericPrice = parseFloat(item.product.price.replace(/\$|,/g, ''));
         const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
-        const numberOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
         totalPrice += item.quantity * numericPrice;
         return (
-        <TableBody>
-          {/* Row 1 */}
-          <TableRow key={item.product.id}>
-            <TableCell>
-              <Stack direction='row'>
-              <Typography variant="body1"> {item.product.name}</Typography>
-              <Typography>*{item.quantity}</Typography>
-              </Stack>
-            
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1">RS.{numericPrice.toLocaleString(undefined, numberOptions)} </Typography>
-            </TableCell>
-          </TableRow>
-
-          {/* Row 2 */}
-          <TableRow>
-            <TableCell>
-              <Typography variant="body1">Subtotal</Typography>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1"> RS.{(item.quantity * numericPrice).toLocaleString(undefined, numberOptions)}</Typography>
-            </TableCell>
-          </TableRow>
-
-          {/* Row 3 */}
-          
-        </TableBody>
-          );
-        })}
-        <TableRow>
-            <TableCell>
-              <Typography variant="body1">Total</Typography>
-            </TableCell>
-            <TableCell sx={{textAlign:'right'}}>
-              <Typography variant="body1">   RS.{totalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2, })}</Typography>
-            </TableCell>
-          </TableRow>
-      </StyledTable>
-    
-    </TableContainer>
-  
-
-
-      <Divider variant='middle' />
-
         <TableBody>
           {/* Row 1 */}
           <TableRow key={item.product.id}>
@@ -284,8 +219,6 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           }}
         />
       </Stack>
-    </>
-    
     </>
   );
 }
