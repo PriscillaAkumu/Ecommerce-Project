@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import productData from '../../Data/productData';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../Context/CartContext';
 import Size from './Size';
 import Color from './Color';
 import FooterIcon from '../../components/Icons/FooterIcon';

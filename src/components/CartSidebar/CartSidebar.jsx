@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import { ShoppingBagOutlined } from '@mui/icons-material';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../Context/CartContext';
 import './cartSidebar.css';
 
 const CartSidebar = () => {
