@@ -24,7 +24,8 @@ export default defineConfig({
       },
     },
     // Adjust the chunk size warning limit
-    chunkSizeWarningLimit: 2000, // Set your desired limit in kilobytes
+    chunkSizeWarningLimit: 2000,
+    
   },
   plugins: [react()],
   
