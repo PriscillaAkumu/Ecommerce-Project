@@ -1,6 +1,6 @@
 .payment-section {
   background-color: #faf4f4;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: clamp(0.625rem, -5.7857rem + 13.373vw, 6.25rem);
 }
 

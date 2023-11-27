@@ -49,7 +49,7 @@ const StyledBox = styled(Box)({
   justifyContent: 'center',
   alignItems: 'center',
   width: '100px',
-  height: '73px',
+  height: '80px',
   borderRadius: '8px',
   backgroundColor: '#FBEBB5',
 });
@@ -61,10 +61,11 @@ const StyledButton = styled(Button)({
   fontSize: '20px',
   border: '1px solid #000',
   borderRadius: '15px',
+  
  
   // Responsive styles
   '@media (max-width: 600px)': {
-    width: '100%',
+    width: '80%',
   },
   '@media (max-width: 400px)': {
     fontSize: '16px',
