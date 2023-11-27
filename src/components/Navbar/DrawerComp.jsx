@@ -106,7 +106,17 @@ const DrawerComp = () => {
               </ListItemIcon>
             </ListItemButton>
           </Link>
+
+          <Link to='/blog'>
+            <ListItemButton>
+              <ListItemIcon>
+                <ListItemText>Blog</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          </Link>
+          
         </List>
+        
       </Drawer>
       <IconButton
         sx={{ color: 'black', marginRight: 'auto' }}
