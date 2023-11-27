@@ -124,7 +124,7 @@ const ProductDetails = () => {
           xs={12}
           sm={12}
           md={1}
-          lg={1}
+       
           sx={{
             width: '100%',
             height: '100%',
@@ -154,7 +154,7 @@ const ProductDetails = () => {
           xs={12}
           sm={12}
           md={5}
-          lg={3}
+       
           sx={{ width: '100%', height: '500px', padding: '5px 20px ' }}
         >
           <img src={product.img} alt={product.name} style={imageBig} />
@@ -165,7 +165,7 @@ const ProductDetails = () => {
           xs={12}
           sm={12}
           md={6}
-          lg={8}
+         
           height='680px'
           sx={{ padding: '5px 20px' }}
         >
