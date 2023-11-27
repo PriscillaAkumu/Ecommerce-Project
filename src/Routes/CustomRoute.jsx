@@ -10,7 +10,7 @@ import Blog from '../Pages/Blog/Blog';
 import CartProvider from '../context/CartContext';
 import AuthLogin from '../components/Login/Auth';
 import NotFound from '../components/NotFound';
-import AuthProvider from '../context/authContext';
+import AuthProvider from '../Auth/authContext';
 import ProtectedRoute from '../components/ProtectedRoutes';
 import CheckoutSection from '../Pages/Checkout/CheckoutSection';
 

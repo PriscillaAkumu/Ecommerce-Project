@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 // import { DevTool } from '@hookform/devtools';
-import { useAuth } from '../../../context/authContext';
+import { useAuth } from '../../../Auth/authContext';
 import { useNavigate } from 'react-router-dom';
 // mui
 import { TextField, Typography, Grid, Checkbox, Button, Stack, Box } from '@mui/material';

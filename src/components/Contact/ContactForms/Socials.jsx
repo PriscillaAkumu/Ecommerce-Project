@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import location from '../../../assets/contact/location.png';
 import phone from '../../../assets/contact/phone.png';
-import clock from '../../../assets/contact/clock.png';
+import clock from '../../../assets/contact/Clock.png';
 
 // mui
 import { TextField, Typography, Button, Stack, Box } from '@mui/material';
