@@ -20,6 +20,24 @@ import {
 import { tableCellClasses } from '@mui/material/TableCell';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+
+
+const MainButton = styled(Button)({
+ backgroundColor: 'transparent',
+  color: '#000',
+  fontSize: '18px',
+  borderStyle: 'none',
+  borderBottom: '1px solid #000',
+  paddingBottom: '10px',
+    '&:hover': {
+    backgroundColor: '#000',
+    color: '#fff',
+  }
+}
+)
+
+
+
 const StyledTable = styled(Table)({
   [`& .${tableCellClasses.root}`]: {
     borderBottom: 'none',
@@ -60,7 +78,15 @@ const CartItems = () => {
   let totalPrice = 0;
 
   return (
-    <Grid container className='cart-container'>
+    <>
+   
+     <Grid container className='cart-container'>
+     <Grid item xs={12} sx={{ padding: '10px' }}>
+        <MainButton onClick={() => navigate('/shop')}>
+          Continue Shopping
+        </MainButton>
+      </Grid>
+
       {/* Grid item with table */}
       <Grid item xs={12} md={8} lg={9} sx={{ padding: '10px' }}>
         <Box sx={{ overflowX: 'auto' }}>
@@ -163,7 +189,7 @@ const CartItems = () => {
       </Grid>
 
       {/* Grid item with subtotal */}
-      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px', height: '340px' }}>
+      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px', height: '280px' }}>
         <Paper
           style={{
             backgroundColor: '#FBEBB5',
@@ -210,11 +236,13 @@ const CartItems = () => {
 
           <Stack marginTop='20px' alignItems='center' justifyContent='center'>
             <StyledButton onClick={() => navigate('/checkout')}>Checkout</StyledButton>
-            <StyledButton onClick={() => navigate('/shop')}> Shopping</StyledButton>
+            {/* <StyledButton onClick={() => navigate('/shop')}> Shopping</StyledButton> */}
           </Stack>
         </Paper>
       </Grid>
     </Grid>
+    </>
+   
   );
 };
 
