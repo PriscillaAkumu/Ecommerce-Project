@@ -61,6 +61,7 @@ const StyledButton = styled(Button)({
   fontSize: '20px',
   border: '1px solid #000',
   borderRadius: '15px',
+  marginBottom: '10px',
   
  
   // Responsive styles
@@ -195,7 +196,7 @@ const CartItems = () => {
           style={{
             backgroundColor: '#FBEBB5',
             height: '100%',
-            padding: '20px 40px',
+            padding: '20px 30px',
             textAlign: 'center',
           }}
           elevation={0}
