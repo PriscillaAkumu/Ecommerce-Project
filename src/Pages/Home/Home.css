@@ -33,7 +33,7 @@
 .feat {
   padding: 80px 0;
   background-color: #faf4f4;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .feat .feat-products {
@@ -61,7 +61,7 @@
 .top-pick {
   padding: 80px 0;
   background-color: #ffffff;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .top-pick .top-pick__head,
@@ -128,7 +128,7 @@
 /* New Arrival */
 .new-arrival {
   background-color: #fff9e5;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .new-arrival__inner {
@@ -180,7 +180,7 @@
 .blog {
   padding: 80px 0;
   background-color: #ffffff;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .blog .blog-head {
@@ -255,7 +255,7 @@
 .our-instagram {
   padding: 80px 0;
   background: url(./img/our-instagram.png);
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
   padding: 130px 0;
   background-repeat: no-repeat;
