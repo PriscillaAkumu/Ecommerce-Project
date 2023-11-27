@@ -30,7 +30,7 @@ const Navbar = () => {
   const isHomePage = location.pathname === '/';
 
   const [navbarStyle, setNavbarStyle] = useState({
-    backgroundColor: isHomePage ? '#fbebb5' : 'transparent',
+    backgroundColor: isHomePage ? '#fbebb5' : '#fff',
     boxShadow: 'none',
   });
 
@@ -42,6 +42,7 @@ const Navbar = () => {
       setNavbarStyle({
         backgroundColor: shouldChangeColor ? '#fbebb5' : '#fff',
         boxShadow: 'none',
+        color:'#000',
       });
     }
   };
