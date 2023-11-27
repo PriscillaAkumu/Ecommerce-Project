@@ -61,7 +61,7 @@ const StyledButton = styled(Button)({
   fontSize: '20px',
   border: '1px solid #000',
   borderRadius: '15px',
-  marginBottom: '10px',
+ 
   // Responsive styles
   '@media (max-width: 600px)': {
     width: '100%',
@@ -189,7 +189,7 @@ const CartItems = () => {
       </Grid>
 
       {/* Grid item with subtotal */}
-      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px', height: '280px' }}>
+      <Grid item xs={12} md={4} lg={3} sx={{ padding: '10px', height: '300px' }}>
         <Paper
           style={{
             backgroundColor: '#FBEBB5',
@@ -236,7 +236,7 @@ const CartItems = () => {
 
           <Stack marginTop='20px' alignItems='center' justifyContent='center'>
             <StyledButton onClick={() => navigate('/checkout')}>Checkout</StyledButton>
-            {/* <StyledButton onClick={() => navigate('/shop')}> Shopping</StyledButton> */}
+           
           </Stack>
         </Paper>
       </Grid>
