@@ -17,6 +17,12 @@ Primary.args = {
   label: 'Button',
 };
 
+export const Maroon = Template.bind({});
+Maroon.args = {
+  primary: true,
+  label: 'Button',
+};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
