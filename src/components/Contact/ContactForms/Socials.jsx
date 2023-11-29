@@ -12,7 +12,7 @@ export default function Socials() {
       <div
         style={{
           display: 'flex',
-          gap: '10px',
+          gap: '20px',
           marginBottom: '20px',
         }}
       >
@@ -47,7 +47,7 @@ export default function Socials() {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
         <img
           src={phone}
           alt='logo'
@@ -79,7 +79,7 @@ export default function Socials() {
       </div>
       {/* Working hours  */}
 
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
         <img
           src={clock}
           alt='logo'

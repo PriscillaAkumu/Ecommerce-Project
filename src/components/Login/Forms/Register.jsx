@@ -25,11 +25,11 @@ export default function LoginForm() {
 
   return (
     <Box>
-      <Typography variant='h4'>Register</Typography>
+      <Typography sx={{fontWeight:"600",fontSize:"36px",lineHeight:"54px" }}>Register</Typography>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <Stack>
-          <Typography mb={2} mt={2}>
+          <Typography sx={{fontSize:"16px", fontWeight:"400", lineHeight:"24px"}}mb={2} mt={2} >
             Email address
           </Typography>
           <TextField
@@ -50,13 +50,12 @@ export default function LoginForm() {
         </Stack>
 
         <Stack direction='column'>
-          <Typography variant='body-3'>
-            {' '}
-            A link to set your new password will be sent to your email address{' '}
+          <Typography sx={{fontSize:"16px", fontWeight:"400", lineHeight:"24px"}}>
+            A link to set your new password will be sent to your email <br/> address
           </Typography>
-          <Typography variant='body-3'>
-            Your personal data will be used to support your experience throughout this website, to
-            manage access to your account, and for other purposes described in our{' '}
+          <Typography sx={{fontSize:"16px", fontWeight:"400", lineHeight:"24px"}}>
+            Your personal data will be used to support your <br/> experience throughout this website, to
+            manage access <br/> to your account, and for other purposes described in our <br/>
             <b>privacy policy.</b>
           </Typography>
         </Stack>
