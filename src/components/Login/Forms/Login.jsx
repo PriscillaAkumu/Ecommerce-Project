@@ -45,13 +45,24 @@ export default function LoginForm() {
     <>
       {!isAuthenticated && (
         <Box>
-          <Typography variant='h4' sx={{ display: { xs: 'block', md: 'block' } }}>
+          <Typography
+            sx={{
+              display: { xs: 'block', md: 'block' },
+              fontWeight: '600',
+              fontSize: '36px',
+              lineHeight: '54px',
+            }}
+          >
             Log in
           </Typography>
 
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <Stack>
-              <Typography mb={2} mt={2}>
+              <Typography
+                mb={2}
+                mt={2}
+                sx={{ fontSize: '16px', fontWeight: '400', lineHeight: '24px' }}
+              >
                 Username or email address
               </Typography>
               <TextField
@@ -72,7 +83,11 @@ export default function LoginForm() {
             </Stack>
 
             <Stack>
-              <Typography mb={2} mt={2}>
+              <Typography
+                mb={2}
+                mt={2}
+                sx={{ fontSize: '16px', fontWeight: '400', lineHeight: '24px' }}
+              >
                 Password
               </Typography>
               <TextField
@@ -93,7 +108,9 @@ export default function LoginForm() {
 
             <Stack direction='row' alignItems='center'>
               <Checkbox type='checkbox' id='checkbox' {...register('checkbox')} />
-              <Typography variant='body-2'>Remember me</Typography>
+              <Typography sx={{ fontSize: '16px', fontWeight: '400', lineHeight: '24px' }}>
+                Remember me
+              </Typography>
             </Stack>
 
             <Stack direction='row'>

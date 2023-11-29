@@ -182,7 +182,17 @@ export default function Billing({ register, control, handleSubmit, formState }) 
           shipped until the funds have cleared in our account.
         </Typography>
       </div>
-      <div style={{ color: '#9F9F9F', fontSize: '16px', fontWeight: '400' }}>
+      <div
+        style={{
+          color: '#9F9F9F',
+          fontSize: '16px',
+          fontWeight: '400',
+          marginBottom: '10px',
+          marginTop: '10px',
+        }}
+        mb={2}
+        mt={2}
+      >
         <input
           {...register('paymentMode', {
             required: 'Select a payment mode',

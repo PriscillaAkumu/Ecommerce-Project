@@ -22,8 +22,6 @@ import classes from './navbar.module.css';
 import { useAuth } from '../../Auth/authContext';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-
-
 const DrawerComp = () => {
   const { signout } = useAuth();
   const handleLogout = () => {
@@ -114,9 +112,7 @@ const DrawerComp = () => {
               </ListItemIcon>
             </ListItemButton>
           </Link>
-          
         </List>
-        
       </Drawer>
       <IconButton
         sx={{ color: 'black', marginRight: 'auto' }}

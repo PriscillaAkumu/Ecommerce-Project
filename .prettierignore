@@ -11,5 +11,6 @@ vite.config.js
 dist
 dist-ssr
 *.local
+vercel.json
 
 

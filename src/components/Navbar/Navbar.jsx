@@ -42,7 +42,7 @@ const Navbar = () => {
       setNavbarStyle({
         backgroundColor: shouldChangeColor ? '#fbebb5' : '#fff',
         boxShadow: 'none',
-        color:'#000',
+        color: '#000',
       });
     }
   };
