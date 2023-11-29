@@ -5,8 +5,6 @@ import Logo from '../../assets/logo.png';
 import CustomBreadcrumb from '../Breadcrumb/CustomBreadcrumb';
 import './banner.css';
 
-
-
 const textOverlay = {
   color: '#000',
   fontFamily: 'Poppins',
@@ -16,7 +14,7 @@ const textOverlay = {
 
 const Banner = ({ pageTitle, breadcrumbItems }) => {
   return (
-    <Grid container elevation={0} className='banner'  alignItems='center'>
+    <Grid container elevation={0} className='banner' alignItems='center'>
       <Grid item xs={12}>
         <Stack
           direction='column'
