@@ -112,6 +112,31 @@ const productData = [
     price: 'Rs. 244,000.00',
     img: Outdoor_sofa_set,
   },
+
+  {
+    id: 17,
+    name: 'Granite square side table',
+    price: 'Rs. 258,800.00',
+    img: Granite_square,
+  },
+  {
+    id: 18,
+    name: 'Asgaard sofa',
+    price: 'Rs. 250,000.00',
+    img: Asgaard_sofa,
+  },
+  {
+    id: 19,
+    name: 'Maya sofa three seater',
+    price: 'Rs. 115,000.00',
+    img: Maya_sofa_three_seater,
+  },
+  {
+    id: 20,
+    name: 'Outdoor sofa set',
+    price: 'Rs. 244,000.00',
+    img: Outdoor_sofa_set,
+  },
 ];
 
 export default productData;

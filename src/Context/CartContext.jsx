@@ -50,7 +50,7 @@ const CartProvider = ({ children }) => {
         quantity: quantity,
       };
 
-      // Update the cart state and use the callback form to ensure the correct order of operations
+      // it is creating a new array by spreading the elements of the previous cart and adding a new item  at the end of the array.
       setCart((prevCart) => [...prevCart, newCartItem]);
 
       // Use the updatedCart directly when storing in localStorage
