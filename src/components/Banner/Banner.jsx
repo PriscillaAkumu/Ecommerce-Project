@@ -10,7 +10,6 @@ const textOverlay = {
   fontFamily: 'Poppins',
   fontWeight: 500,
   fontSize: '48px',
- 
 };
 
 const Banner = ({ pageTitle, breadcrumbItems }) => {

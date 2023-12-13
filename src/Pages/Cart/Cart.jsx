@@ -7,7 +7,6 @@ import './cart.css';
 import { ThemeProvider } from '@mui/material';
 import theme from '../../Theme';
 
-
 const Cart = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },

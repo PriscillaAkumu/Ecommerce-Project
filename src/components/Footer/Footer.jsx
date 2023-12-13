@@ -11,10 +11,30 @@ const Footer = () => {
         <div>
           <h6>Links</h6>
           <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/shop'>Shop</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/contact'>Contact</Link>
+            <li>
+              {' '}
+              <Link to='/' style={{ fontSize: '16px' }}>
+                Home
+              </Link>{' '}
+            </li>
+            <li>
+              {' '}
+              <Link to='/shop' style={{ fontSize: '16px' }}>
+                Shop
+              </Link>{' '}
+            </li>
+            <li>
+              {' '}
+              <Link to='/about' style={{ fontSize: '16px' }}>
+                About
+              </Link>{' '}
+            </li>
+            <li>
+              {' '}
+              <Link to='/contact' style={{ fontSize: '16px' }}>
+                Contact
+              </Link>{' '}
+            </li>
           </nav>
         </div>
         <div>
