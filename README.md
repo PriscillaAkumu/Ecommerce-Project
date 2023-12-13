@@ -1,8 +1,6 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully responsvie Ecommerce website built using Vite and React, React ContextApi using dependencies such as Es-Lint, Prettier, Axios, material-ui, styled-components, react-hook-form, Es-lint-plugins, storybook. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Getting started
+To view the website click [on this link](https://ecommerce-project-73rh.vercel.app/)
