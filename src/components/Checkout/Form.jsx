@@ -37,11 +37,13 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
                   message: 'Enter your First name',
                 },
               })}
+              error={Boolean(errors.firstname)}
+              helperText={errors.firstname?.message}
             />
 
-            <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+            {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
               {errors.firstname?.message}
-            </Typography>
+            </Typography> */}
           </div>
 
           <div style={{ flex: 1 }}>
@@ -58,10 +60,12 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
                   message: 'Enter your last name',
                 },
               })}
+              error={Boolean(errors.lastname)}
+              helperText={errors.lastname?.message}
             />
-            <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+            {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
               {errors.lastname?.message}
-            </Typography>
+            </Typography> */}
           </div>
         </Stack>
 
@@ -84,6 +88,9 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
             {...register('country', {
               required: 'Select a country',
             })}
+            error={Boolean(errors.country)}
+            helperText={errors.country?.message}
+
           >
             <MenuItem value='italy' selected>
               Italy
@@ -95,9 +102,9 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
             <MenuItem value='other'>Other</MenuItem>
           </Select>
 
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+          {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
             {errors.country?.message}
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Stack>
@@ -131,6 +138,8 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
             {...register('provincearea', {
               required: 'Select a province',
             })}
+            error={Boolean(errors.provincearea)}
+            helperText={errors.provincearea?.message}
           >
             <MenuItem value='western province' selected>
               Western Province{' '}
@@ -141,9 +150,9 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
             <MenuItem value='other'>Other</MenuItem>
           </Select>
 
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+          {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
             {errors.provincearea?.message}
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Stack>
@@ -178,10 +187,12 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
                 message: 'contact must be 12 characters long',
               },
             })}
+            error={Boolean(errors.phone)}
+            helperText={errors.phone?.message}
           />
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+          {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
             {errors.phone?.message}
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Stack>
@@ -197,6 +208,8 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
                 message: 'Enter a valid Email Address',
               },
             })}
+            error={Boolean(errors.email)}
+            helperText={errors.email?.message}
           />
 
           <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
@@ -218,10 +231,12 @@ export default function CheckoutForm({ register, control, handleSubmit, formStat
                 message: 'Enter Additional Message',
               },
             })}
+            error={Boolean(errors.message)}
+            helperText={errors.message?.message}
           />
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
+          {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2}>
             {errors.message?.message}
-          </Typography>
+          </Typography> */}
         </Stack>
         {/* <DevTool control={control} /> */}
       </Box>

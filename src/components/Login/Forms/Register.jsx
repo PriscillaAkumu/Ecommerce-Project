@@ -49,10 +49,12 @@ export default function LoginForm() {
                 message: 'Enter your email address',
               },
             })}
+            error={Boolean(errors.email)}
+            helperText={errors.email?.message}
           />
-          <Typography variant='body-3' sx={{ color: 'red' }} mb={2} mt={2}>
+          {/* <Typography variant='body-3' sx={{ color: 'red' }} mb={2} mt={2}>
             {errors.email?.message}
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Stack direction='column'>
